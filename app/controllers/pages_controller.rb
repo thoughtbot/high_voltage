@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
   # skip_before_filter :verify_account, :authenticate, :verify_access, :protect_page, :verify_can_use_ssl
+  unloadable
   before_filter :ensure_valid
-  
+
   def show
     render :template => current_page
   end
@@ -13,7 +14,7 @@ class PagesController < ApplicationController
       render :nothing => true, :status => 404 and return false
     end
   end
-  
+
   def current_page
     "pages/#{params[:id].to_s.downcase}"
   end
