@@ -41,6 +41,30 @@ Then modify it to subclass from High Voltage, adding whatever you need:
       layout "danger"
     end
 
+Don't forget to add the new route:
+
+    map.resources :pages,
+      :controller => 'pages',
+      :only       => [:show]
+
+Testing
+-------
+
+Just a suggestion, but you can test your pages using Shoulda pretty easily:
+
+    class PagesControllerTest < ActionController::TestCase
+      tests PagesController
+
+      %w(earn_money screencast about contact).each do |page|
+        context "on GET to /pages/#{page}" do
+          setup { get :show, :id => page }
+
+          should_respond_with :success
+          should_render_template page
+        end
+      end
+    end
+
 Enjoy!
 
 Copyright (c) 2009 Thoughtbot, released under the MIT license
