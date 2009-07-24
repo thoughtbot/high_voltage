@@ -1,5 +1,0 @@
-= Nothing to see here.  Move along.
-
-Static pages plugin.  Install and place templates in RAILS_ROOT/app/views/pages/
-
-Copyright (c) 2009 Thoughtbot, released under the MIT license
