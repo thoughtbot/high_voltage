@@ -3,12 +3,12 @@ require 'test_helper'
 class ApplicationController < ActionController::Base
 end
 
-require "pages_controller"
-require File.join(File.dirname(__FILE__), '..', 'config', 'routes')
+require "high_voltage/pages_controller"
+require File.join(File.dirname(__FILE__), '..', 'config', 'high_voltage_routes')
 
-class PagesControllerTest < ActionController::TestCase
+class HighVoltage::PagesControllerTest < ActionController::TestCase
 
-  PagesController.view_paths << "/tmp"
+  HighVoltage::PagesController.view_paths << "/tmp"
 
   context "on GET to a page that exists" do
     setup do
@@ -39,10 +39,6 @@ class PagesControllerTest < ActionController::TestCase
   context "on GET to /pages/invalid" do
     setup { get :show, :id => "invalid" }
     should_respond_with :missing
-  end  
-  
-  context "on GET to /pages" do
-    setup { get :index }
-    should_respond_with :missing
   end
+
 end

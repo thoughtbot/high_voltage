@@ -1,1 +1,2 @@
-# Include hook code here
+require 'high_voltage'
+

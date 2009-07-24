@@ -1,5 +1,4 @@
-class PagesController < ApplicationController
-  # skip_before_filter :verify_account, :authenticate, :verify_access, :protect_page, :verify_can_use_ssl
+class HighVoltage::PagesController < ApplicationController
   unloadable
   before_filter :ensure_valid
 
