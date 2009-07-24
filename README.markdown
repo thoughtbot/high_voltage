@@ -23,6 +23,10 @@ Write your static pages and put them in the RAILS_ROOT/app/views/pages directory
     mkdir app/views/pages
     touch app/views/pages/about.html.erb
 
+After putting something interesting there, you can link to it from anywhere in your app with:
+
+    link_to "About", page_path("about")
+
 Bam.
 
 Override
