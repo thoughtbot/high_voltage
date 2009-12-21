@@ -69,6 +69,8 @@ Just a suggestion, but you can test your pages using Shoulda pretty easily:
       end
     end
 
+If you're not using a custom PagesController be sure to test <code>HighVoltage::PagesController</code> instead.
+
 Enjoy!
 
 Copyright (c) 2009 Thoughtbot, released under the MIT license
