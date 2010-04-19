@@ -1,14 +1,13 @@
-ENV['RAILS_ENV'] = 'test'
+# Configure Rails Envinronment
+ENV["RAILS_ENV"] = "test"
 
-require 'rubygems'
-require 'active_support'
-require 'active_support/test_case'
-require 'action_controller'
-require 'test_help'
-require 'high_voltage'
+require File.expand_path("../dummy/config/environment.rb",  __FILE__)
+require "rails/test_help"
 
-$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'app', 'controllers')
-$LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'app', 'models')
+ActionMailer::Base.delivery_method = :test
+ActionMailer::Base.perform_deliveries = true
+ActionMailer::Base.default_url_options[:host] = "test.com"
 
 require 'shoulda'
 require 'shoulda/rails'
+begin require 'redgreen'; rescue LoadError; end

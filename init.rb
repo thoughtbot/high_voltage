@@ -1,2 +1,1 @@
 require 'high_voltage'
-
