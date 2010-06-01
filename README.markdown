@@ -29,6 +29,19 @@ After putting something interesting there, you can link to it from anywhere in y
 
 Bam.
 
+Routes
+------
+
+By default, the static page routes will be like /pages/:id (where :id is the view filename).
+
+If you want to route to a static page in another location (for example, a homepage), do this:
+
+    map.root :controller => 'pages', :action => 'show', :id => 'home'
+
+In that case, you'd need an app/views/pages/home.html.erb file.
+
+Generally speaking, you need to route to the 'show' action with an :id param of the view filename.
+
 Override
 --------
 
