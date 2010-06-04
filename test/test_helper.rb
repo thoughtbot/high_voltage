@@ -12,3 +12,7 @@ $LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'app', 'models')
 
 require 'shoulda'
 require 'shoulda/rails'
+
+ActionController::Routing::Routes.draw do |map|
+  HighVoltage::Routes.draw(map)
+end

@@ -1,5 +1,4 @@
 module HighVoltage
 end
 
-require 'high_voltage/extensions/routes'
-
+require 'high_voltage/routes'
