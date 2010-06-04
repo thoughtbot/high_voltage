@@ -5,13 +5,12 @@ module HighVoltage
     # @example
     #   HighVoltage::Routes.draw(map)
     #
-    # If you need to override a High Voltage route, invoke your app route
-    # earlier in the file so Rails' router short-circuits when it finds
-    # your route:
+    # If you need to override a High Voltage route, replace it with
+    # your app route:
     #
     # @example
     #   map.resources :pages, :controller => :pages, :only => [:show]
-    #   Clearance::Routes.draw(map)
+    #   # HighVoltage::Routes.draw(map)
     def self.draw(map)
       map.resources :pages,
         :controller => 'high_voltage/pages',
