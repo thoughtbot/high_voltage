@@ -13,7 +13,7 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 Installation
 ------------
 
-    script/plugin install git://github.com/thoughtbot/high_voltage.git
+    $ gem install high_voltage
 
 Usage
 -----
@@ -62,14 +62,6 @@ Then modify it to subclass from High Voltage, adding whatever you need:
       layout "danger"
     end
 
-Don't forget to replace HighVoltage::Routes.draw(map) with your new routes:
-
-    map.resources :pages,
-      :controller => 'pages',
-      :only       => [:show]
-
-    # HighVoltage::Routes.draw(map)
-
 Testing
 -------
 
@@ -92,5 +84,7 @@ If you're not using a custom PagesController be sure to test <code>HighVoltage::
 
 Enjoy!
 
-Copyright (c) 2009 Thoughtbot, released under the MIT license
+License
+-------
 
+Copyright (c) thoughtbot, inc -- released under the MIT license.
