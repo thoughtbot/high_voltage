@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'high_voltage'
-  s.version = '0.9.0'
+  s.version = '0.9.1'
   s.date = %q{2010-04-20}
   s.email = 'support@thoughtbot.com'
   s.homepage = 'http://github.com/thoughtbot/high_voltage'
