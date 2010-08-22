@@ -6,12 +6,12 @@ class HighVoltage::PagesControllerTest < ActionController::TestCase
       get :show, :id => 'exists'
     end
 
-    should_respond_with :success
-    should_render_template 'exists'
+    should respond_with(:success)
+    should render_template('exists')
   end
 
   context "on GET to /pages/invalid" do
     setup { get :show, :id => "invalid" }
-    should_respond_with :missing
+    should respond_with(:missing)
   end
 end
