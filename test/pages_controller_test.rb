@@ -10,8 +10,9 @@ class HighVoltage::PagesControllerTest < ActionController::TestCase
     should render_template('exists')
   end
 
-  context "on GET to /pages/invalid" do
-    setup { get :show, :id => "invalid" }
-    should respond_with(:missing)
+  should "raise a routing error for an invalid page" do
+    assert_raise ActionController::RoutingError do
+      get :show, :id => "invalid"
+    end
   end
 end

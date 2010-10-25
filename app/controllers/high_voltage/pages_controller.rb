@@ -11,7 +11,7 @@ class HighVoltage::PagesController < ApplicationController
   protected
 
     def invalid_page
-      render :nothing => true, :status => 404
+      raise ActionController::RoutingError, "No such page: #{params[:id]}"
     end
 
     def current_page
