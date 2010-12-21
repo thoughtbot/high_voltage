@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class HighVoltage::PagesControllerTest < ActionController::TestCase
+
   context "on GET to /pages/exists" do
     setup do
       get :show, :id => 'exists'
@@ -15,4 +16,5 @@ class HighVoltage::PagesControllerTest < ActionController::TestCase
       get :show, :id => "invalid"
     end
   end
+
 end
