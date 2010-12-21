@@ -6,6 +6,6 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/thoughtbot/high_voltage'
   s.summary = 'Simple static page rendering controller'
   s.description = 'Fire in the disco.  Fire in the ... taco bell.'
-  s.files = ["app/controllers/high_voltage/pages_controller.rb", "config/routes.rb", "init.rb", "install.rb", "lib/high_voltage/engine.rb", "lib/high_voltage.rb", "MIT-LICENSE", "README.markdown"]
+  s.files = ["init.rb", "install.rb", "MIT-LICENSE", "README.markdown", "{app,config,lib}/**/*"]
   s.authors = ['Dan Croak', 'Matt Jankowski', 'Tammer Saleh', 'Nick Quaranto', 'Tristan Dunn', 'Chad Pytel', 'Joe Ferris']
 end
