@@ -30,6 +30,10 @@ After putting something interesting there, you can link to it from anywhere in y
 
     link_to "About", page_path("about")
 
+This will also work, if you like the more explicit style:
+
+    link_to "About", page_path(:id => "about")
+
 Bam.
 
 == Routes
@@ -52,7 +56,10 @@ Which will render a homepage from app/views/pages/home.html.erb
 
 == Override
 
-Most common reasons to override? Authentication, layouts.
+Most common reasons to override?
+
+  * You need authentication around the pages to make sure a user is signed in.
+  * You need to render different layouts for different pages.
 
 Create a PagesController of your own:
 
@@ -62,7 +69,17 @@ Then modify it to subclass from High Voltage, adding whatever you need:
 
     class PagesController < HighVoltage::PagesController
       before_filter :authenticate
-      layout "danger"
+      layout :layout_for_page
+
+      protected
+        def layout_for_page
+          case params[:id]
+          when 'home'
+            'home'
+          else
+            'application'
+          end
+        end
     end
 
 == Testing
