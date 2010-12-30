@@ -1,1 +1,0 @@
-require 'high_voltage'
