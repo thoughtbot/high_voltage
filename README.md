@@ -1,14 +1,17 @@
-= High Voltage
+High Voltage
+============
 
 Rails engine for static pages.
 
 ... but be careful. [Danger!](http://www.youtube.com/watch?v=HD5tnb2RBYg)
 
-== Static pages?
+Static pages?
+-------------
 
 Yeah, like "About us", "Directions", marketing pages, etc.
 
-== Installation
+Installation
+------------
 
     $ gem install high_voltage
 
@@ -19,7 +22,8 @@ Include in your Gemfile:
 For Rails versions prior to 3.0, use the rails2 branch of high_voltage:
 https://github.com/thoughtbot/high_voltage/tree/rails2    
 
-== Usage
+Usage
+-----
 
 Write your static pages and put them in the RAILS_ROOT/app/views/pages directory.
 
@@ -36,7 +40,8 @@ This will also work, if you like the more explicit style:
 
 Bam.
 
-== Routes
+Routes
+------
 
 By default, the static page routes will be like /pages/:id (where :id is the view filename).
 
@@ -54,7 +59,8 @@ You can route the root url to a high voltage page like this:
 
 Which will render a homepage from app/views/pages/home.html.erb
 
-== Override
+Override
+--------
 
 Most common reasons to override?
 
@@ -82,7 +88,8 @@ Then modify it to subclass from High Voltage, adding whatever you need:
         end
     end
 
-== Testing
+Testing
+-------
 
 Just a suggestion, but you can test your pages using Shoulda pretty easily:
 
@@ -103,6 +110,16 @@ If you're not using a custom PagesController be sure to test <code>HighVoltage::
 
 Enjoy!
 
-== License
+Credits
+-------
 
-Copyright (c) thoughtbot, inc -- released under the MIT license.
+![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
+
+High Voltage is maintained and funded by [thoughtbot, inc](http://thoughtbot.com/community)
+
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.
+
+License
+-------
+
+High Voltage is Copyright © 2009-2011 thoughtbot. It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
