@@ -27,8 +27,8 @@ Usage
 
 Write your static pages and put them in the RAILS_ROOT/app/views/pages directory.
 
-    mkdir app/views/pages
-    touch app/views/pages/about.html.erb
+    $ mkdir app/views/pages
+    $ touch app/views/pages/about.html.erb
 
 After putting something interesting there, you can link to it from anywhere in your app with:
 
@@ -69,7 +69,12 @@ Most common reasons to override?
 
 Create a PagesController of your own:
 
-    script/generate controller pages
+    $ rails generate controller pages
+
+Override the default route:
+
+    # in config/routes.rb
+    resources :pages
 
 Then modify it to subclass from High Voltage, adding whatever you need:
 
