@@ -17,4 +17,9 @@ class HighVoltage::PagesControllerTest < ActionController::TestCase
     end
   end
 
+  should "raise missing template error for valid page with invalid partial" do
+    assert_raise ActionView::MissingTemplate do
+      get :show, :id => "exists_but_references_nonexistent_partial"
+    end
+  end
 end
