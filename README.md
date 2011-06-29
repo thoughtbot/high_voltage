@@ -38,6 +38,10 @@ This will also work, if you like the more explicit style:
 
     link_to "About", page_path(:id => "about")
 
+You can nest pages in a directory structure, if that makes sense from a URL perspective for you:
+
+    link_to "Q4 Reports", page_path("about/corporate/policies/HR/en_US/biz/sales/Quarter-Four")
+
 Bam.
 
 Routes

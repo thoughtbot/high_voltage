@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :pages, :controller => 'high_voltage/pages', :only => :show
+  match '/pages/*id' => 'high_voltage/pages#show', :as => :page
 end

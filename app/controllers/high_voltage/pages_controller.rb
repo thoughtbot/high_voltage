@@ -17,7 +17,12 @@ class HighVoltage::PagesController < ApplicationController
   protected
 
     def current_page
-      "pages/#{params[:id].to_s.downcase}"
+      "pages/#{clean_path}"
+    end
+
+    def clean_path
+      path = Pathname.new "/#{params[:id]}"
+      path.cleanpath.to_s[1..-1]
     end
 
 end

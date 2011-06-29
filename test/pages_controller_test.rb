@@ -11,9 +11,24 @@ class HighVoltage::PagesControllerTest < ActionController::TestCase
     should render_template('exists')
   end
 
+  context "on GET to /pages/dir/nested" do
+    setup do
+      get :show, :id => 'dir/nested'
+    end
+
+    should respond_with(:success)
+    should render_template('pages/dir/nested')
+  end
+
   should "raise a routing error for an invalid page" do
     assert_raise ActionController::RoutingError do
       get :show, :id => "invalid"
+    end
+  end
+
+  should "raise a routing error for a page in another directory" do
+    assert_raise ActionController::RoutingError do
+      get :show, :id => "../other/wrong"
     end
   end
 
