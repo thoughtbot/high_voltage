@@ -19,8 +19,9 @@ Include in your Gemfile:
 
     gem "high_voltage"
 
-For Rails versions prior to 3.0, use the rails2 branch of high_voltage:
-https://github.com/thoughtbot/high_voltage/tree/rails2    
+For Rails versions prior to 3.0, use the 0.9.2 tag of high_voltage:
+
+    https://github.com/thoughtbot/high_voltage/tree/v0.9.2
 
 Usage
 -----
