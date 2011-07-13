@@ -11,7 +11,11 @@ class HighVoltage::PagesController < ApplicationController
   end
 
   def show
-    render :template => current_page
+    if params[:layout].nil?
+      render current_page
+    else
+      render current_page, :layout=>params[:layout]
+    end
   end
 
   protected

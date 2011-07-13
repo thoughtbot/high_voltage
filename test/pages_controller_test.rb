@@ -19,6 +19,26 @@ class HighVoltage::PagesControllerTest < ActionController::TestCase
     should respond_with(:success)
     should render_template('pages/dir/nested')
   end
+  
+  context "on GET to /pages/exists with layout" do
+    setup do
+      get :show, :id => 'exists', :layout=>'application'
+    end
+
+    should respond_with(:success)
+    should render_template('exists')
+    should render_with_layout('application')
+  end
+
+  context "on GET to /pages/exists without layout" do
+    setup do
+      get :show, :id => 'exists', :layout=>false
+    end
+
+    should respond_with(:success)
+    should render_template('exists')
+    should_not render_with_layout
+  end
 
   should "raise a routing error for an invalid page" do
     assert_raise ActionController::RoutingError do

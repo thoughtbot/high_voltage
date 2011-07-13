@@ -72,6 +72,10 @@ You can route the root url to a high voltage page like this:
 
 Which will render a homepage from app/views/pages/home.html.erb
 
+You can also use specify which layout to use like this:
+
+    match 'pages/home' => 'high_voltage/pages#show', :id => 'home', :layout=>'default'
+
 Override
 --------
 
