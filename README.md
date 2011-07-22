@@ -128,6 +128,11 @@ If you're not using a custom PagesController be sure to test <code>HighVoltage::
 
 Enjoy!
 
+Contributing
+------------
+
+Please see CONTRIBUTING.md for details.
+
 Credits
 -------
 
