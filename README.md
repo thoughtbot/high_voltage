@@ -1,5 +1,4 @@
-High Voltage
-============
+# High Voltage ![build status](https://secure.travis-ci.org/thoughtbot/high_voltage.png?branch=master)
 
 Rails engine for static pages.
 
