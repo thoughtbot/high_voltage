@@ -11,7 +11,6 @@ class HighVoltage::PagesController < ApplicationController
   end
 
   def method_missing(name, *args, &block)
-    puts "Fuuuuu! #{name}"
     render :template => current_page
   end
 
@@ -22,7 +21,6 @@ class HighVoltage::PagesController < ApplicationController
     end
 
     def clean_path
-      puts "Params: #{params.inspect} - Action: #{params[:action]}"
       path = Pathname.new "/#{params[:action]}"
       path.cleanpath.to_s[1..-1]
     end
