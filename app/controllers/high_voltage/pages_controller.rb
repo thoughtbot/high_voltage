@@ -1,9 +1,10 @@
 class HighVoltage::PagesController < ApplicationController
 
   unloadable
+  layout HighVoltage::layout
 
   rescue_from ActionView::MissingTemplate do |exception|
-    if exception.message =~ %r{Missing template pages/}
+    if exception.message =~ %r{Missing template #{HighVoltage::content_path}}
       raise ActionController::RoutingError, "No such page: #{params[:id]}"
     else
       raise exception
@@ -11,13 +12,13 @@ class HighVoltage::PagesController < ApplicationController
   end
 
   def show
-    render :template => current_page
+    render :template => current_page, :layout => HighVoltage::layout
   end
 
   protected
 
     def current_page
-      "pages/#{clean_path}"
+      "#{HighVoltage::content_path}#{clean_path}"
     end
 
     def clean_path
