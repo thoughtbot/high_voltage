@@ -61,7 +61,7 @@ describe HighVoltage::PagesController do
       HighVoltage::content_path = "other_pages/"
     end
 
-    describe "on GET to /other_pages/exists" do
+    describe "on GET to /other_pages/also_exists" do
       before { get :show, :id => 'also_exists' }
 
       it "should respond with success and render template" do
