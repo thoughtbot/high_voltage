@@ -2,10 +2,10 @@
 
 source "http://rubygems.org"
 
-gem "appraisal"
-gem "rspec-rails"
-gem "capybara", ">= 0.4.0"
 gem "sqlite3"
 gem "rails", "3.0.10"
+gem "rspec-rails"
+gem "appraisal"
+gem "capybara", ">= 0.4.0"
 
 gemspec :path=>"../"

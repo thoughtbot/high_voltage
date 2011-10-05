@@ -1,7 +1,7 @@
 PATH
-  remote: /Users/mjankowski/Development/opensource/high_voltage
+  remote: /home/mike/lib/high_voltage
   specs:
-    high_voltage (1.0.0)
+    high_voltage (1.0.1)
 
 GEM
   remote: http://rubygems.org/
