@@ -76,7 +76,7 @@ Customize
 
 High Voltage uses a default path and folder of 'pages', i.e. 'url.com/pages/contact' , 'app/views/pages'
 
-You can change this in an initializer. 
+You can change this in an initializer: 
 
     HighVoltage.content_path = "site/"
 
