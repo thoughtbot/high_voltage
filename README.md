@@ -71,6 +71,15 @@ You can route the root url to a high voltage page like this:
 
 Which will render a homepage from app/views/pages/home.html.erb
 
+Customize
+--------
+
+High Voltage uses a default path and folder of 'pages', i.e. 'url.com/pages/contact' , 'app/views/pages'
+
+You can change this in an initializer. 
+
+    HighVoltage.content_path = "site/"
+
 Override
 --------
 
