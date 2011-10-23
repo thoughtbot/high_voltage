@@ -114,6 +114,10 @@ Then modify it to subclass from High Voltage, adding whatever you need:
         end
     end
 
+Remember that if you create your own PagesController, you'll need to review your custom routes so they point to it, that is, <code>pages#show</code> instead of <code>high_voltage/pages#show</code>, like this:
+
+    match '/:id' => 'pages#show', :as => :static, :via => :get
+
 Testing
 -------
 
