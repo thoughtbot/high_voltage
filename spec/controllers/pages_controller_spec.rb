@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HighVoltage::PagesController do
+describe PagesController do
 
   render_views
 
