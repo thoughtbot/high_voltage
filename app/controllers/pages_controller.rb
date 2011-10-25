@@ -1,4 +1,4 @@
-class HighVoltage::PagesController < ApplicationController
+class PagesController < ApplicationController
 
   unloadable
   layout HighVoltage::layout

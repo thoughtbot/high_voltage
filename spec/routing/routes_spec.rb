@@ -15,15 +15,15 @@ describe 'routes' do
     end
 
     it "should recognize nested route" do
-      assert_recognizes({ :controller => "high_voltage/pages", :action => "show", :id => "one/two" }, "/pages/one/two")
+      assert_recognizes({ :controller => "pages", :action => "show", :id => "one/two" }, "/pages/one/two")
     end
 
     it "should recognize normal route" do
-      assert_recognizes({ :controller => "high_voltage/pages", :action => "show", :id => "one" }, "/pages/one")
+      assert_recognizes({ :controller => "pages", :action => "show", :id => "one" }, "/pages/one")
     end
 
     it "should recognize normal route with dots" do
-      assert_recognizes({ :controller => "high_voltage/pages", :action => "show", :id => "one.two.three" }, "/pages/one.two.three")
+      assert_recognizes({ :controller => "pages", :action => "show", :id => "one.two.three" }, "/pages/one.two.three")
     end
   end
 
@@ -47,15 +47,15 @@ describe 'routes' do
     end
 
     it "should recognize nested route" do
-      assert_recognizes({:controller => "high_voltage/pages", :action => "show", :id => "one/two"}, "/other_pages/one/two")
+      assert_recognizes({:controller => "pages", :action => "show", :id => "one/two"}, "/other_pages/one/two")
     end
 
     it "should recognize normal route" do
-      assert_recognizes({:controller => "high_voltage/pages", :action => "show", :id => "one"}, "/other_pages/one")
+      assert_recognizes({:controller => "pages", :action => "show", :id => "one"}, "/other_pages/one")
     end
 
     it "should recognize normal route with dots" do
-      assert_recognizes({:controller => "high_voltage/pages", :action => "show", :id => "one.two.three"}, "/other_pages/one.two.three")
+      assert_recognizes({:controller => "pages", :action => "show", :id => "one.two.three"}, "/other_pages/one.two.three")
     end
   end
 
