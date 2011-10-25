@@ -87,6 +87,7 @@ Most common reasons to override?
 
   * You need authentication around the pages to make sure a user is signed in.
   * You need to render different layouts for different pages.
+  * You need to render a partial from the `app/views/pages` directory.
 
 Create a PagesController of your own:
 
