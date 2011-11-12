@@ -1,3 +1,5 @@
+require 'high_voltage/version'
+
 module HighVoltage
   mattr_accessor :layout
   @@layout = "application"
