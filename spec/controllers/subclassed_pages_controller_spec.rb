@@ -4,17 +4,26 @@ describe SubclassedPagesController do
 
   render_views
 
-  describe "on GET to /subclassed_pages/exists" do
-    before { get :show, :id => 'exists' }
+  describe "on GET to /subclassed_pages/also_exists" do
+    before { get :show, :id => 'also_exists' }
 
     it "should respond with success and render template" do
       response.should be_success
-      response.should render_template('exists')
+      response.should render_template('also_exists')
     end
 
     it "should use the custom configured layout" do
       response.should_not render_template("layouts/application")
       response.should render_template('layouts/alternate')
+    end
+  end
+
+  describe "on GET to /subclassed_pages/also_dir/nested" do
+    before { get :show, :id => 'also_dir/also_nested' }
+
+    it "should respond with success and render template" do
+      response.should be_success
+      response.should render_template('other_pages/also_dir/also_nested')
     end
   end
 
@@ -27,6 +36,6 @@ describe SubclassedPagesController do
   end
 
   it "should raise missing template error for valid page with invalid partial" do
-    lambda { get :show, :id => "exists_but_references_nonexistent_partial" }.should raise_error(ActionView::MissingTemplate)
+    lambda { get :show, :id => "also_exists_but_references_nonexistent_partial" }.should raise_error(ActionView::MissingTemplate)
   end
 end
