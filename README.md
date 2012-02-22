@@ -96,7 +96,7 @@ Create a PagesController of your own:
 Override the default route:
 
     # in config/routes.rb
-    resources :pages
+    match "/pages/*id" => 'pages#show', :as => :page, :format => false
 
 Then modify it to subclass from High Voltage, adding whatever you need:
 
@@ -114,10 +114,6 @@ Then modify it to subclass from High Voltage, adding whatever you need:
           end
         end
     end
-
-Remember that if you create your own PagesController, you'll need to review your custom routes so they point to it, that is, <code>pages#show</code> instead of <code>high_voltage/pages#show</code>, like this:
-
-    match '/:id' => 'pages#show', :as => :static, :via => :get
 
 Testing
 -------
