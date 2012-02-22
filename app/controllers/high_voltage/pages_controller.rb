@@ -1,7 +1,7 @@
 class HighVoltage::PagesController < ApplicationController
 
   unloadable
-  layout HighVoltage::layout
+  layout Proc.new { HighVoltage::layout }
 
   rescue_from ActionView::MissingTemplate do |exception|
     if exception.message =~ %r{Missing template #{HighVoltage::content_path}}
@@ -12,7 +12,7 @@ class HighVoltage::PagesController < ApplicationController
   end
 
   def show
-    render :template => current_page, :layout => HighVoltage::layout
+    render :template => current_page
   end
 
   protected
