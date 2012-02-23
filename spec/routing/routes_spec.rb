@@ -30,7 +30,13 @@ describe 'routes' do
   context "using a custom content_path" do
 
     before(:all) do
+      @original_content_path = HighVoltage::content_path
       HighVoltage::content_path = "other_pages/"
+      Rails.application.reload_routes!
+    end
+
+    after(:all) do
+      HighVoltage::content_path = @original_content_path
       Rails.application.reload_routes!
     end
 
