@@ -1,5 +1,5 @@
 PATH
-  remote: /Users/gabe/thoughtbot/high_voltage
+  remote: /Users/jferris/Source/high_voltage
   specs:
     high_voltage (1.0.1)
 
