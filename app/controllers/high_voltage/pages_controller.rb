@@ -1,4 +1,4 @@
-class HighVoltage::PagesController < ApplicationController
+class HighVoltage::PagesController < ActionController::Base
 
   unloadable
   layout Proc.new { |_| HighVoltage::layout }
