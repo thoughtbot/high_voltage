@@ -14,7 +14,7 @@ describe HighVoltage::PagesController do
         response.should render_template('exists')
       end
 
-      it "should use the default layout used by ApplicationController" do
+      it "should use the default layout used by ActionController::Base" do
         response.should render_template("layouts/application")
       end
     end
