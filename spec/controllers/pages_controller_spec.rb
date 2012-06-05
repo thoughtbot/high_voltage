@@ -43,12 +43,12 @@ describe HighVoltage::PagesController do
 
   context "using custom layout" do
     before(:all) do
-      @original_layout = HighVoltage::layout
-      HighVoltage::layout = "alternate"
+      @original_layout = HighVoltage.layout
+      HighVoltage.layout = "alternate"
     end
 
     after(:all) do
-      HighVoltage::layout = @original_layout
+      HighVoltage.layout = @original_layout
     end
 
     describe "on GET to /pages/exists" do
@@ -63,12 +63,12 @@ describe HighVoltage::PagesController do
 
   context "using custom content path" do
     before(:all) do
-      @original_content_path = HighVoltage::content_path
-      HighVoltage::content_path = "other_pages/"
+      @original_content_path = HighVoltage.content_path
+      HighVoltage.content_path = "other_pages/"
     end
 
     after(:all) do
-      HighVoltage::content_path = @original_content_path
+      HighVoltage.content_path = @original_content_path
     end
 
     describe "on GET to /other_pages/also_exists" do

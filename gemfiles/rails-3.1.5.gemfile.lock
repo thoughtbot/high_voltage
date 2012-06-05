@@ -1,5 +1,5 @@
 PATH
-  remote: /Users/mjankowski/Development/opensource/high_voltage
+  remote: /Users/gabe/thoughtbot/open-source/high_voltage
   specs:
     high_voltage (1.1.1)
 
