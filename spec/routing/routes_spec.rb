@@ -65,4 +65,14 @@ describe 'routes' do
     end
   end
 
+  context "with default configuration disabled" do
+    before do
+      HighVoltage.routes = false
+      Rails.application.reload_routes!
+    end
+
+    it "should not recognize routes" do
+      { :get => "/pages/one/two" }.should_not be_routable
+    end
+  end
 end

@@ -71,6 +71,12 @@ You can route the root url to a high voltage page like this:
 
 Which will render a homepage from app/views/pages/home.html.erb
 
+The default routes can be completely removed by changing the
+`HighVoltage.routes` Boolean. For example, in
+`config/initializers/high_voltage.rb`:
+
+    HighVoltage.routes = false
+
 Customize
 --------
 
