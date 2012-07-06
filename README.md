@@ -80,6 +80,17 @@ You can change this in an initializer:
 
     HighVoltage.content_path = "site/"
 
+You can also tell High Voltage to fall back to index pages. For example if you
+visit '/pages/my_category' and High Voltage fails to locate the
+`my_category.html` view, the controller will also check:
+`/app/views/pages/my_category/index.html.erb`
+
+You can enable this in an initializer:
+
+```ruby
+HighVoltage.fallback_to_index_pages = true
+```
+
 Override
 --------
 
