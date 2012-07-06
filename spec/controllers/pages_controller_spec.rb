@@ -29,7 +29,13 @@ describe HighVoltage::PagesController do
     end
 
     describe "on GET to /pages/dir" do
-      before { get :show, :id => 'dir' }
+      before do
+        HighVoltage.setup do |config|
+          config.fallback_to_index_pages = true
+        end
+
+        get :show, :id => 'dir'
+      end
 
       it "should respond with success and render index template" do
         response.should be_success

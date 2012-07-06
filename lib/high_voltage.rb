@@ -7,6 +7,9 @@ module HighVoltage
   mattr_accessor :content_path
   @@content_path = "pages/"
 
+  mattr_accessor :fallback_to_index_pages
+  @@fallback_to_index_pages = false
+
   def self.setup
     yield self
   end
