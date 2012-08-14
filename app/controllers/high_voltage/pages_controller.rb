@@ -5,7 +5,7 @@ class HighVoltage::PagesController < ApplicationController
 
   rescue_from ActionView::MissingTemplate do |exception|
     if exception.message =~ %r{Missing template #{content_path}}
-      raise ActionController::RoutingError, "No such page: #{params[:id]}"
+      raise ActionController::RoutingError, "No such page: #{protected_id}"
     else
       raise exception
     end
@@ -17,12 +17,16 @@ class HighVoltage::PagesController < ApplicationController
 
   protected
 
+    def protected_id
+      params[:id].gsub(/[^0-9A-Za-z\/]/, '')
+    end
+
     def current_page
       "#{content_path}#{clean_path}"
     end
 
     def clean_path
-      path = Pathname.new "/#{params[:id]}"
+      path = Pathname.new "/#{protected_id}"
       path.cleanpath.to_s[1..-1]
     end
 
