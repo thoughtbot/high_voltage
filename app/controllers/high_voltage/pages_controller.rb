@@ -18,7 +18,7 @@ class HighVoltage::PagesController < ApplicationController
   protected
 
     def protected_id
-      params[:id].gsub(/[^0-9A-Za-z\/]/, '')
+      params[:id].gsub(/[^0-9A-Za-z\/\-]/, '')
     end
 
     def current_page
