@@ -1,4 +1,5 @@
 class HighVoltage::PagesController < ApplicationController
+  VALID_CHARACTERS = "a-zA-Z0-9~!@$%^&*()#`_+-=<>\"{}|[];',?".freeze
 
   unloadable
   layout Proc.new { |_| HighVoltage.layout }
@@ -22,7 +23,7 @@ class HighVoltage::PagesController < ApplicationController
     end
 
     def clean_path
-      path = Pathname.new "/#{params[:id]}"
+      path = Pathname.new("/#{clean_id}")
       path.cleanpath.to_s[1..-1]
     end
 
@@ -30,4 +31,7 @@ class HighVoltage::PagesController < ApplicationController
       HighVoltage.content_path
     end
 
+    def clean_id
+      params[:id].tr("^#{VALID_CHARACTERS}", '')
+    end
 end

@@ -1,3 +1,5 @@
+# encoding: UTF-8
+
 require 'spec_helper'
 
 describe HighVoltage::PagesController do
@@ -95,6 +97,10 @@ describe HighVoltage::PagesController do
 
     it "should raise a routing error for a page in another directory" do
       lambda { get :show, :id => "../other/wrong" }.should raise_error(ActionController::RoutingError)
+    end
+
+    it "should raise a routing error for a page in another directory when using a Unicode exploit" do
+      lambda { get :show, :id => "/\\../other/wrong" }.should raise_error(ActionController::RoutingError)
     end
 
     it "should raise missing template error for valid page with invalid partial" do
