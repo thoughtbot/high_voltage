@@ -30,6 +30,21 @@ describe HighVoltage::PagesController do
       end
     end
 
+    describe "on GET to /pages/dir" do
+      before do
+        HighVoltage.setup do |config|
+          config.fallback_to_index_pages = true
+        end
+
+        get :show, :id => 'dir'
+      end
+
+      it "should respond with success and render index template" do
+        response.should be_success
+        response.should render_template('pages/dir/index')
+      end
+    end
+
     it "should raise a routing error for an invalid page" do
       lambda { get :show, :id => "invalid" }.should raise_error(ActionController::RoutingError)
     end
