@@ -1,4 +1,6 @@
 module HighVoltage
+  # A command for finding pages by id. This encapsulates the concepts of
+  # mapping page names to file names.
   class PageFinder
     VALID_CHARACTERS = "a-zA-Z0-9~!@$%^&*()#`_+-=<>\"{}|[];',?".freeze
 
@@ -6,6 +8,8 @@ module HighVoltage
       @page_id = page_id
     end
 
+    # Produce a template path to the page, in a format understood by
+    # `render :template => find`
     def find
       "#{content_path}#{clean_path}"
     end
@@ -16,6 +20,7 @@ module HighVoltage
 
     protected
 
+    # The raw page id passed in by the user
     attr_reader :page_id
 
     private
