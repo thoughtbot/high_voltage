@@ -1,11 +1,11 @@
-class HighVoltage::PagesController < ApplicationController
-  VALID_CHARACTERS = "a-zA-Z0-9~!@$%^&*()#`_+-=<>\"{}|[];',?".freeze
+require 'high_voltage/page_finder'
 
+class HighVoltage::PagesController < ApplicationController
   unloadable
   layout Proc.new { |_| HighVoltage.layout }
 
   rescue_from ActionView::MissingTemplate do |exception|
-    if exception.message =~ %r{Missing template #{content_path}}
+    if exception.message =~ %r{Missing template #{page_finder.content_path}}
       raise ActionController::RoutingError, "No such page: #{params[:id]}"
     else
       raise exception
@@ -16,22 +16,17 @@ class HighVoltage::PagesController < ApplicationController
     render :template => current_page
   end
 
-  protected
+  private
 
-    def current_page
-      "#{content_path}#{clean_path}"
-    end
+  def current_page
+    page_finder.find
+  end
 
-    def clean_path
-      path = Pathname.new("/#{clean_id}")
-      path.cleanpath.to_s[1..-1]
-    end
+  def page_finder
+    page_finder_factory.new(params[:id])
+  end
 
-    def content_path
-      HighVoltage.content_path
-    end
-
-    def clean_id
-      params[:id].tr("^#{VALID_CHARACTERS}", '')
-    end
+  def page_finder_factory
+    HighVoltage::PageFinder
+  end
 end
