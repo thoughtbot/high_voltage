@@ -18,15 +18,6 @@ describe SubclassedPagesController do
     end
   end
 
-  describe "on GET to /subclassed_pages/also_dir/nested" do
-    before { get :show, :id => 'also_dir/also_nested' }
-
-    it "should respond with success and render template" do
-      response.should be_success
-      response.should render_template('other_pages/also_dir/also_nested')
-    end
-  end
-
   it "should raise a routing error for an invalid page" do
     lambda { get :show, :id => "invalid" }.should raise_error(ActionController::RoutingError)
   end
