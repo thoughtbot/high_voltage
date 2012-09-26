@@ -121,6 +121,36 @@ Then modify it to subclass from High Voltage, adding whatever you need:
         end
     end
 
+Custom finding
+--------------
+
+You can further control the algorithm used to find pages by overriding
+the `page_finder_factory` method:
+
+    class PagesController < HighVoltage::PagesController
+      private
+
+      def page_finder_factory
+        Rot13PageFinder
+      end
+    end
+
+The easiest thing is to subclass `HighVoltage::PageFinder`, which
+provides you with `page_id`:
+
+    class Rot13PageFinder < HighVoltage::PageFinder
+      def find
+        paths = super.split('/')
+        directory = paths[0..-2]
+        filename = paths[-1].tr('a-z','n-za-m')
+
+        File.join(*directory, filename)
+      end
+    end
+
+Use this to create a custom file mapping, clean filenames for your file
+system, A/B test, and so on.
+
 Testing
 -------
 
