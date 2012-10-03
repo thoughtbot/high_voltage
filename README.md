@@ -1,4 +1,4 @@
-# High Voltage [![Build Status](http://travis-ci.org/thoughtbot/high_voltage.png)](http://travis-ci.org/thoughtbot/high_voltage)
+# High Voltage [![Build Status](https://travis-ci.org/thoughtbot/high_voltage.png)](http://travis-ci.org/thoughtbot/high_voltage)
 
 Rails engine for static pages.
 
