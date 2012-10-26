@@ -1,16 +1,13 @@
 require 'spec_helper'
+
 describe 'routes' do
   context "using default configuration" do
 
-    it "should generate normal resource route with id" do
-      page_path(:id => "one").should == "/pages/one"
-    end
-
-    it "should generate normal resource route with string" do
+    it "should generate normal resource route" do
       page_path("one").should == "/pages/one"
     end
 
-    it "should generate nested route with string" do
+    it "should generate nested route" do
       page_path("one/two").should == "/pages/one/two"
     end
 
@@ -40,15 +37,11 @@ describe 'routes' do
       Rails.application.reload_routes!
     end
 
-    it "should generate normal resource route with id" do
-      page_path(:id => "one").should == "/other_pages/one"
-    end
-
-    it "should generate normal resource route with string" do
+    it "should generate normal resource route" do
       page_path("one").should == "/other_pages/one"
     end
 
-    it "should generate nested route with string" do
+    it "should generate nested route" do
       page_path("one/two").should == "/other_pages/one/two"
     end
 
