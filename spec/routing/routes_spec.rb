@@ -15,27 +15,48 @@ describe 'routes' do
     end
 
     it 'should recognize nested route' do
-      assert_recognizes({:controller => 'high_voltage/pages', :action => 'show', :id => 'one/two'}, '/pages/one/two')
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'one/two'
+        },
+        '/pages/one/two'
+      )
     end
 
     it 'should recognize normal route' do
-      assert_recognizes({:controller => 'high_voltage/pages', :action => 'show', :id => 'one'}, '/pages/one')
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'one'
+        },
+        '/pages/one'
+      )
     end
 
     it 'should recognize normal route with dots' do
-      assert_recognizes({:controller => 'high_voltage/pages', :action => 'show', :id => 'one.two.three'}, '/pages/one.two.three')
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'one.two.three'
+        },
+        '/pages/one.two.three'
+      )
     end
   end
 
   context 'using root routing configuration' do
-    before(:all) do
-      @original_route_drawer = HighVoltage.route_drawer
+    around do |example|
+      cached_high_voltage_route_drawer = HighVoltage.route_drawer
       HighVoltage.route_drawer = HighVoltage::RouteDrawers::Root
       Rails.application.reload_routes!
-    end
 
-    after(:all) do
-      HighVoltage.route_drawer = @original_route_drawer
+      example.run
+
+      HighVoltage.route_drawer = cached_high_voltage_route_drawer
       Rails.application.reload_routes!
     end
 
@@ -53,14 +74,14 @@ describe 'routes' do
   end
 
   context 'using a custom content_path' do
-    before(:all) do
-      @original_content_path = HighVoltage.content_path
+    around do |example|
+      cached_high_voltage_content_path = HighVoltage.content_path
       HighVoltage.content_path = 'other_pages/'
       Rails.application.reload_routes!
-    end
 
-    after(:all) do
-      HighVoltage.content_path = @original_content_path
+      example.run
+
+      HighVoltage.content_path = cached_high_voltage_content_path
       Rails.application.reload_routes!
     end
 
@@ -77,15 +98,36 @@ describe 'routes' do
     end
 
     it 'should recognize nested route' do
-      assert_recognizes({:controller => 'high_voltage/pages', :action => 'show', :id => 'one/two'}, '/other_pages/one/two')
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'one/two'
+        },
+        '/other_pages/one/two'
+      )
     end
 
     it 'should recognize normal route' do
-      assert_recognizes({:controller => 'high_voltage/pages', :action => 'show', :id => 'one'}, '/other_pages/one')
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'one'
+        },
+        '/other_pages/one'
+      )
     end
 
     it 'should recognize normal route with dots' do
-      assert_recognizes({:controller => 'high_voltage/pages', :action => 'show', :id => 'one.two.three'}, '/other_pages/one.two.three')
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'one.two.three'
+        },
+        '/other_pages/one.two.three'
+      )
     end
   end
 
@@ -94,7 +136,9 @@ describe 'routes' do
       cached_high_voltage_routes = HighVoltage.routes
       HighVoltage.routes = false
       Rails.application.reload_routes!
+
       example.run
+
       HighVoltage.routes = cached_high_voltage_routes
       Rails.application.reload_routes!
     end
