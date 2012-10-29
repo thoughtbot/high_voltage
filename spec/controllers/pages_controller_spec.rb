@@ -28,15 +28,24 @@ describe HighVoltage::PagesController do
     end
 
     it 'should raise a routing error for an invalid page' do
-      lambda { get :show, :id => 'invalid' }.should raise_error(ActionController::RoutingError)
+      lambda {
+        get :show,
+        :id => 'invalid'
+      }.should raise_error(ActionController::RoutingError)
     end
 
     it 'should raise a routing error for a page in another directory' do
-      lambda { get :show, :id => '../other/wrong' }.should raise_error(ActionController::RoutingError)
+      lambda {
+        get :show,
+        :id => '../other/wrong'
+      }.should raise_error(ActionController::RoutingError)
     end
 
     it 'should raise missing template error for valid page with invalid partial' do
-      lambda { get :show, :id => 'exists_but_references_nonexistent_partial' }.should raise_error(ActionView::MissingTemplate)
+      lambda {
+        get :show,
+        :id => 'exists_but_references_nonexistent_partial'
+      }.should raise_error(ActionView::MissingTemplate)
     end
   end
 

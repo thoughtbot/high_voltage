@@ -181,22 +181,25 @@ system, A/B test, and so on.
 Testing
 -------
 
-Just a suggestion, but you can test your pages using Shoulda pretty easily:
+You can test your static pages using [RSpec](https://github.com/rspec/rspec-rails) 
+and [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers):
 
-    class PagesControllerTest < ActionController::TestCase
-      tests PagesController
-
+    # spec/controllers/pages_controller_spec.rb
+    describe PagesController, '#show' do
       %w(earn_money screencast about contact).each do |page|
-        context "on GET to /pages/#{page}" do
-          setup { get :show, :id => page }
+        context 'on GET to /pages/#{page}' do
+          before do
+            get :show, :id => page
+          end
 
-          should_respond_with :success
-          should_render_template page
+          it { should respond_with(:success) }
+          it { should render_template(page) }
         end
       end
     end
 
-If you're not using a custom PagesController be sure to test <code>HighVoltage::PagesController</code> instead.
+If you're not using a custom PagesController be sure to test
+`HighVoltage::PagesController` instead.
 
 Enjoy!
 
@@ -219,4 +222,5 @@ The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 License
 -------
 
-High Voltage is Copyright © 2009-2012 thoughtbot. It is free software, and may be redistributed under the terms specified in the MIT-LICENSE file.
+High Voltage is Copyright © 2009-2012 thoughtbot. It is free software, and may
+be redistributed under the terms specified in the MIT-LICENSE file.

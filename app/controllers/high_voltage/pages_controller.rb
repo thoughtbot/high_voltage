@@ -1,5 +1,3 @@
-require 'high_voltage/page_finder'
-
 class HighVoltage::PagesController < ApplicationController
   unloadable
   layout Proc.new { |_| HighVoltage.layout }

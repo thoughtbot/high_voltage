@@ -1,24 +1,23 @@
 require 'spec_helper'
-require 'high_voltage/page_finder'
 
 describe HighVoltage::PageFinder do
   it 'produces the name of an existing template' do
-    find('existing').should == 'pages/existing'
+    find('existing').should eq 'pages/existing'
   end
 
   it 'produces the name of a nested template' do
-    find('dir/nested').should == 'pages/dir/nested'
+    find('dir/nested').should eq 'pages/dir/nested'
   end
 
   it 'uses a custom content path' do
     with_content_path('other_pages/') do
-      find('also_exists').should == 'other_pages/also_exists'
+      find('also_exists').should eq 'other_pages/also_exists'
     end
   end
 
   it 'exposes the content path' do
     with_content_path('another_thing/') do
-      page_finder.content_path.should == 'another_thing/'
+      page_finder.content_path.should eq 'another_thing/'
     end
   end
 
@@ -29,7 +28,7 @@ describe HighVoltage::PageFinder do
       end
     end
 
-    subclass.new('sweet page').page_name.should == 'the page is sweet page'
+    subclass.new('sweet page').page_name.should eq 'the page is sweet page'
   end
 
   private
