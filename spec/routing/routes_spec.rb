@@ -72,6 +72,7 @@ describe 'routes' do
       Rails.application.reload_routes!
       example.run
       HighVoltage.routes = cached_high_voltage_routes
+      Rails.application.reload_routes!
     end
 
     it "should not recognize routes" do
