@@ -66,15 +66,12 @@ describe 'routes' do
   end
 
   context "with default configuration disabled" do
-    before do
-      @original_routes_boolean = HighVoltage.routes
+    around do |example|
+      cached_high_voltage_routes = HighVoltage.routes
       HighVoltage.routes = false
       Rails.application.reload_routes!
-    end
-
-    after do
-      HighVoltage.routes = @original_routes_boolean
-      Rails.application.reload_routes!
+      example.run
+      HighVoltage.routes = cached_high_voltage_routes
     end
 
     it "should not recognize routes" do
