@@ -99,9 +99,9 @@ Note: This is not a catchall route. It will check the `HighVoltage.content_path`
 #### Disabling routes
 
 The default routes can be completely removed by changing the
-`HighVoltage.routes` Boolean. For example, in
-`config/initializers/high_voltage.rb`:
+`HighVoltage.routes` to `false`
 
+    # config/initializers/high_voltage.rb
     HighVoltage.routes = false
 
 Customize
