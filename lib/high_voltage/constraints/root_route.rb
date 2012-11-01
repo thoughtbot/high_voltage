@@ -2,7 +2,7 @@ module HighVoltage
   module Constraints
     # Routing constraint to validate request.path has a corresponding view
     class RootRoute
-      VIEW_EXTENSIONS = 'html.erb,html.haml,html'
+      VIEW_EXTENSIONS = 'html.erb,html.haml,html.slim,html'
 
       def self.matches?(request)
         pattern = file_pattern(request.path)
