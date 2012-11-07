@@ -1,21 +1,22 @@
 require 'spec_helper'
 
 describe HighVoltage::Constraints::RootRoute, '.matches?' do
-  context 'view file exists' do
-    it 'should return true' do
-      request = stub(:path => 'index')
-      Dir.stub!(:glob).and_return(['about.html.erb'])
+  let(:request) { stub(:path => 'index') }
+  let(:matches) { HighVoltage::Constraints::RootRoute.matches?(request) }
 
-      HighVoltage::Constraints::RootRoute.matches?(request).should be_true
-    end
+  before do
+    Dir.stub!(:glob).and_return(found_filenames)
+  end
+
+  subject { matches }
+
+  context 'view file exists' do
+    let(:found_filenames) { ['about.html.erb'] }
+    it { should be_true }
   end
 
   context 'view file does not exist' do
-    it 'should return false' do
-      request = stub(:path => 'index')
-      File.stub!(:glob).and_return([])
-
-      HighVoltage::Constraints::RootRoute.matches?(request).should be_false
-    end
+    let(:found_filenames) { [] }
+    it { should be_false }
   end
 end
