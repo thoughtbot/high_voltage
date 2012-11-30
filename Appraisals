@@ -1,4 +1,4 @@
-['3.2.6', '3.1.6', '3.0.15'].each do |rails_version|
+['3.2.9', '3.1.8', '3.0.17'].each do |rails_version|
   appraise "rails-#{rails_version}" do
     gem "rails", rails_version
   end
