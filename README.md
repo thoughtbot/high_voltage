@@ -131,6 +131,9 @@ Override the default route:
     # in config/routes.rb
     match "/pages/*id" => 'pages#show', :as => :page, :format => false
 
+    # if routing the root path, update for your controller
+    root :to => 'pages#show', :id => 'home'
+
 Then modify it to subclass from High Voltage, adding whatever you need:
 
     class PagesController < HighVoltage::PagesController
