@@ -8,3 +8,6 @@ gemfile:
   - gemfiles/rails_3.1.11.gemfile
   - gemfiles/rails_3.2.12.gemfile
   - gemfiles/rails_4.0.0.beta1.gemfile
+matrix:
+  allow_failures:
+    - gemfile: gemfiles/rails_4.0.0.beta1.gemfile
