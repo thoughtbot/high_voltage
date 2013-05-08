@@ -9,8 +9,6 @@ Rails.backtrace_cleaner.remove_silencers!
 Capybara.default_driver   = :rack_test
 Capybara.default_selector = :css
 
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
-
 RSpec.configure do |config|
   require 'rspec/expectations'
   config.include RSpec::Matchers
