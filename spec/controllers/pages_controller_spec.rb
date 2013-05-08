@@ -98,21 +98,21 @@ describe HighVoltage::PagesController do
     end
 
     it 'should raise a routing error for an invalid page' do
-      lambda { 
-        get :show, 
-        :id => 'also_invalid' 
+      lambda {
+        get :show,
+        :id => 'also_invalid'
       }.should raise_error(ActionController::RoutingError)
     end
 
     it 'should raise a routing error for a page in another directory' do
       lambda {
         get :show,
-        :id => '../other/wrong' 
+        :id => '../other/wrong'
       }.should raise_error(ActionController::RoutingError)
     end
 
     it 'should raise a routing error for a page in another directory when using a Unicode exploit' do
-      lambda { 
+      lambda {
         get :show,
         :id => '/\\../other/wrong'
       }.should raise_error(ActionController::RoutingError)
