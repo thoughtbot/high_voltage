@@ -77,7 +77,7 @@ Which will render a homepage from app/views/pages/home.html.erb
 
 #### Enabling root domain routes
 
-You can remove the directory `pages` from the URL path and serve up routes from 
+You can remove the directory `pages` from the URL path and serve up routes from
 the root of the domain path:
 
     http://www.example.com/about
@@ -93,7 +93,7 @@ This is accomplished by changing the `HighVoltage.route_drawer` to `HighVoltage:
     # config/initializers/high_voltage.rb
     HighVoltage.route_drawer = HighVoltage::RouteDrawers::Root
 
-Note: This is not a catchall route. It will check the `HighVoltage.content_path` 
+Note: This is not a catchall route. It will check the `HighVoltage.content_path`
 (by default this is `app/views/pages`) and validate the view exists.
 
 #### Disabling routes
@@ -184,7 +184,7 @@ system, A/B test, and so on.
 Testing
 -------
 
-You can test your static pages using [RSpec](https://github.com/rspec/rspec-rails) 
+You can test your static pages using [RSpec](https://github.com/rspec/rspec-rails)
 and [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers):
 
     # spec/controllers/pages_controller_spec.rb
