@@ -3,6 +3,7 @@ require 'high_voltage/constraints/root_route'
 require 'high_voltage/page_finder'
 require 'high_voltage/route_drawers/default'
 require 'high_voltage/route_drawers/root'
+require 'active_support/core_ext/module/attribute_accessors'
 
 module HighVoltage
   mattr_accessor :layout
