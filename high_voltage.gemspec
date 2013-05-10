@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency("appraisal")
   s.add_development_dependency("rspec-rails")
-  # Ruby version < 1.9.3 can't install capybara > 2.0.3.
   s.add_development_dependency("capybara", "= 2.0.3")
   s.add_development_dependency("sqlite3")
 end
