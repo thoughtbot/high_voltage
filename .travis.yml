@@ -5,9 +5,9 @@ rvm:
   - 1.9.3
 gemfile:
   - gemfiles/rails_3.0.20.gemfile
-  - gemfiles/rails_3.1.11.gemfile
-  - gemfiles/rails_3.2.12.gemfile
-  - gemfiles/rails_4.0.0.beta1.gemfile
+  - gemfiles/rails_3.1.12.gemfile
+  - gemfiles/rails_3.2.13.gemfile
+  - gemfiles/rails_4.0.0.rc1.gemfile
 matrix:
   allow_failures:
-    - gemfile: gemfiles/rails_4.0.0.beta1.gemfile
+    - gemfile: gemfiles/rails_4.0.0.rc1.gemfile
