@@ -67,6 +67,13 @@ get a named route called `static_path` which does not conflict with the generate
 
     get '/:id' => 'high_voltage/pages#show', :as => :static, :via => :get
 
+
+#### Specifying a different layout for a single page
+
+You can define a specific layout for a voltage page like this:
+
+    get 'pages/mobile' => 'high_voltage/pages#show', :id => 'mobile', :layout => 'mobile'
+
 #### Specifying a root path
 
 You can route the root url to a high voltage page like this:
