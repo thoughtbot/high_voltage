@@ -18,6 +18,12 @@ module HighVoltage
   mattr_accessor :routes
   @@routes = true
 
+  mattr_accessor :action_caching
+  @@action_caching = false
+
+  mattr_accessor :page_caching
+  @@page_caching = false
+  
   def self.setup
     yield self
   end
