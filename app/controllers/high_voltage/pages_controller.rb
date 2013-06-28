@@ -1,6 +1,14 @@
 class HighVoltage::PagesController < ApplicationController
   layout Proc.new { |_| HighVoltage.layout }
 
+  caches_action :show, if: Proc.new {
+    HighVoltage.action_caching
+  }
+
+  caches_page :show, if: Proc.new {
+    HighVoltage.page_caching
+  }
+
   rescue_from ActionView::MissingTemplate do |exception|
     if exception.message =~ %r{Missing template #{page_finder.content_path}}
       raise ActionController::RoutingError, "No such page: #{params[:id]}"

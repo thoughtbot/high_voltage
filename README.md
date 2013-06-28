@@ -113,6 +113,20 @@ You can change this in an initializer:
 
     HighVoltage.content_path = "site/"
 
+#### Caching
+
+High Voltage supports both [page](http://guides.rubyonrails.org/caching_with_rails.html#page-caching) and [action caching](http://guides.rubyonrails.org/caching_with_rails.html#action-caching).
+
+
+To enable them you can add the following to your initializer.
+
+    HighVoltage.action_caching = true
+    # OR
+    HighVoltage.page_caching = true
+
+HighVoltage will use your default cache store to store action caches.
+
+
 Override
 --------
 
