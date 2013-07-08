@@ -1,13 +1,17 @@
 class HighVoltage::PagesController < ApplicationController
   layout Proc.new { |_| HighVoltage.layout }
 
-  caches_action :show, if: Proc.new {
-    HighVoltage.action_caching
-  }
+  if respond_to?('caches_action')
+    caches_action :show, if: Proc.new {
+      HighVoltage.action_caching
+    }
+  end
 
-  caches_page :show, if: Proc.new {
-    HighVoltage.page_caching
-  }
+  if respond_to?('caches_page')
+    caches_page :show, if: Proc.new {
+      HighVoltage.page_caching
+    }
+  end
 
   rescue_from ActionView::MissingTemplate do |exception|
     if exception.message =~ %r{Missing template #{page_finder.content_path}}
