@@ -126,6 +126,12 @@ To enable them you can add the following to your initializer.
 
 HighVoltage will use your default cache store to store action caches.
 
+Using caching with Ruby on Rails 4 or higher requires gems:
+```ruby
+gem "actionpack-action_caching"
+gem "actionpack-page_caching"
+```
+
 
 Override
 --------
