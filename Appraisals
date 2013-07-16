@@ -1,9 +1,16 @@
-['4.0.0', '3.2.13', '3.1.12', '3.0.20'].each do |rails_version|
+if RUBY_VERSION >= '1.9.3'
+  rails_versions = ['3.2.13', '4.0.0']
+else
+  rails_versions = ['3.1.12']
+end
+
+rails_versions.each do |rails_version|
   appraise "rails_#{rails_version}" do
-    gem "rails", rails_version
+    gem 'rails', rails_version
+
     if rails_version == '4.0.0'
-      gem "actionpack-action_caching"
-      gem "actionpack-page_caching"
+      gem 'actionpack-action_caching'
+      gem 'actionpack-page_caching'
     end
   end
 end

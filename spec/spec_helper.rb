@@ -6,7 +6,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 
 Rails.backtrace_cleaner.remove_silencers!
-Capybara.default_driver   = :rack_test
+Capybara.default_driver = :rack_test
 Capybara.default_selector = :css
 
 Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each {|f| require f}
