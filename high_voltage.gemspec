@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = ['support@thoughtbot.com']
   s.homepage    = 'http://github.com/thoughtbot/high_voltage'
   s.summary     = 'Simple static page rendering controller'
-  s.description = 'Fire in the disco.  Fire in the ... taco bell.'
+  s.description = 'Fire in the disco. Fire in the ... taco bell.'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -16,7 +16,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency("appraisal")
-  s.add_development_dependency("rspec-rails")
   s.add_development_dependency("capybara", "= 2.0.3")
+  s.add_development_dependency("pry-debugger")
+  s.add_development_dependency("rspec-rails")
   s.add_development_dependency("sqlite3")
 end

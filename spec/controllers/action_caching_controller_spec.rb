@@ -20,7 +20,7 @@ describe HighVoltage::PagesController, 'action_caching' do
   end
 
   def action_was_cached(page)
-      ActionController::Base.cache_store.exist?("views/test.host#{page_path(page)}")
+    ActionController::Base.cache_store.exist?("views/test.host#{page_path(page)}")
   end
 end
 
