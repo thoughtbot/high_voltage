@@ -1,18 +1,19 @@
+# encoding: utf-8
+
+require 'rubygems'
 require 'bundler/setup'
 require 'bundler/gem_tasks'
+
+require 'rake'
+require 'rspec/core/rake_task'
 require 'appraisal'
 
-require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
-task :default do |t|
-  if ENV['BUNDLE_GEMFILE'] =~ /gemfiles/
-    exec 'rake spec'
-  else
-    Rake::Task['appraise'].execute
-  end
-end
+desc 'Default'
+task :default => [:all]
 
-task :appraise => ['appraisal:install'] do |t|
-  exec 'rake appraisal'
+desc 'Test the engine under all supported Rails versions'
+task all: ['appraisal:install'] do |t|
+  exec 'rake appraisal spec'
 end

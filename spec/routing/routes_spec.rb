@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'routes' do
   context 'using default configuration' do
     it 'should generate normal resource route with id' do
-      page_path(:id => 'one').should eq '/pages/one'
+      page_path('one').should eq '/pages/one'
     end
 
     it 'should generate normal resource route with string' do
@@ -48,7 +48,7 @@ describe 'routes' do
     end
   end
 
-  context 'using root routing configuration' do
+  context 'using top-level routing configuration' do
     around do |example|
       cached_high_voltage_route_drawer = HighVoltage.route_drawer
       HighVoltage.route_drawer = HighVoltage::RouteDrawers::Root
@@ -58,10 +58,6 @@ describe 'routes' do
 
       HighVoltage.route_drawer = cached_high_voltage_route_drawer
       Rails.application.reload_routes!
-    end
-
-    it 'should generate normal resource route with id' do
-      page_path(:id => 'one').should eq '/one'
     end
 
     it 'should generate normal resource route with string' do
@@ -83,10 +79,6 @@ describe 'routes' do
 
       HighVoltage.content_path = cached_high_voltage_content_path
       Rails.application.reload_routes!
-    end
-
-    it 'should generate normal resource route with id' do
-      page_path(:id => 'one').should eq '/other_pages/one'
     end
 
     it 'should generate normal resource route with string' do
