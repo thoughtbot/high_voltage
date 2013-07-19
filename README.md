@@ -72,6 +72,23 @@ root :to => 'high_voltage/pages#show', id: 'home'
 
 Which will render a homepage from app/views/pages/home.html.erb
 
+#### Page title's and meta-data
+
+We suggest using `content_for` and `yield` for setting custom page titles and
+meta-data on High Voltage pages.
+
+```ruby
+# app/views/pages/about.html.erb
+<%= content_for :page_title, 'About Us - Custom page title' %>
+```
+
+Then print the contents of `:title` into the layout:
+
+```ruby
+# app/views/layouts/application.html.erb
+<title><%= yield(:page_title) %></title>
+```
+
 #### Top-level routes
 
 You can remove the directory `pages` from the URL path and serve up routes from
