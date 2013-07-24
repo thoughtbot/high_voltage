@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/thoughtbot/high_voltage'
   s.summary     = 'Simple static page rendering controller'
   s.description = 'Fire in the disco. Fire in the ... taco bell.'
+  s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
