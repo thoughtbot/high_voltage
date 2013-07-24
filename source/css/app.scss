@@ -3,3 +3,15 @@
 @import "neat/neat-helpers";
 @import "neat/neat";
 
+$blue: #228ACC;
+$faded-red: #F27783;
+$warm-white: #FFF9E7;
+
+h1, h2, h3{
+  font-family: "league-gothic",helvetica,arial,sans-serif;
+}
+
+p{
+	font-size: 14px;
+	line-height: 22px;
+}
