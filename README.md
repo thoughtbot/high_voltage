@@ -176,23 +176,26 @@ get "/pages/*id" => 'pages#show', :as => :page, :format => false
 root :to => 'pages#show', :id => 'home'
 ```
 
-Then modify it to subclass from High Voltage, adding whatever you need:
+Then modify it to include the High Voltage static page concern:
 
 ```ruby
 # app/controllers/pages_controller.rb
-class PagesController < HighVoltage::PagesController
+class PagesController < ApplicationController
+  include HighVoltage::Pageable
+
   before_filter :authenticate
   layout :layout_for_page
 
-  protected
-    def layout_for_page
-      case params[:id]
-      when 'home'
-        'home'
-      else
-        'application'
-      end
-   end
+protected
+
+  def layout_for_page
+    case params[:id]
+    when 'home'
+      'home'
+    else
+      'application'
+    end
+  end
 end
 ```
 
@@ -203,8 +206,10 @@ the `page_finder_factory` method:
 
 ```ruby
 # app/controllers/pages_controller.rb
-class PagesController < HighVoltage::PagesController
-  private
+class PagesController < ApplicationController
+  include HighVoltage::Pageable
+
+private
 
   def page_finder_factory
     Rot13PageFinder
