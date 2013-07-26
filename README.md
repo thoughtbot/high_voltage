@@ -186,7 +186,7 @@ class PagesController < ApplicationController
   before_filter :authenticate
   layout :layout_for_page
 
-protected
+  protected
 
   def layout_for_page
     case params[:id]
@@ -209,7 +209,7 @@ the `page_finder_factory` method:
 class PagesController < ApplicationController
   include HighVoltage::Pageable
 
-private
+  private
 
   def page_finder_factory
     Rot13PageFinder
