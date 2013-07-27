@@ -6,7 +6,7 @@ describe HighVoltage::PagesController, 'action_caching' do
       HighVoltage.action_caching = true
       concern_reload
       get :show, id: :exists
-   end.to change { action_was_cached(:exists) }
+    end.to change { action_was_cached(:exists) }
   end
 
   it 'does not cache the action when action_caching is set to false', enable_caching: true do
