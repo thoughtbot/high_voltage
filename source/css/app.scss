@@ -23,17 +23,17 @@ h2{
 }
 
 h3{
-	font-size: 36px;
-	text-transform: uppercase;
-	color: #444;
+	color: $blue;
+	font-size: 48px;
 	line-height: 1.5em;
+	text-transform: uppercase;
 }
 
 p{
 	color: #222;
+	font-family: "droid-sans", helvetica, arial, sans-serif;
 	font-size: 14px;
 	line-height: 22px;
-	font-family: "droid-sans", helvetica, arial, sans-serif;
 }
 
 body{
@@ -50,44 +50,46 @@ hgroup{
 }
 
 .blue-b{
-	height: 60px;
 	@include span-columns(2);
-	border-radius: 5px;
+  @include transition(0.2s ease-in-out);
 	background-color: $light-blue;
+  border: solid 1px #487FE5;
+	border-radius: 5px;
+  border-top: none;
+  color: #fff;
   font-family: "league-gothic",helvetica,arial,sans-serif;
   font-size: 24px;
-  text-transform: uppercase;
   font-weight: bold;
-  text-align: center;
+	height: 60px;
   line-height: 60px;
+  text-align: center;
   text-decoration: none;
-  color: #fff;
-  border: solid 1px #487FE5;
-  border-top: none;
-  @include transition(0.2s ease-in-out);
+  text-transform: uppercase;
+  
   &:hover{
   	background-color: $blue;
   }
 }
 
 header#main-header{
-	height: 160px;
 	background-color: #FFFFFF;
+	height: 160px;
 
 	.row{
 		position: relative;
 	}
 
 	.logo{
-		width: 272px;
-		height: 94px;
-		position: absolute;
-		left: 0;
-		top: 33px;
 		@include inline-block;
-		text-indent: -9999px;
-		overflow: hidden;
 		background: url('/img/logo.png') no-repeat;
+		height: 94px;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		text-indent: -9999px;
+		top: 33px;
+		width: 272px;
+
 		@media 
     (-webkit-min-device-pixel-ratio: 2), 
     (min-resolution: 192dpi) {
@@ -116,8 +118,8 @@ section#banner{
   }
 
 	hgroup{
-		padding: 75px 0;
 		color: #fff;
+		padding: 75px 0;
 	}
 
 	h1{
@@ -133,36 +135,36 @@ section#installation{
 	position: relative;
 
 	#warning{
-		height: 80px;
-		width: 80px;
-		position: absolute;
-		display: block;
-		left: 50%;
-		margin-left: -40px;
-		top: -40px;
-		z-index: 1000;
-		border-radius: 40px;
-		background-color: #FFCC11;
-		font-family: "league-gothic",helvetica,arial,sans-serif;
-  	color: #fff;
-  	text-decoration: none;
-  	font-size: 24px;
-  	line-height: 22px;
-  	padding-top: 17px;
-  	text-align: center;
-  	font-weight: bold;
-   	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
-		display: block;
-		text-transform: uppercase;
 		@include transform(rotate(-15deg));
-		box-shadow: 0 1px 0 #E2B50F;
   	@include transition(0.2s ease-in-out);
 		@include box-sizing(border-box);
+		background-color: #FFCC11;
+		border-radius: 40px;
+		box-shadow: 0 1px 0 #E2B50F;
+  	color: #fff;
+		display: block;
+		display: block;
+		font-family: "league-gothic",helvetica,arial,sans-serif;
+  	font-size: 24px;
+  	font-weight: bold;
+		height: 80px;
+		left: 50%;
+  	line-height: 22px;
+		margin-left: -40px;
+  	padding-top: 17px;
+		position: absolute;
+  	text-align: center;
+  	text-decoration: none;
+		text-transform: uppercase;
+   	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+		top: -40px;
+		width: 80px;
+		z-index: 1000;
 
   	em{
+  		font-size: 18px;
   		font-style: normal;
   		text-transform: none;
-  		font-size: 18px;
   	}
 
 		&:hover{
@@ -193,22 +195,22 @@ section#installation{
 	}
 
 	pre{
-		font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
 		background-color: #fff;
 		border: solid 1px rgba(0,0,0,0.1);
 		border-radius: 5px;
-		padding: 10px;
+		font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
 		font-size: 13px;
 		margin-bottom: 44px;
+		padding: 10px;
 	}
 }
 
 section#ready{
+
+	background: url('/img/bg.png') repeat $light-blue;
 	background-color: $light-blue;
 	border-top: solid 1px rgba(0,0,0,0.2);
 	position: relative;
-
-	background: url('/img/bg.png') repeat $light-blue;
 
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
@@ -217,27 +219,27 @@ section#ready{
     background-size: 50%;
   }
 
-  
+
 	#bam{
-		height: 80px;
-		width: 80px;
-		position: absolute;
-		left: 50%;
-		margin-left: -40px;
-		top: -45px;
-		z-index: 1000;
-		border-radius: 40px;
-		background-color: #FFCC11;
-		font-family: "league-gothic",helvetica,arial,sans-serif;
-  	color: #fff;
-  	font-size: 36px;
-  	line-height: 80px;
-  	font-weight: bold;
-   	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
-		display: block;
-		text-transform: uppercase;
 		@include transform(rotate(-15deg));
+		background-color: #FFCC11;
+		border-radius: 40px;
 		box-shadow: 0 1px 0 #487FE5;
+  	color: #fff;
+		display: block;
+		font-family: "league-gothic",helvetica,arial,sans-serif;
+  	font-size: 36px;
+  	font-weight: bold;
+		height: 80px;
+		left: 50%;
+  	line-height: 80px;
+		margin-left: -40px;
+		position: absolute;
+		text-transform: uppercase;
+   	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+		top: -45px;
+		width: 80px;
+		z-index: 1000;
 	}
 
 	.row{
@@ -246,19 +248,20 @@ section#ready{
 	}
 
 	h3{
+		color: #fff;
 		display: inline-block;
 		float: none;
 		margin-right: 40px;
-		color: #fff;
 	}
 
 	a.blue-b{
 		background-color: #fff;
 		color: $light-blue;
-		float: none;
 		display: inline-block;
+		float: none;
 		position: relative;
 		vertical-align: 3px;
+
 		&:hover{
 			background-color: $warm-white;
 			color: $light-blue;
@@ -278,8 +281,10 @@ footer#main-footer{
 	p{
 		color: #fff;
 		text-align: center;
+
 		a{
 			color: #fff;
+
 			&:hover{
 				text-decoration: none;
 			}
