@@ -6,6 +6,7 @@ gem "sass"
 gem "bourbon"
 gem "neat"
 gem "middleman-deploy"
+gem "coderay" 
 
 gem "middleman", "~>3.1.4"
 

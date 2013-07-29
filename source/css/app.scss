@@ -4,6 +4,7 @@
 @import "neat/neat";
 
 $blue: #228ACC;
+$light-blue: #518EFF;
 $faded-red: #F27783;
 $warm-white: #FFF9E7;
 
@@ -11,7 +12,277 @@ h1, h2, h3{
   font-family: "league-gothic",helvetica,arial,sans-serif;
 }
 
+h1{
+	font-size: 48px;
+	line-height: 1.5em;
+}
+
+h2{
+	font-size: 36px;
+	line-height: 1.5em;
+}
+
+h3{
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #444;
+	line-height: 1.5em;
+}
+
 p{
+	color: #222;
 	font-size: 14px;
 	line-height: 22px;
+	font-family: "droid-sans", helvetica, arial, sans-serif;
+}
+
+body{
+	background-color: $warm-white;
+	-webkit-font-smoothing: antialiased;
+}
+
+.row{
+	@include outer-container;
+}
+
+hgroup{
+	text-align: center;
+}
+
+.blue-b{
+	height: 60px;
+	@include span-columns(2);
+	border-radius: 5px;
+	background-color: $light-blue;
+  font-family: "league-gothic",helvetica,arial,sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  text-decoration: none;
+  color: #fff;
+  border: solid 1px #487FE5;
+  border-top: none;
+  @include transition(0.2s ease-in-out);
+  &:hover{
+  	background-color: $blue;
+  }
+}
+
+header#main-header{
+	height: 160px;
+	background-color: #FFFFFF;
+
+	.row{
+		position: relative;
+	}
+
+	.logo{
+		width: 272px;
+		height: 94px;
+		position: absolute;
+		left: 0;
+		top: 33px;
+		@include inline-block;
+		text-indent: -9999px;
+		overflow: hidden;
+		background: url('/img/logo.png') no-repeat;
+		@media 
+    (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) {
+			background: url('/img/logo@2x.png') no-repeat;
+      background-size: cover;
+    }
+	}
+
+	.blue-b{
+		@include shift(10);
+		position: relative;
+		top: 50px;
+	}
+}
+
+section#banner{
+	background: url('/img/bg.png') repeat $light-blue;
+	border-bottom: solid 1px rgba(0,0,0,0.1);
+	border-top: solid 1px rgba(0,0,0,0.2);
+
+	@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) {
+		background: url('/img/bg@2x.png') repeat $light-blue;
+    background-size: 50%;
+  }
+
+	hgroup{
+		padding: 75px 0;
+		color: #fff;
+	}
+
+	h1{
+		text-transform: uppercase;
+	}
+
+	h2{
+		opacity: 0.75;
+	}
+}
+
+section#installation{
+	position: relative;
+
+	#warning{
+		height: 80px;
+		width: 80px;
+		position: absolute;
+		display: block;
+		left: 50%;
+		margin-left: -40px;
+		top: -40px;
+		z-index: 1000;
+		border-radius: 40px;
+		background-color: #FFCC11;
+		font-family: "league-gothic",helvetica,arial,sans-serif;
+  	color: #fff;
+  	text-decoration: none;
+  	font-size: 24px;
+  	line-height: 22px;
+  	padding-top: 17px;
+  	text-align: center;
+  	font-weight: bold;
+   	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+		display: block;
+		text-transform: uppercase;
+		@include transform(rotate(-15deg));
+		box-shadow: 0 1px 0 #E2B50F;
+  	@include transition(0.2s ease-in-out);
+		@include box-sizing(border-box);
+
+  	em{
+  		font-style: normal;
+  		text-transform: none;
+  		font-size: 18px;
+  	}
+
+		&:hover{
+			@include transform(rotate(0deg));
+		}
+	}
+
+	.row{
+		padding: 75px 0;
+		article{
+			@include span-columns(8);
+			@include shift(2);
+		}
+	}
+
+	article:first-child{
+		margin-bottom: 30px;
+	}
+
+	article:last-child{
+		border-top: solid 1px rgba(0,0,0,0.1);
+		padding-top: 64px;
+	}
+
+	p{
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	pre{
+		font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+		background-color: #fff;
+		border: solid 1px rgba(0,0,0,0.1);
+		border-radius: 5px;
+		padding: 10px;
+		font-size: 13px;
+		margin-bottom: 44px;
+	}
+}
+
+section#ready{
+	background-color: $light-blue;
+	border-top: solid 1px rgba(0,0,0,0.2);
+	position: relative;
+
+	background: url('/img/bg.png') repeat $light-blue;
+
+	@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) {
+		background: url('/img/bg@2x.png') repeat $light-blue;
+    background-size: 50%;
+  }
+
+  
+	#bam{
+		height: 80px;
+		width: 80px;
+		position: absolute;
+		left: 50%;
+		margin-left: -40px;
+		top: -45px;
+		z-index: 1000;
+		border-radius: 40px;
+		background-color: #FFCC11;
+		font-family: "league-gothic",helvetica,arial,sans-serif;
+  	color: #fff;
+  	font-size: 36px;
+  	line-height: 80px;
+  	font-weight: bold;
+   	text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+		display: block;
+		text-transform: uppercase;
+		@include transform(rotate(-15deg));
+		box-shadow: 0 1px 0 #487FE5;
+	}
+
+	.row{
+		padding: 75px 0;
+		text-align: center;
+	}
+
+	h3{
+		display: inline-block;
+		float: none;
+		margin-right: 40px;
+		color: #fff;
+	}
+
+	a.blue-b{
+		background-color: #fff;
+		color: $light-blue;
+		float: none;
+		display: inline-block;
+		position: relative;
+		vertical-align: 3px;
+		&:hover{
+			background-color: $warm-white;
+			color: $light-blue;
+		}
+	}
+
+}
+
+footer#main-footer{
+	background-color: $blue;
+	border-top: solid 1px rgba(0,0,0,0.1);
+
+	.row{
+		padding: 50px 0;
+	}
+
+	p{
+		color: #fff;
+		text-align: center;
+		a{
+			color: #fff;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
 }
