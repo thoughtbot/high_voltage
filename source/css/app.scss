@@ -52,8 +52,6 @@ hgroup{
 }
 
 .blue-b{
-	@include span-columns(2);
-  @include transition(0.2s ease-in-out);
 	background-color: $light-blue;
   border: solid 1px #487FE5;
 	border-radius: 5px;
