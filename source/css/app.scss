@@ -83,7 +83,7 @@ header#main-header{
 
 	.logo{
 		@include inline-block;
-		background: url('img/logo.png') no-repeat;
+		background: url('http://thoughtbot.github.io/high_voltage/img/logo.png') no-repeat;
 		height: 94px;
 		left: 0;
 		overflow: hidden;
@@ -95,7 +95,7 @@ header#main-header{
 		@media 
     (-webkit-min-device-pixel-ratio: 2), 
     (min-resolution: 192dpi) {
-			background: url('img/logo@2x.png') no-repeat;
+			background: url('http://thoughtbot.github.io/high_voltage/img/logo@2x.png') no-repeat;
       background-size: cover;
     }
 	}
@@ -108,14 +108,14 @@ header#main-header{
 }
 
 section#banner{
-	background: url('img/bg.png') repeat $light-blue;
+	background: url('http://thoughtbot.github.io/high_voltage/img/bg.png') repeat $light-blue;
 	border-bottom: solid 1px rgba(0,0,0,0.1);
 	border-top: solid 1px rgba(0,0,0,0.2);
 
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
   (min-resolution: 192dpi) {
-		background: url('img/bg@2x.png') repeat $light-blue;
+		background: url('http://thoughtbot.github.io/high_voltage/img/bg@2x.png') repeat $light-blue;
     background-size: 50%;
   }
 
@@ -211,7 +211,7 @@ section#installation{
 
 section#ready{
 
-	background: url('img/bg.png') repeat $light-blue;
+	background: url('http://thoughtbot.github.io/high_voltage/img/bg.png') repeat $light-blue;
 	background-color: $light-blue;
 	border-top: solid 1px rgba(0,0,0,0.2);
 	position: relative;
@@ -223,7 +223,7 @@ section#ready{
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
   (min-resolution: 192dpi) {
-		background: url('img/bg@2x.png') repeat $light-blue;
+		background: url('http://thoughtbot.github.io/high_voltage/img/bg@2x.png') repeat $light-blue;
     background-size: 50%;
   }
 
