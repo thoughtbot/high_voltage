@@ -5,8 +5,9 @@ source 'http://rubygems.org'
 gem "sass"
 gem "bourbon"
 gem "neat"
+gem "coderay"
 gem "middleman-deploy"
-gem "coderay" 
+require 'coderay'
 
 gem "middleman", "~>3.1.4"
 

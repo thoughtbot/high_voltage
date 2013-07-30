@@ -2,6 +2,7 @@
 @import "grid-settings";
 @import "neat/neat-helpers";
 @import "neat/neat";
+@import "coderay";
 
 $blue: #228ACC;
 $light-blue: #518EFF;
@@ -26,6 +27,7 @@ h3{
 	color: $blue;
 	font-size: 48px;
 	line-height: 1.5em;
+	margin-bottom: 44px;
 	text-transform: uppercase;
 }
 
@@ -51,7 +53,6 @@ hgroup{
 
 .blue-b{
 	@include span-columns(2);
-  @include transition(0.2s ease-in-out);
 	background-color: $light-blue;
   border: solid 1px #487FE5;
 	border-radius: 5px;
@@ -69,6 +70,7 @@ hgroup{
   &:hover{
   	background-color: $blue;
   }
+  @include transition(0.2s ease-in-out);
 }
 
 header#main-header{
@@ -136,7 +138,6 @@ section#installation{
 
 	#warning{
 		@include transform(rotate(-15deg));
-  	@include transition(0.2s ease-in-out);
 		@include box-sizing(border-box);
 		background-color: #FFCC11;
 		border-radius: 40px;
@@ -170,10 +171,11 @@ section#installation{
 		&:hover{
 			@include transform(rotate(0deg));
 		}
+  	@include transition(0.2s ease-in-out);
 	}
 
 	.row{
-		padding: 75px 0;
+		padding: 75px 0 100px;
 		article{
 			@include span-columns(8);
 			@include shift(2);
@@ -181,27 +183,30 @@ section#installation{
 	}
 
 	article:first-child{
-		margin-bottom: 30px;
+		margin-bottom: 75px;
 	}
 
 	article:last-child{
 		border-top: solid 1px rgba(0,0,0,0.1);
-		padding-top: 64px;
+		padding-top: 58px;
 	}
 
 	p{
 		font-size: 16px;
 		line-height: 24px;
+		margin-bottom: 12px;
 	}
 
-	pre{
-		background-color: #fff;
+	div.CodeRay{
 		border: solid 1px rgba(0,0,0,0.1);
-		border-radius: 5px;
-		font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
-		font-size: 13px;
+  	border-radius: 5px;
+  	color: #222;
+  	font-size: 13px;
 		margin-bottom: 44px;
 		padding: 10px;
+  	&:last-child{
+  		margin-bottom: 0;
+  	}
 	}
 }
 
@@ -211,6 +216,10 @@ section#ready{
 	background-color: $light-blue;
 	border-top: solid 1px rgba(0,0,0,0.2);
 	position: relative;
+
+	h3{
+		margin-bottom: 0;
+	}
 
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
@@ -281,6 +290,10 @@ footer#main-footer{
 	p{
 		color: #fff;
 		text-align: center;
+		
+		&:first-child{
+			margin-bottom: 22px;
+		}
 
 		a{
 			color: #fff;

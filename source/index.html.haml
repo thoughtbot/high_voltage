@@ -16,40 +16,29 @@
 		%article
 			%hgroup
 				%h3 Installation
-
 			%p Install it:
-			.highlight
-				%pre 
-					%code $ gem install high_voltage
+			%html= CodeRay.scan("$ gem install high_voltage", :text).div(:css => :class)
 
 			%p Include in your gemfile: 
-			.highlight
-				%pre 
-					%code= CodeRay.scan("gem 'high_voltage'", :ruby).html
+			%html= CodeRay.scan("gem 'high_voltage'", :ruby).div(:css => :class)
 
 			%p For Rails versions prior to 3.0, use the 0.9.2 tag of high_voltage:
-			.highlight
-				%pre 
-					%code https://github.com/thoughtbot/high_voltage/tree/v0.9.2
+			%html= CodeRay.scan("https://github.com/thoughtbot/high_voltage/tree/v0.9.2", :html).div(:css => :class)
 
 		%article
 			%hgroup
 				%h3 Usage
 
 			%p Write your static pages and put them in the RAILS_ROOT/app/views/pages directory.
-			.highlight
-				%pre 
-					%code $ mkdir app/views/pages<br/>$ touch app/views/pages/about.html.erb
+			.CodeRay
+				.code
+					%pre $ mkdir app/views/page <br/>$ touch app/views/pages/about.html.erb
 
 			%p After putting something interesting there, you can link to it from anywhere in your app with:
-			.highlight
-				%pre 
-					%code link_to 'About', page_path('about')
+			%html= CodeRay.scan("link_to 'About', page_path('about')", :ruby).div(:css => :class)
 
 			%p You can nest pages in a directory structure, if that makes sense from a URL perspective for you:
-			.highlight
-				%pre 
-					%code link_to 'Q4 Reports', page_path('about/corporate/policies/HR/en_US/biz/sales/Quarter-Four')
+			%html= CodeRay.scan("link_to 'Q4 Reports', page_path('about/corporate/policies/HR/en_US/biz/sales/Quarter-Four')", :ruby).div(:css => :class)
 
 %section{id: 'ready'}
 	.row
