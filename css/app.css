@@ -518,7 +518,7 @@ header#main-header {
     zoom: 1;
     *display: inline;
     *vertical-align: auto;
-    background: url("img/logo.png") no-repeat;
+    background: url("http://thoughtbot.github.io/high_voltage/img/logo.png") no-repeat;
     height: 94px;
     left: 0;
     overflow: hidden;
@@ -529,7 +529,7 @@ header#main-header {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       /* line 84, ../css/app.scss */
       header#main-header .logo {
-        background: url("img/logo@2x.png") no-repeat;
+        background: url("http://thoughtbot.github.io/high_voltage/img/logo@2x.png") no-repeat;
         background-size: cover; } }
   /* line 103, ../css/app.scss */
   header#main-header .blue-b {
@@ -539,13 +539,13 @@ header#main-header {
 
 /* line 110, ../css/app.scss */
 section#banner {
-  background: url("img/bg.png") repeat #518eff;
+  background: url("http://thoughtbot.github.io/high_voltage/img/bg.png") repeat #518eff;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
   border-top: solid 1px rgba(0, 0, 0, 0.2); }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     /* line 110, ../css/app.scss */
     section#banner {
-      background: url("img/bg@2x.png") repeat #518eff;
+      background: url("http://thoughtbot.github.io/high_voltage/img/bg@2x.png") repeat #518eff;
       background-size: 50%; } }
   /* line 122, ../css/app.scss */
   section#banner hgroup {
@@ -646,7 +646,7 @@ section#installation {
 
 /* line 212, ../css/app.scss */
 section#ready {
-  background: url("img/bg.png") repeat #518eff;
+  background: url("http://thoughtbot.github.io/high_voltage/img/bg.png") repeat #518eff;
   background-color: #518eff;
   border-top: solid 1px rgba(0, 0, 0, 0.2);
   position: relative; }
@@ -656,7 +656,7 @@ section#ready {
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     /* line 212, ../css/app.scss */
     section#ready {
-      background: url("img/bg@2x.png") repeat #518eff;
+      background: url("http://thoughtbot.github.io/high_voltage/img/bg@2x.png") repeat #518eff;
       background-size: 50%; } }
   /* line 231, ../css/app.scss */
   section#ready #bam {
