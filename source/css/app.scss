@@ -53,6 +53,7 @@ hgroup{
 
 .blue-b{
 	@include span-columns(2);
+  @include transition(0.2s ease-in-out);
 	background-color: $light-blue;
   border: solid 1px #487FE5;
 	border-radius: 5px;
@@ -70,7 +71,6 @@ hgroup{
   &:hover{
   	background-color: $blue;
   }
-  @include transition(0.2s ease-in-out);
 }
 
 header#main-header{
@@ -83,7 +83,7 @@ header#main-header{
 
 	.logo{
 		@include inline-block;
-		background: url('/img/logo.png') no-repeat;
+		background: url('img/logo.png') no-repeat;
 		height: 94px;
 		left: 0;
 		overflow: hidden;
@@ -95,7 +95,7 @@ header#main-header{
 		@media 
     (-webkit-min-device-pixel-ratio: 2), 
     (min-resolution: 192dpi) {
-			background: url('/img/logo@2x.png') no-repeat;
+			background: url('img/logo@2x.png') no-repeat;
       background-size: cover;
     }
 	}
@@ -108,14 +108,14 @@ header#main-header{
 }
 
 section#banner{
-	background: url('/img/bg.png') repeat $light-blue;
+	background: url('img/bg.png') repeat $light-blue;
 	border-bottom: solid 1px rgba(0,0,0,0.1);
 	border-top: solid 1px rgba(0,0,0,0.2);
 
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
   (min-resolution: 192dpi) {
-		background: url('/img/bg@2x.png') repeat $light-blue;
+		background: url('img/bg@2x.png') repeat $light-blue;
     background-size: 50%;
   }
 
@@ -138,7 +138,7 @@ section#installation{
 
 	#warning{
 		@include transform(rotate(-15deg));
-		@include box-sizing(border-box);
+  	@include transition(0.2s ease-in-out);
 		background-color: #FFCC11;
 		border-radius: 40px;
 		box-shadow: 0 1px 0 #E2B50F;
@@ -162,16 +162,15 @@ section#installation{
 		width: 80px;
 		z-index: 1000;
 
-  	em{
+  	span{
   		font-size: 18px;
-  		font-style: normal;
   		text-transform: none;
   	}
 
 		&:hover{
 			@include transform(rotate(0deg));
 		}
-  	@include transition(0.2s ease-in-out);
+		@include box-sizing(border-box);
 	}
 
 	.row{
@@ -212,7 +211,7 @@ section#installation{
 
 section#ready{
 
-	background: url('/img/bg.png') repeat $light-blue;
+	background: url('img/bg.png') repeat $light-blue;
 	background-color: $light-blue;
 	border-top: solid 1px rgba(0,0,0,0.2);
 	position: relative;
@@ -224,7 +223,7 @@ section#ready{
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
   (min-resolution: 192dpi) {
-		background: url('/img/bg@2x.png') repeat $light-blue;
+		background: url('img/bg@2x.png') repeat $light-blue;
     background-size: 50%;
   }
 
