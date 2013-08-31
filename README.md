@@ -72,7 +72,7 @@ root :to => 'high_voltage/pages#show', id: 'home'
 
 Which will render a homepage from app/views/pages/home.html.erb
 
-#### Page title's and meta-data
+#### Page titles and meta-data
 
 We suggest using `content_for` and `yield` for setting custom page titles and
 meta-data on High Voltage pages.
