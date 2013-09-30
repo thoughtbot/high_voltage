@@ -166,7 +166,14 @@ Create a `PagesController` of your own:
 
     $ rails generate controller pages
 
-Override the default route:
+Disable the default routes:
+
+```ruby
+# config/initializers/high_voltage.rb
+HighVoltage.routes = false
+```
+
+Define a new route for the local `PagesController`:
 
 ```ruby
 # config/routes.rb
