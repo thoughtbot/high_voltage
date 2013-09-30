@@ -173,7 +173,7 @@ Disable the default routes:
 HighVoltage.routes = false
 ```
 
-Define new a route for the new `PagesController`:
+Define a new route for the local `PagesController`:
 
 ```ruby
 # config/routes.rb
