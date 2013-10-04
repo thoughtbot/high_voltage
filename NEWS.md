@@ -1,3 +1,7 @@
+New for 2.0.0:
++ Extract PagesController into a module
++ Update README with module usage instructions
+
 New for 1.2.4:
 + Add page and action caching
 + Remove redundant link style `page_path(id: 'about')` from README

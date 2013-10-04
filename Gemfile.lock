@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    high_voltage (1.2.4)
+    high_voltage (2.0.0)
 
 GEM
   remote: http://rubygems.org/
