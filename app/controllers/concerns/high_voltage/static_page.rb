@@ -13,7 +13,8 @@ module HighVoltage::StaticPage
     end
 
     if respond_to?(:caches_action)
-      caches_action :show, if: -> { HighVoltage.action_caching }
+      caches_action :show, layout: HighVoltage.action_caching_layout,
+        if: -> { HighVoltage.action_caching }
     end
 
     if respond_to?(:caches_page)
