@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HighVoltage::PagesController, 'action_caching' do
+describe HighVoltage::PagesController, 'page_caching' do
   it 'caches the page when page_caching is set to true', enable_caching: true do
     controller.should_receive(:cache_page).at_least(:once)
 
