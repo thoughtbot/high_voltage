@@ -21,6 +21,9 @@ module HighVoltage
   mattr_accessor :action_caching
   @@action_caching = false
 
+  mattr_accessor :action_caching_layout
+  @@action_caching_layout = true
+
   mattr_accessor :page_caching
   @@page_caching = false
   
