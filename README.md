@@ -140,6 +140,7 @@ To enable them you can add the following to your initializer:
 ```ruby
 # config/initializers/high_voltage.rb
 HighVoltage.action_caching = true
+HighVoltage.action_caching_layout = false # optionally do not cache layout. default is true.
 # OR
 HighVoltage.page_caching = true
 ```
