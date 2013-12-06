@@ -69,7 +69,7 @@ You can route the root route to a High Voltage page like this:
 ```ruby
 get '/home', to: redirect('/')
 
-root :to => 'high_voltage/pages#show', id: 'home'
+root to: 'high_voltage/pages#show', id: 'home'
 ```
 
 Which will render a homepage from `app/views/pages/home.html.erb`
@@ -77,7 +77,7 @@ Which will render a homepage from `app/views/pages/home.html.erb`
 We use `get '/home', to: redirect('/')` to prevent High Voltage from serving up duplicate content. It creates a search engine friendly 301 redirect. Without this line, High Voltage would render the same page on two different paths, as the root route ('/') and a home page ('pages/home). If you want the same page displayed in two places, then simply use:
 
 ```ruby
-root :to => 'high_voltage/pages#show', id: 'home'
+root to: 'high_voltage/pages#show', id: 'home'
 ```
 
 #### Page titles and meta-data
@@ -186,10 +186,10 @@ Define a route for the new `PagesController`:
 
 ```ruby
 # config/routes.rb
-get "/pages/*id" => 'pages#show', :as => :page, :format => false
+get "/pages/*id" => 'pages#show', as: :page, format: false
 
 # if routing the root path, update for your controller
-root :to => 'pages#show', :id => 'home'
+root to: 'pages#show', id: 'home'
 ```
 
 Then modify new `PagesController` to include the High Voltage static page concern:
@@ -262,7 +262,7 @@ describe PagesController, '#show' do
   %w(earn_money screencast about contact).each do |page|
     context 'on GET to /pages/#{page}' do
       before do
-        get :show, :id => page
+        get :show, id: page
       end
 
       it { should respond_with(:success) }
