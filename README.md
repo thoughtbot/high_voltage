@@ -15,7 +15,7 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 Include in your Gemfile:
 
 ```ruby
-gem 'high_voltage'
+gem 'high_voltage', '~> 2.0.0'
 ```
 
 For Rails versions prior to 3.0, use the 0.9.2 tag of high_voltage:
