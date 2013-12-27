@@ -65,22 +65,20 @@ as it will conflict with the High Voltage named route.
 
 #### Specifying a root path
 
-You can route the root route to a High Voltage page like this:
+You can configure the root route to a High Voltage page like this:
 
 ```ruby
-get '/home', to: redirect('/')
-
-root to: 'high_voltage/pages#show', id: 'home'
+# config/initializers/high_voltage.rb
+HighVoltage.configure do |config|
+  config.home_page = 'home'
+end
 ```
 
-Which will render a homepage from `app/views/pages/home.html.erb`
+Which will render the page from `app/views/pages/home.html.erb` when the '/'
+route of the site is accessed.
 
-We use `get '/home', to: redirect('/')` to prevent High Voltage from serving up
-duplicate content.
-
-It creates a search engine friendly 301 redirect. Without this line, High Voltage
-would render the same page on two different paths, as the root route ('/') and a
-home page ('pages/home').
+Note: High Voltage also creates a search engine friendly 301 redirect. Any attempt to
+access the path '/home' will be redirected to '/'.
 
 #### Top-level routes
 

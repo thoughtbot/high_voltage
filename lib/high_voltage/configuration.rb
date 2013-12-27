@@ -4,6 +4,7 @@ module HighVoltage
       :action_caching,
       :action_caching_layout,
       :content_path,
+      :home_page,
       :layout,
       :page_caching,
       :route_drawer,
@@ -22,6 +23,7 @@ module HighVoltage
       self.action_caching = false
       self.action_caching_layout = true
       self.content_path = 'pages/'
+      self.home_page = nil
       self.layout = 'application'
       self.page_caching = false
       self.route_drawer = HighVoltage::RouteDrawers::Default

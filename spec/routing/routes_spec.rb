@@ -107,6 +107,24 @@ describe 'routes' do
     end
   end
 
+  context 'home page route' do
+    before(:each) do
+      HighVoltage.home_page = 'home'
+      Rails.application.reload_routes!
+    end
+
+    it 'recognizes the root route' do
+      assert_recognizes(
+        {
+          :controller => 'high_voltage/pages',
+          :action => 'show',
+          :id => 'home'
+        },
+        '/'
+      )
+    end
+  end
+
   context 'disabled routes' do
     before(:each) do
       HighVoltage.routes = false
