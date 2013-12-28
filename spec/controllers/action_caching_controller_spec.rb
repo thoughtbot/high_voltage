@@ -1,23 +1,27 @@
 require 'spec_helper'
 
 describe HighVoltage::PagesController, 'action_caching' do
-  it 'caches the action when action_caching is set to true', enable_caching: true do
-    expect do
+  let(:page_name) { :exists }
+
+  context 'action_caching set to true' do
+    it 'caches the action', enable_caching: true do
       HighVoltage.action_caching = true
       concern_reload
-      get :show, id: :exists
-    end.to change { action_was_cached(:exists) }
+
+      expect { get :show, id: page_name }.to change { action_cache_exists? }
+    end
   end
 
-  it 'does not cache the action when action_caching is set to false', enable_caching: true do
-    expect do
+  context 'action_caching set to false' do
+    it 'does not cache the action', enable_caching: true do
       HighVoltage.action_caching = false
       concern_reload
-      get :show, id: :exists
-    end.to_not change { action_was_cached(:exists) }
+
+      expect { get :show, id: page_name }.to_not change { action_cache_exists? }
+    end
   end
 
-  def action_was_cached(page)
-    ActionController::Base.cache_store.exist?("views/test.host#{page_path(page)}")
+  def action_cache_exists?
+    ActionController::Base.cache_store.exist?("views/test.host#{page_path(page_name)}")
   end
 end

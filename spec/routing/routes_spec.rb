@@ -108,12 +108,10 @@ describe 'routes' do
   end
 
   context 'home page route' do
-    before(:each) do
+    it 'recognizes the root route' do
       HighVoltage.home_page = 'home'
       Rails.application.reload_routes!
-    end
 
-    it 'recognizes the root route' do
       assert_recognizes(
         {
           :controller => 'high_voltage/pages',
@@ -125,13 +123,17 @@ describe 'routes' do
     end
   end
 
+  context 'no home page route' do
+    it 'does generate a home page route' do
+      { :get => '/' }.should_not be_routable
+    end
+  end
+
   context 'disabled routes' do
-    before(:each) do
+    it 'does not recognize routes' do
       HighVoltage.routes = false
       Rails.application.reload_routes!
-    end
 
-    it 'does not recognize routes' do
       { :get => '/pages/one/two' }.should_not be_routable
     end
   end
