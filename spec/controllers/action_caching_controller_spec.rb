@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe HighVoltage::PagesController, 'action_caching' do
+describe HighVoltage::PagesController, '#action_caching' do
   let(:page_name) { :exists }
 
   context 'action_caching set to true' do
