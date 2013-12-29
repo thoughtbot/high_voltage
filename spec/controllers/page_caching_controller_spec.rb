@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe HighVoltage::PagesController do
+describe HighVoltage::PagesController, '#cache_page' do
   let(:page_name) { :exists }
 
-  context 'page_caching set to false' do
+  context 'page_caching set to true' do
     it 'caches the page', enable_caching: true do
       HighVoltage.page_caching = true
       concern_reload
