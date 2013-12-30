@@ -1,3 +1,9 @@
+New for 2.1.0:
++ Extract configuration options into a module
++ Add ability to configure whether layout is cached with action_caching
++ Add ability to configure a `home_page` for root routing to High Voltage
++ Update README with new block style config
+
 New for 2.0.0:
 + Extract PagesController into a module
 + Update README with module usage instructions
