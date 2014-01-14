@@ -151,7 +151,7 @@ To enable action-caching you can add the following to your initializer:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVolgate.configure do |config|
+HighVoltage.configure do |config|
   config.action_caching = true
   config.action_caching_layout = false # optionally do not cache layout. default is true.
 end
@@ -161,7 +161,7 @@ To enable page-caching:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVolgate.configure do |config|
+HighVoltage.configure do |config|
   config.page_caching = true
 end
 ```
