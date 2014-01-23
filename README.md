@@ -69,7 +69,7 @@ You can configure the root route to a High Voltage page like this:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.home_page = 'home'
 end
 ```
@@ -97,7 +97,7 @@ This is accomplished by setting the `route_drawer` to `HighVoltage::RouteDrawers
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.route_drawer = HighVoltage::RouteDrawers::Root
 end
 ```
@@ -108,7 +108,7 @@ The default routes can be completely removed by setting the `routes` to `false`:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.routes = false
 end
 ```
@@ -138,7 +138,7 @@ You can change this in an initializer:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.content_path = 'site/'
 end
 ```
@@ -151,7 +151,7 @@ To enable action-caching you can add the following to your initializer:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.action_caching = true
   config.action_caching_layout = false # optionally do not cache layout. default is true.
 end
@@ -161,7 +161,7 @@ To enable page-caching:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.page_caching = true
 end
 ```
@@ -192,7 +192,7 @@ Disable the default routes:
 
 ```ruby
 # config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
+HighVoltage.setup do |config|
   config.routes = false
 end
 ```
