@@ -309,5 +309,5 @@ The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 ## License
 
-High Voltage is Copyright © 2009-2013 thoughtbot. It is free software, and may
+High Voltage is Copyright © 2009-2014 thoughtbot. It is free software, and may
 be redistributed under the terms specified in the MIT-LICENSE file.
