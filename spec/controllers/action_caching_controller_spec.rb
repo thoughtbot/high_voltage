@@ -4,24 +4,29 @@ describe HighVoltage::PagesController, '#action_caching' do
   let(:page_name) { :exists }
 
   context 'action_caching set to true' do
-    it 'caches the action', enable_caching: true do
-      HighVoltage.action_caching = true
-      concern_reload
+    after do
+      HighVoltage.action_caching = false
+    end
 
-      expect { get :show, id: page_name }.to change { action_cache_exists? }
+    it 'caches the action' do
+      HighVoltage.action_caching = true
+      allow(controller).to receive(:_save_fragment)
+
+      get :show, id: page_name
+
+      expect(controller).to have_received(:_save_fragment)
+        .with("test.host#{page_path(page_name)}", {})
     end
   end
 
   context 'action_caching set to false' do
-    it 'does not cache the action', enable_caching: true do
+    it 'does not cache the action' do
+      allow(controller).to receive(:_save_fragment)
       HighVoltage.action_caching = false
-      concern_reload
 
-      expect { get :show, id: page_name }.to_not change { action_cache_exists? }
+      get :show, id: page_name
+
+      expect(controller).not_to have_received(:_save_fragment)
     end
-  end
-
-  def action_cache_exists?
-    ActionController::Base.cache_store.exist?("views/test.host#{page_path(page_name)}")
   end
 end
