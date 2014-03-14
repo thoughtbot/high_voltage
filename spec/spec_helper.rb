@@ -20,6 +20,10 @@ RSpec.configure do |config|
     Rails.application.reload_routes!
   end
 
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+
   config.include RSpec::Matchers
   config.mock_with :rspec
   config.order = 'random'
