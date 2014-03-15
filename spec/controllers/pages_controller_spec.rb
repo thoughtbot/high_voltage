@@ -86,14 +86,16 @@ describe HighVoltage::PagesController do
         .to raise_error(ActionController::RoutingError)
     end
 
-    it 'raises a routing error for a page in another directory' do
-      expect { get :show, id: '../other_wrong' }
-        .to raise_error(ActionController::RoutingError)
-    end
+    context 'page in another directory' do
+      it 'raises a routing error' do
+        expect { get :show, id: '../other_wrong' }
+          .to raise_error(ActionController::RoutingError)
+      end
 
-    it 'raises a routing error for a page in another directory when using a Unicode exploit' do
-      expect { get :show, id: '/\\../other/wrong' }
-        .to raise_error(ActionController::RoutingError)
+      it 'raises a routing error when using a Unicode exploit' do
+        expect { get :show, id: '/\\../other/wrong' }
+          .to raise_error(ActionController::RoutingError)
+      end
     end
 
     it 'raises a missing template error for valid page with invalid partial' do
