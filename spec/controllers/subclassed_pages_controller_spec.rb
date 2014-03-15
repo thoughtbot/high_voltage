@@ -18,20 +18,17 @@ describe SubclassedPagesController do
   end
 
   it 'raises a routing error for an invalid page' do
-    expect {
-      get :show, id: 'invalid'
-    }.to raise_error(ActionController::RoutingError)
+    expect { get :show, id: 'invalid' }
+      .to raise_error(ActionController::RoutingError)
   end
 
   it 'raises a routing error for a page in another directory' do
-    expect {
-      get :show, id: '../other/wrong'
-    }.to raise_error(ActionController::RoutingError)
+    expect { get :show, id: '../other/wrong' }
+      .to raise_error(ActionController::RoutingError)
   end
 
   it 'raises a missing template error for valid page with invalid partial' do
-    expect {
-      get :show, id: 'also_exists_but_references_nonexistent_partial'
-    }.to raise_error(ActionView::MissingTemplate)
+    expect { get :show, id: 'also_exists_but_references_nonexistent_partial' }
+      .to raise_error(ActionView::MissingTemplate)
   end
 end
