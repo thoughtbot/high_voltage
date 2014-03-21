@@ -5,12 +5,12 @@ describe HighVoltage::PagesController, '#cache_page' do
 
   context 'page_caching set to true' do
     after do
-      HighVoltage.page_caching = false
+      set_page_caching_without_deprecation(false)
     end
 
     it 'caches the page' do
       allow(controller).to receive(:cache_page)
-      HighVoltage.page_caching = true
+      set_page_caching_without_deprecation(true)
 
       get :show, id: page_name
 
@@ -21,11 +21,17 @@ describe HighVoltage::PagesController, '#cache_page' do
   context 'page_caching set to false' do
     it 'does not cache the page' do
       allow(controller).to receive(:cache_page)
-      HighVoltage.page_caching = false
+      set_page_caching_without_deprecation(false)
 
       get :show, id: page_name
 
       expect(controller).not_to have_received(:cache_page)
+    end
+  end
+
+  def set_page_caching_without_deprecation(value)
+    ActiveSupport::Deprecation.silence do
+      HighVoltage.page_caching = value
     end
   end
 end
