@@ -230,6 +230,15 @@ class PagesController < ApplicationController
 end
 ```
 
+To set up a different layout for all High Voltage static pages, use an initializer:
+
+```ruby
+# config/initializers/high_voltage.rb
+HighVoltage.configure do |config|
+  config.layout = 'your_layout'
+end
+```
+
 ## Custom finding
 
 You can further control the algorithm used to find pages by overriding
