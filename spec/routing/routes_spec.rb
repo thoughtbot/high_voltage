@@ -3,11 +3,11 @@ require 'spec_helper'
 describe 'routes' do
   context 'default configuration' do
     it 'generates a route' do
-      page_path('one').should eq '/pages/one'
+      expect(page_path('one')).to eq '/pages/one'
     end
 
     it 'generates a nested route' do
-      page_path('one/two').should eq '/pages/one/two'
+      expect(page_path('one/two')).to eq '/pages/one/two'
     end
 
     it 'recognizes a route' do
@@ -51,11 +51,11 @@ describe 'routes' do
     end
 
     it 'generates a route' do
-      page_path('one').should eq '/one'
+      expect(page_path('one')).to eq '/one'
     end
 
     it 'generates  a nested route' do
-      page_path('one/two').should eq '/one/two'
+      expect(page_path('one/two')).to eq '/one/two'
     end
   end
 
@@ -66,11 +66,11 @@ describe 'routes' do
     end
 
     it 'generates a route' do
-      page_path('one').should eq '/other_pages/one'
+      expect(page_path('one')).to eq '/other_pages/one'
     end
 
     it 'generates a nested route' do
-      page_path('one/two').should eq '/other_pages/one/two'
+      expect(page_path('one/two')).to eq '/other_pages/one/two'
     end
 
     it 'recognizes a route' do
@@ -125,7 +125,7 @@ describe 'routes' do
 
   context 'no home page route' do
     it 'does generate a home page route' do
-      { :get => '/' }.should_not be_routable
+      expect(get: '/').not_to be_routable
     end
   end
 
@@ -134,7 +134,7 @@ describe 'routes' do
       HighVoltage.routes = false
       Rails.application.reload_routes!
 
-      { :get => '/pages/one/two' }.should_not be_routable
+      expect(get: '/pages/one/two').not_to be_routable
     end
   end
 end
