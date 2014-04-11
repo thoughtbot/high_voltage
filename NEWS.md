@@ -1,3 +1,6 @@
+New for 2.2.0:
++ Deprecate caching because page and action caching was removed in Rails 4
+
 New for 2.1.0:
 + Extract configuration options into a module
 + Add ability to configure whether layout is cached with action_caching

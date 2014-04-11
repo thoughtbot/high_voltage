@@ -145,36 +145,12 @@ end
 
 #### Caching
 
-High Voltage supports both [page](http://guides.rubyonrails.org/caching_with_rails.html#page-caching) and [action caching](http://guides.rubyonrails.org/caching_with_rails.html#action-caching).
+Caching has been deprecated and will be removed in the next release.
 
-To enable action-caching you can add the following to your initializer:
-
-```ruby
-# config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
-  config.action_caching = true
-  config.action_caching_layout = false # optionally do not cache layout. default is true.
-end
-```
-
-To enable page-caching:
-
-```ruby
-# config/initializers/high_voltage.rb
-HighVoltage.configure do |config|
-  config.page_caching = true
-end
-```
-
-High Voltage will use your default cache store to store action caches.
-
-Using caching with Ruby on Rails 4 or higher requires gems:
-
-```ruby
-# Gemfile
-gem 'actionpack-action_caching'
-gem 'actionpack-page_caching'
-```
+Page caching and action caching can be done via Rails. Visit the [Caching with
+Rails: An overview](http://guides.rubyonrails.org/caching_with_rails.html) guide
+for more details. You can utilize the methods described there by overriding the
+HighVoltage controller as described [below](#override).
 
 ## Override
 
