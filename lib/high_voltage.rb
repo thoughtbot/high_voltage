@@ -1,3 +1,4 @@
+require 'active_support/core_ext/string'
 require 'active_support/core_ext/module/attribute_accessors'
 
 require 'high_voltage/configuration'
