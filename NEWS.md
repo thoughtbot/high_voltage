@@ -1,5 +1,6 @@
-New for 2.2.0:
+HEAD
 + Deprecate caching because page and action caching was removed in Rails 4
++ Refactor test suite to use rspec `expect` syntax consistently.
 
 New for 2.1.0:
 + Extract configuration options into a module
