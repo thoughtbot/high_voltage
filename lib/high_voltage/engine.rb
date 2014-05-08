@@ -6,8 +6,6 @@ module HighVoltage
       unless app.paths.keys.include?(concerns_path)
         app.paths.add(concerns_path)
       end
-
-      require 'concerns/high_voltage/static_page'
     end
   end
 end
