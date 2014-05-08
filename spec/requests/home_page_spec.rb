@@ -8,6 +8,6 @@ describe 'Home page route' do
 
   it 'redirects the duplicate content to root' do
     get '/home'
-    expect(response).to redirect_to('/')
+    expect(response.headers['Location']).to eq 'http://www.example.com/'
   end
 end
