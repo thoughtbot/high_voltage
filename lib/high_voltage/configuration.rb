@@ -9,6 +9,7 @@ module HighVoltage
       :content_path,
       :home_page,
       :layout,
+      :parent_engine,
       :route_drawer,
       :routes,
     )

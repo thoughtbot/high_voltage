@@ -1,5 +1,9 @@
 module HighVoltage
   class Engine < Rails::Engine
+    initializer 'Set up default parent engine' do |app|
+      HighVoltage.parent_engine ||= Rails.application
+    end
+
     initializer 'Require concerns path' do |app|
       concerns_path = 'app/controllers/concerns'
 
