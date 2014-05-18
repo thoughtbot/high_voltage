@@ -159,6 +159,7 @@ Most common reasons to override?
   * You need authentication around the pages to make sure a user is signed in.
   * You need to render different layouts for different pages.
   * You need to render a partial from the `app/views/pages` directory.
+  * You need support for request variants.
 
 Create a `PagesController` of your own:
 
@@ -212,6 +213,44 @@ To set up a different layout for all High Voltage static pages, use an initializ
 # config/initializers/high_voltage.rb
 HighVoltage.configure do |config|
   config.layout = 'your_layout'
+end
+```
+
+## Support for request variants
+Override the controller as shown in the previous step, then inside the controller override the `show`, `page_finder_factory` and `current_page` methods:
+
+```ruby
+# app/controllers/pages_controller.rb
+def show
+  respond_to do |format|
+    format.html do |variant|
+      variant.web { render template: current_page }
+      variant.tablet { render template: current_page }
+      variant.phone { render template: current_page }
+    end
+  end
+end
+
+protected
+
+def page_finder_factory
+  HighVoltage::PageVariantFinder
+end
+
+def current_page
+  page_finder.find(request.variant)
+end
+
+#additionaly you can override the layout depending on the variant
+def layout_for_page
+  case request.variant
+  when :tablet
+    "tablet"
+  when :phone
+    "phone"
+  else
+    "application"
+  end
 end
 ```
 
