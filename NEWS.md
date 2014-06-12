@@ -4,6 +4,7 @@ HEAD
 + Added Rails 4.1 to test suite.
 + Remove Ruby 1.9.2 from test suite.
 + Remove Capybara from test suite.
++ Support dependency injection for Rails engine to define routes on
 
 New for 2.1.0:
 + Extract configuration options into a module
