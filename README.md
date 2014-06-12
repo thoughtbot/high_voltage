@@ -113,6 +113,18 @@ HighVoltage.configure do |config|
 end
 ```
 
+#### Specifying Rails engine for routes
+
+If you are using multiple Rails engines within your application, you can
+specify which engine to define the default HighVoltage routes on.
+
+```ruby
+# config/initializers/high_voltage.rb
+HighVoltage.configure do |config|
+  config.parent_engine = MyEngine
+end
+```
+
 #### Page titles and meta-data
 
 We suggest using `content_for` and `yield` for setting custom page titles and
