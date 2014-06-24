@@ -1,4 +1,4 @@
-HEAD
+New for 2.2.0:
 + Deprecate caching because page and action caching was removed in Rails 4
 + Refactor test suite to use rspec `expect` syntax consistently.
 + Added Rails 4.1 to test suite.
