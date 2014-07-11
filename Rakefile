@@ -11,9 +11,14 @@ require 'appraisal'
 RSpec::Core::RakeTask.new(:spec)
 
 desc 'Default'
-task :default => [:all]
+task :default do
+  if ENV['BUNDLE_GEMFILE'] =~ /gemfiles/
+    Rake::Task['spec'].invoke
+  else
+    Rake::Task['appraise'].invoke
+  end
+end
 
-desc 'Test the engine under all supported Rails versions'
-task all: ['appraisal:install'] do |t|
-  exec 'rake appraisal spec'
+task :appraise do
+  exec 'appraisal install && appraisal rake'
 end
