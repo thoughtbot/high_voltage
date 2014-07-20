@@ -263,6 +263,58 @@ end
 Use this to create a custom file mapping, clean filenames for your file
 system, A/B test, and so on.
 
+## Localization
+
+[Rails I18n guides](http://guides.rubyonrails.org/i18n.html).
+
+Add a before filter to the Application controller
+
+```ruby
+# app/controllers/application_controller.rb
+before_action :set_locale
+
+def set_locale
+  I18n.locale = params[:locale] || I18n.default_locale
+end
+```
+
+Disable the default High Voltage routes
+
+```ruby
+# config/initializers/high_voltage.rb
+HighVoltage.configure do |config|
+  config.routes = false
+end
+```
+
+```ruby
+# config/routes.rb
+scope "/:locale", locale: /en|bn|hi/ do
+  get "/pages/:id" => "high_voltage/pages#show", :as => :page, :format => false
+end
+```
+
+Add a static page to the project
+
+```
+# app/views/pages/about.html.erb
+<%= t "hello" %>
+```
+
+Make sure that there are corresponding locale files
+
+```
+/config/locale/bn.yml
+/config/locale/en.yml
+/config/locale/hi.yml
+```
+
+One last note is there is a [know
+issue](https://github.com/thoughtbot/high_voltage/issues/59) with High Voltage.
+
+You'll need to specify routes like this `<%= link_to "About Us", page_path(id:
+"about") %>`
+
 ## Testing
 
 You can test your static pages using [RSpec](https://github.com/rspec/rspec-rails)
