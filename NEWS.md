@@ -1,3 +1,6 @@
+New for 2.2.1:
++ Resolve issue with require statements for Rails 3.x projects
+
 New for 2.2.0:
 + Deprecate caching because page and action caching was removed in Rails 4
 + Refactor test suite to use rspec `expect` syntax consistently.
