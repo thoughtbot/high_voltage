@@ -317,20 +317,22 @@ You'll need to specify routes like this `<%= link_to "About Us", page_path(id:
 
 ## Testing
 
-You can test your static pages using [RSpec](https://github.com/rspec/rspec-rails)
-and [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers):
+You can test your static pages using [RSpec 3](https://github.com/rspec/rspec-rails):
 
 ```ruby
 # spec/controllers/pages_controller_spec.rb
-describe PagesController, '#show' do
+describe PagesController, '#show', type: :controller do
   %w(earn_money screencast about contact).each do |page|
-    context 'on GET to /pages/#{page}' do
+    describe "on GET to /#{page}" do
       before do
-        get :show, id: page
+        get(:show, id: page)
       end
-
-      it { should respond_with(:success) }
-      it { should render_template(page) }
+      it 'responds with success code' do
+        expect(response).to have_http_status(200)
+      end
+      it 'renders with the page-specific template' do
+        expect(response).to render_template(page)
+      end
     end
   end
 end
