@@ -317,7 +317,7 @@ You'll need to specify routes like this `<%= link_to "About Us", page_path(id:
 
 ## Testing
 
-You can test your static pages using [RSpec 3](https://github.com/rspec/rspec-rails):
+You can test your static pages using [RSpec](https://github.com/rspec/rspec-rails):
 
 ```ruby
 # spec/controllers/pages_controller_spec.rb
@@ -327,9 +327,11 @@ describe PagesController, '#show', type: :controller do
       before do
         get(:show, id: page)
       end
+
       it 'responds with success code' do
         expect(response).to have_http_status(200)
       end
+
       it 'renders with the page-specific template' do
         expect(response).to render_template(page)
       end
