@@ -14,9 +14,9 @@ h4,
 h5,
 h6 {
   font-family: $header-font-family;
+  font-weight: 300;
   line-height: $header-line-height;
   margin: 0;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 
 h1 {
@@ -50,7 +50,6 @@ p {
 a {
   @include transition(color 0.1s linear);
   color: $base-link-color;
-  text-decoration: none;
 
   &:hover {
     color: $hover-link-color;

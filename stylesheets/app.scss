@@ -7,20 +7,21 @@
  * Copyright 2013–2014 thoughtbot, inc.
  * MIT License */
 
-@import url(http://fonts.googleapis.com/css?family=Merriweather|Anonymous+Pro);
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic|Anonymous+Pro|Roboto+Condensed:300);
 @import "bourbon";
+
+html, *, *:before, *:after {
+  box-sizing: border-box;
+}
 
 // Variables
 @import "variables";
 
-// Neat Settings -- uncomment if using Neat -- must be imported before Neat
-// @import "grid-settings";
-
 // Extends
 @import "extends/button";
 @import "extends/clearfix";
-@import "extends/errors";
-@import "extends/flashes";
+@import "extends/container";
 @import "extends/hide-text";
 
 // Typography and Elements
@@ -29,3 +30,11 @@
 @import "tables";
 @import "lists";
 @import "buttons";
+
+// Page Modules
+@import "modules/footer";
+@import "modules/header";
+@import "modules/install";
+@import "modules/navigation";
+@import "modules/refrences";
+@import "modules/usage";

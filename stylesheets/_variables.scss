@@ -1,8 +1,17 @@
+// Breakpoints
+$medium-screen: em(640);
+$large-screen: em(860);
+
+// Grid Settings
+$gutter-width: 1.75rem;
+$section-max-width: 75rem;
+
 // Typography
-$sans-serif: $helvetica;
-$serif: $georgia;
-$base-font-family: $sans-serif;
-$header-font-family: $base-font-family;
+$sans-serif: 'Roboto Condensed', sans-serif;
+$serif: 'Merriweather', $georgia;
+$monospace-font-family: 'Anonymous Pro', $monospace;
+$base-font-family: $serif;
+$header-font-family: $sans-serif;
 
 // Font Sizes
 $base-font-size: 1em;
@@ -14,8 +23,8 @@ $h5-font-size: $base-font-size * 1.25;
 $h6-font-size: $base-font-size;
 
 // Line height
-$base-line-height: 1.5;
-$header-line-height: 1.25;
+$base-line-height: 1.7;
+$header-line-height: 1;
 
 // Other Sizes
 $base-border-radius: 3px;
@@ -23,35 +32,30 @@ $base-spacing: $base-line-height * 1em;
 $base-z-index: 0;
 
 // Colors
-$blue: #477DCA;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #DDD;
-$light-red: #FBE3E4;
-$light-yellow: #FFF6BF;
-$light-green: #E6EFC2;
+$blue: #3fa9f5;
+$dark-blue: #288dbf;
+$dark-gray: #414042;
+$gray: #bbb;
+$smoke: whitesmoke;
 
 // Background Color
 $base-background-color: white;
+$section-background-color: $smoke;
 
 // Font Colors
 $base-font-color: $dark-gray;
 $base-accent-color: $blue;
+$alt-accent-color: $dark-blue;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: $alt-accent-color;
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
-// Flash Colors
-$alert-color: $light-yellow;
-$error-color: $light-red;
-$notice-color: lighten($base-accent-color, 40);
-$success-color: $light-green;
-
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: $dark-gray;
+$alt-border-color: $gray;
 $base-border: 1px solid $base-border-color;
 
 // Forms
