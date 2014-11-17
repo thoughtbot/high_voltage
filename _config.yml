@@ -8,6 +8,7 @@ url: "http://thoughtbot.github.io/high_voltage/"
 repository_url: "http://github.com/thoughtbot/high_voltage"
 documentation_url: "http://github.com/thoughtbot/high_voltage/blob/master/README.md"
 thoughtbot_url: "http://thoughtbot.com"
+license_url: "https://github.com/thoughtbot/high_voltage/blob/master/MIT-LICENSE"
 
 # Build settings
 markdown: kramdown
