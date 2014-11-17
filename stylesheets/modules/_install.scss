@@ -13,7 +13,43 @@
   }
 }
 
+.install_direction {
+  padding: 0;
+}
+
+.install_direction p,
+.install_direction_sample {
+  padding: $gutter-width;
+  margin: 0;
+}
+
+.install_direction_step {
+    @include clearfix;
+}
+
+.install_direction p {
+  float: left;
+}
+
+.install_direction_sample {
+  border-bottom: 1px solid $base-border-color;
+  border-left: 1px solid $base-border-color;
+  float: right;
+  font-size: 1.25em;
+  min-width: 25rem;
+
+  .install_direction_step:last-child &{
+    border-bottom-style: none;
+  }
+}
+
 .install_direction.optional {
   border-color: $alt-border-color;
   border-top-color: $base-border-color;
+  background-color: white;
+
+  .install_direction_sample {
+    border-color: $alt-border-color;
+  }
 }
+

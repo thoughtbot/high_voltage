@@ -1,3 +1,20 @@
 .site-footer {
   @extend %container;
+
+  .cite {
+    @extend %clearfix;
+    margin-bottom: $gutter-width;
+    max-width: 22em;
+    font-size: 1.25em;
+  }
+
+  .ralph {
+    float: left;
+    margin-right: $gutter-width;
+  }
+
+  .copyright span {
+    display: block;
+    font-size: 0.875;
+  }
 }

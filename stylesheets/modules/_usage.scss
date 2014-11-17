@@ -5,15 +5,47 @@
 .usage_header,
 .usage_content {
   @extend %container;
-  border: 1px solid $base-border-color;
   background-color: $section-background-color;
+  border: 1px solid $base-border-color;
 }
 
 .usage_content {
   border-top-style: none;
+  position: relative;
 
   svg {
     font-family: 'Anonymous Pro';
+    max-width: 100%;
   }
 }
 
+.usage_directions {
+  max-width: 25em;
+  padding: $gutter-width;
+}
+
+.usage_illustration-small {
+  display: block;
+}
+
+.usage_illustration-large {
+  display: none;
+}
+
+@media screen and (min-width : $large-screen) {
+
+  .usage_directions {
+    @include position(absolute, 0em null null 0em);
+    border-right: 1px solid $base-border-color;
+    border-bottom: 1px solid $base-border-color;
+  }
+
+  .usage_illustration-small {
+    display: none;
+  }
+
+  .usage_illustration-large {
+    display: block;
+    font-size: 1.25em;
+  }
+}
