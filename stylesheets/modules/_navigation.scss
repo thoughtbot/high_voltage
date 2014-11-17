@@ -1,0 +1,17 @@
+.site-navigation {
+  line-height: 2.5;
+  margin: 0 auto;
+  max-width: $section-max-width;
+  text-align: right;
+}
+
+.site-nav_item {
+  color: $dark-gray;
+  text-decoration: none;
+
+  &:not(:last-of-type):after {
+    color: $dark-gray;
+    content: "•";
+    margin: 0 0.75em;
+  }
+}

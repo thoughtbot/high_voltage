@@ -1,0 +1,21 @@
+.refrences {
+  @include clearfix;
+  margin: 0 auto $gutter-width auto;
+  max-width: $section-max-width;
+}
+
+.refrences_documentation {
+  background-color: $section-background-color;
+  padding: $gutter-width;
+  float: left;
+  font-size: 1.25em;
+
+  span:after {
+    content: "";
+    display: block;
+  }
+}
+
+.refrences_dangerdanger {
+  float: right;
+}

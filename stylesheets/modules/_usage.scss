@@ -1,0 +1,19 @@
+.usage {
+  margin-bottom: $gutter-width;
+}
+
+.usage_header,
+.usage_content {
+  @extend %container;
+  border: 1px solid $base-border-color;
+  background-color: $section-background-color;
+}
+
+.usage_content {
+  border-top-style: none;
+
+  svg {
+    font-family: 'Anonymous Pro';
+  }
+}
+

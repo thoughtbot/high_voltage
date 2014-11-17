@@ -1,0 +1,19 @@
+.install {
+  margin-bottom: $gutter-width;
+}
+
+.install_header,
+.install_direction {
+  @extend %container;
+  background-color: $section-background-color;
+  border: 1px solid $base-border-color;
+
+  &:not(:last-child){
+    border-bottom-style: none;
+  }
+}
+
+.install_direction.optional {
+  border-color: $alt-border-color;
+  border-top-color: $base-border-color;
+}

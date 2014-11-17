@@ -1,0 +1,19 @@
+.site-header {
+  @extend %container;
+  background-color: $section-background-color;
+  margin-bottom: $gutter-width;
+}
+
+.site-title {
+  svg {
+    max-width: 100%;
+  }
+}
+
+.site-description {
+  font-size: 1.25em;
+  border: 2px solid $base-font-color;
+  padding: ($gutter-width * 0.8) $gutter-width;
+  margin: $gutter-width 0 0 0;
+  max-width: 22em;
+}
