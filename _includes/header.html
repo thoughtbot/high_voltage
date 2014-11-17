@@ -1,14 +1,20 @@
+<nav class="site-navigation">
+  <a href="{{ site.repository_url }}" class="site-nav_item">
+    github
+  </a>
+  <a href="{{ site.documentation_url }}" class="site-nav_item">
+    docs
+  </a>
+  <a href="{{ site.thoughtbot_url }}" class="site-nav_item">
+    thoughtbot
+  </a>
+</nav>
+
 <header class="site-header">
 
-  <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-    <nav class="site-nav">
-      <a href="#" class="site-nav_item">
-      </a>
-    </nav>
-
-  </div>
+  <h1 class="site-title">
+    {% include high_voltage-logo.svg %}
+  </h1>
+  <p class="site-description">high_voltage is a the most rapid tool to serve static pages in your rails app</p>
 
 </header>

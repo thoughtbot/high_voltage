@@ -1,0 +1,14 @@
+<svg version="1.1"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   x="0px" y="0px" width="14.9px" height="20.3px" viewBox="0 0 14.9 20.3" enable-background="new 0 0 14.9 20.3"
+   xml:space="preserve">
+<defs>
+</defs>
+<g>
+  <g>
+    <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,19.3 1,6.5 6.5,1 13.9,1 13.9,19.3     "/>
+    <path fill="#414042" d="M12.9,2v16.3H2V7l5-5H12.9 M14.9,0h-2H7H6.1L5.5,0.6l-5,5L0,6.1V7v11.3v2h2h10.9h2v-2V2V0L14.9,0z"/>
+  </g>
+  <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,2 7,7 2,7  "/>
+</g>
+</svg>
