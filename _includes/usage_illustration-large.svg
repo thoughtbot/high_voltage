@@ -1,7 +1,6 @@
 <svg version="1.1"
    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-   viewBox="0 0 1174.1 413"
-   xml:space="preserve" class="usage_illustration-large">
+   viewBox="0 0 1174.1 413" class="usage_illustration-large">
   <defs></defs>
   <text transform="matrix(1 0 0 1 35.5821 177.1818)" fill="#414042">$ touch app/views/pages/about.html.erb</text>
   <text transform="matrix(1 0 0 1 35.5821 221.9079)" fill="#414042">$ touch app/views/pages/contact.html.erb</text>
