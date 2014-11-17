@@ -2,6 +2,43 @@
 layout: default
 ---
 
-<main>
+<main class="foo">
+
+  <section class="install">
+    <header class="install_header">
+      <h1>01. Install</h1>
+    </header>
+    <section class="install_direction">
+      <div class="install_direction_step"></div>
+      <p>Install high_voltage in your local system</p>
+      <code>$ gem install high_voltage</code>
+      <p>Include high_voltage in your gemfile</p>
+      <code>$ gem 'high_voltage'</code>
+    </section>
+    <section class="install_direction optional">
+      <p>For Rails versions prior to 3.0, use the 0.9.2 tag of high_voltage</p>
+      <code>$ gem 'high_voltage', '~> 0.9.2'</code>
+    </section>
+  </section>
+
+  <section class="usage">
+    <header class="usage_header">
+      <h1>02. USAGE</h1>
+    </header>
+    <div class="usage_content">
+      <p class="">Write your static pages and put them in the <code>/app/views/pages</code> directory</p>
+      {% include illu-directories.svg %}
+    </div>
+  </section>
+
+  <footer class="refrences">
+    <p class="refrences_documentation">
+      For advanced configuration options <span>—</span> consult project <a href="{{ site.documentation_url }}">documentation</a>
+    </p>
+    <nav class="refrences_dangerdanger">
+      <a href="#">{% include dangerdanger.svg %}</a>
+    </nav>
+
+  </footer>
 
 </main>

@@ -1,15 +1,17 @@
 # Site settings
-title: HIGH_VOLTAGE
-description: > # this means to ignore newlines until "baseurl:"
+title: high_voltage
+description: >
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-url: "http://yourdomain.com"
+url: "http://thoughtbot.github.io/high_voltage/"
+repository_url: "http://github.com/thoughtbot/high_voltage"
+documentation_url: "http://github.com/thoughtbot/high_voltage/blob/master/README.md"
+thoughtbot_url: "http://thoughtbot.com"
 
 # Build settings
 markdown: kramdown
 sass:
   sass_dir: stylesheets
-  style: compressed
 
 gems: [bourbon]
