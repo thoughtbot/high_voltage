@@ -5,6 +5,10 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+
+  @media screen and (min-width : $medium-screen) {
+    padding: 0 $gutter-width;
+  }
 }
 
 h1,
