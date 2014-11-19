@@ -22,29 +22,26 @@
 .usage-directions {
   max-width: 25em;
   padding: $gutter-width;
-}
 
-.usage-illustration-small {
-  display: block;
-}
-
-.usage-illustration-large {
-  display: none;
-}
-
-@media screen and (min-width : $large-screen) {
-
-  .usage-directions {
+  @media screen and (min-width : $large-screen) {
     @include position(absolute, 0em null null 0em);
     border-right: 1px solid $base-border-color;
     border-bottom: 1px solid $base-border-color;
   }
+}
 
-  .usage-illustration-small {
+.usage-illustration-small {
+  display: block;
+
+  @media screen and (min-width : $large-screen) {
     display: none;
   }
+}
 
-  .usage-illustration-large {
+.usage-illustration-large {
+  display: none;
+
+  @media screen and (min-width : $large-screen) {
     display: block;
     font-size: 1.25em;
   }

@@ -1,40 +1,38 @@
 .site-footer {
   @extend %container;
-  text-transform: lowercase;
   text-align: center;
+  text-transform: lowercase;
+
+  @media screen and (min-width : $medium-screen) {
+    text-align: left;
+  }
 
   .cite {
     @include clearfix();
+    font-size: 1.25em;
     margin-bottom: $gutter-width;
     max-width: 22em;
-    font-size: 1.25em;
   }
 
   .ralph {
     display: block;
     margin: 0 auto 1em auto;
     width: 5rem;
+    @media screen and (min-width : $medium-screen) {
+
+      float: left;
+      margin-right: $gutter-width;
+      width: 3.75rem;
+    }
   }
 
   .copyright {
     font-size: 0.875em;
-  }
-}
 
-
-@media screen and (min-width : $medium-screen) {
-
-  .site-footer {
-    text-align: left;
-
-    .copyright span {
-      display: block;
-    }
-
-    .ralph {
-      float: left;
-      margin-right: $gutter-width;
-      width: 3.75rem;
+    @media screen and (min-width : $medium-screen) {
+      span {
+        display: block;
+      }
     }
   }
 }
