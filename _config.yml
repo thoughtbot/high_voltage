@@ -1,9 +1,7 @@
 # Site settings
-title: high_voltage
+title: High Voltage
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  High Voltage is the most rapid tool to serve static pages in your rails app
 url: "http://thoughtbot.github.io/high_voltage/"
 repository_url: "http://github.com/thoughtbot/high_voltage"
 documentation_url: "http://github.com/thoughtbot/high_voltage/blob/master/README.md"
