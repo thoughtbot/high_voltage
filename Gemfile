@@ -4,5 +4,7 @@ ruby "2.1.2"
 
 gem "github-pages"
 
-gem 'bourbon'
-gem 'bitters'
+group :jekyll_plugins do
+  gem 'bourbon'
+  gem 'bitters'
+end
