@@ -2,8 +2,8 @@
   margin-bottom: $gutter-width;
 }
 
-.install_header,
-.install_direction {
+.install-header,
+.install-direction {
   @extend %container;
   background-color: $section-background-color;
   border: 1px solid $base-border-color;
@@ -13,45 +13,43 @@
   }
 }
 
-.install_direction {
+.install-direction {
   padding: 0;
   text-transform: lowercase;
 }
 
-.install_direction p,
-.install_direction_sample {
+.install-direction-instructions,
+.install-direction-sample {
   padding: $gutter-width;
   margin: 0;
 }
 
-.install_direction_step {
+.install-direction-step {
   @include clearfix;
 }
 
-.install_direction p {
+.install-direction-instructions {
   float: left;
 }
 
-.install_direction_sample,
-.install_direction-optional {
+.install-direction-sample {
   border-bottom: 1px solid $base-border-color;
   border-left: 1px solid $base-border-color;
   float: right;
   font-size: 1.25em;
   min-width: 25rem;
 
-  .install_direction_step:last-child & {
+  .install-direction-step:last-child & {
     border-bottom-style: none;
   }
 }
 
-.install_direction-optional {
+.install-direction-optional {
   border-color: $alt-border-color;
   border-top-color: $base-border-color;
   background-color: white;
 
-  .install_direction_sample {
+  .install-direction-sample {
     border-color: $alt-border-color;
   }
 }
-

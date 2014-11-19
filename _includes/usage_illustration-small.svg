@@ -1,4 +1,4 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="84 44 430 756"  class="usage_illustration-small">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="84 44 430 756"  class="usage-illustration-small">
 <text transform="matrix(1 0 0 1 175.9899 460.5267)" fill="#414042">$ touch app/views/pages/about.html.erb</text>
 <text transform="matrix(1 0 0 1 175.9899 521.4829)" fill="#414042">$ touch app/views/pages/contact.html.erb</text>
 <text transform="matrix(1 0 0 1 175.9899 585.9104)" fill="#414042">$ touch app/views/pages/team.html.erb</text>

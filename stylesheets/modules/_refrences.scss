@@ -5,14 +5,14 @@
   text-transform: lowercase;
 }
 
-.refrences_documentation {
+.refrences-documentation {
   border: 1px solid $base-accent-color;
   padding: $gutter-width;
   float: left;
   font-size: 1.25em;
 }
 
-.refrences_dangerdanger {
+.refrences-dangerdanger {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -21,7 +21,7 @@
 
 @media screen and (min-width : $large-screen) {
 
-  .refrences_documentation {
+  .refrences-documentation {
 
     span:after {
       content: "";
@@ -29,7 +29,7 @@
     }
   }
 
-  .refrences_dangerdanger {
+  .refrences-dangerdanger {
     float: right;
   }
 }
