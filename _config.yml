@@ -1,7 +1,7 @@
 # Site settings
 title: High Voltage
 description: >
-  High Voltage is the most rapid tool to serve static pages in your rails app
+  High Voltage serves static pages in your Rails app
 url: "http://thoughtbot.github.io/high_voltage/"
 repository_url: "http://github.com/thoughtbot/high_voltage"
 documentation_url: "http://github.com/thoughtbot/high_voltage/blob/master/README.md"
