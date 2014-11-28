@@ -6,7 +6,7 @@
 .usage-content {
   @extend %container;
   background-color: $section-background-color;
-  border: 1px solid $base-border-color;
+  border: $base-border;
 }
 
 .usage-content {
@@ -25,8 +25,8 @@
 
   @media screen and (min-width : $large-screen) {
     @include position(absolute, 0em null null 0em);
-    border-right: 1px solid $base-border-color;
-    border-bottom: 1px solid $base-border-color;
+    border-right: $base-border;
+    border-bottom: $base-border;
   }
 }
 

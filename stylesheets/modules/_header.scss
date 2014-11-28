@@ -1,19 +1,35 @@
 .site-header {
   @extend %container;
-  background-color: $section-background-color;
+  background-color: $base-accent-color;
   margin-bottom: $gutter-width;
 }
 
 .site-title {
+  margin-bottom: $gutter-width;
+
   svg {
     max-width: 100%;
   }
 }
 
 .site-description {
+  border: 1px solid $base-background-color;
+  color: $base-background-color;
+  float: left;
   font-size: 1.25em;
-  border: 2px solid $base-font-color;
-  padding: ($gutter-width * 0.8) $gutter-width;
-  margin: $gutter-width 0 0 0;
+  margin: 0;
   max-width: 22em;
+  padding: ($gutter-width * 0.8) $gutter-width;
+
+  @media screen and (min-width : $large-screen) {
+    border-width: 2px;
+  }
+}
+
+.site-header-dangerdanger {
+  display: none;
+
+  @media screen and (min-width : $large-screen) {
+    display: inline;
+  }
 }
