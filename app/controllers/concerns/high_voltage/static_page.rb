@@ -6,11 +6,13 @@ module HighVoltage::StaticPage
 
     rescue_from ActionView::MissingTemplate do |exception|
       if exception.message =~ %r{Missing template #{page_finder.content_path}}
-        raise ActionController::RoutingError, "No such page: #{params[:id]}"
+        invalid_page
       else
         raise exception
       end
     end
+
+    rescue_from HighVoltage::InvalidPageIdError, with: :invalid_page
 
     if respond_to?(:caches_action)
       caches_action :show, layout: HighVoltage.action_caching_layout,
@@ -38,5 +40,9 @@ module HighVoltage::StaticPage
 
   def page_finder_factory
     HighVoltage::PageFinder
+  end
+
+  def invalid_page
+    raise ActionController::RoutingError, "No such page: #{params[:id]}"
   end
 end
