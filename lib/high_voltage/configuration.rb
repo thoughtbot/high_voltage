@@ -8,10 +8,10 @@ module HighVoltage
     attr_accessor(
       :content_path,
       :home_page,
-      :layout,
       :parent_engine,
       :route_drawer,
       :routes,
+      :parent_controller
     )
 
     attr_reader :action_caching, :action_caching_layout, :page_caching
@@ -46,9 +46,9 @@ module HighVoltage
 
       self.content_path = 'pages/'
       self.home_page = nil
-      self.layout = 'application'
       self.route_drawer = HighVoltage::RouteDrawers::Default
       self.routes = true
+      self.parent_controller = 'AppliationController'
     end
   end
 end

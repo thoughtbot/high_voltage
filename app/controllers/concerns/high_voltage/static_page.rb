@@ -2,7 +2,6 @@ module HighVoltage::StaticPage
   extend ActiveSupport::Concern
 
   included do
-    layout ->(_) { HighVoltage.layout }
 
     rescue_from ActionView::MissingTemplate do |exception|
       if exception.message =~ %r{Missing template #{page_finder.content_path}}
