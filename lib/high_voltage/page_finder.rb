@@ -31,7 +31,13 @@ module HighVoltage
     end
 
     def clean_id
-      @page_id.tr("^#{VALID_CHARACTERS}", '')
+      @page_id.tr("^#{VALID_CHARACTERS}", "").tap do |id|
+        if id.blank?
+          raise InvalidPageIdError.new "Invalid page id: #{@page_id}"
+        end
+      end
     end
   end
+
+  class InvalidPageIdError < StandardError; end
 end
