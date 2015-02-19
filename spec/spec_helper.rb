@@ -3,8 +3,6 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 
 require 'pry'
-require 'rails/test_help'
-require 'rspec/expectations'
 require 'rspec/rails'
 
 Rails.backtrace_cleaner.remove_silencers!
@@ -12,6 +10,8 @@ Rails.backtrace_cleaner.remove_silencers!
 Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |file| require file }
 
 RSpec.configure do |config|
+  config.infer_spec_type_from_file_location!
+
   config.after(:each) do
     HighVoltage.set_default_configuration
     Rails.application.reload_routes!
