@@ -6,3 +6,4 @@ spec/dummy/log/*.log
 spec/dummy/tmp/
 *.swp
 *.gem
+gemfiles/*.lock
