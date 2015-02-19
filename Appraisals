@@ -1,16 +1,21 @@
-if RUBY_VERSION >= '2.0'
-  rails_versions = ['~> 3.2.13', '~> 4.0.0', '~> 4.1.0']
-else
-  rails_versions = ['~> 3.1.12', '~> 3.2.13']
+if RUBY_VERSION < "2.2.0"
+  appraise "rails3.1" do
+    gem "rails", "~> 3.1.12"
+  end
+
+  appraise "rails3.2" do
+    gem "rails", '~> 3.2.21'
+  end
 end
 
-rails_versions.each do |rails_version|
-  appraise "rails#{rails_version.slice(/\d+\.\d+/)}" do
-    gem 'rails', rails_version
+appraise "rails4.0" do
+  gem "rails", "~> 4.0.13"
+  gem 'actionpack-action_caching'
+  gem 'actionpack-page_caching'
+end
 
-    if ['~> 4.0.0', '~> 4.1.0'].include? rails_version
-      gem 'actionpack-action_caching'
-      gem 'actionpack-page_caching'
-    end
-  end
+appraise "rails4.1" do
+  gem "rails", "~> 4.1.0"
+  gem 'actionpack-action_caching'
+  gem 'actionpack-page_caching'
 end
