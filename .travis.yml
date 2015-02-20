@@ -1,10 +1,11 @@
+cache: bundler
 gemfile:
   - gemfiles/rails3.1.gemfile
   - gemfiles/rails3.2.gemfile
   - gemfiles/rails4.0.gemfile
   - gemfiles/rails4.1.gemfile
 install:
-  - 'travis_retry bundle install'
+  - "travis_retry bundle install"
 language:
   - ruby
 matrix:
@@ -12,15 +13,19 @@ matrix:
     - rvm: 1.9.3
       gemfile: gemfiles/rails4.0.gemfile
     - rvm: 1.9.3
-      gemfile:  gemfiles/rails4.1.gemfile
+      gemfile: gemfiles/rails4.1.gemfile
     - rvm: 2.0.0
       gemfile: gemfiles/rails3.1.gemfile
     - rvm: 2.1.5
       gemfile: gemfiles/rails3.1.gemfile
+    - rvm: 2.2.0
+      gemfile: gemfiles/rails3.1.gemfile
+    - rvm: 2.2.0
+      gemfile: gemfiles/rails3.2.gemfile
 rvm:
   - 1.9.3
   - 2.0.0
   - 2.1.5
+  - 2.2.0
 script: 'bundle exec rake spec'
 sudo: false
-cache: bundler
