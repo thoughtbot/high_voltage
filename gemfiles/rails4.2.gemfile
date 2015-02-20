@@ -3,6 +3,8 @@
 source "http://rubygems.org"
 
 gem "appraisal"
-gem "rails", "~> 3.2.13"
+gem "rails", "~> 4.2.0"
+gem "actionpack-action_caching"
+gem "actionpack-page_caching"
 
 gemspec :path => "../"
