@@ -1,13 +1,19 @@
-ENV['RAILS_ENV'] = 'test'
+ENV["RAILS_ENV"] = "test"
 
-require File.expand_path('../dummy/config/environment.rb',  __FILE__)
+require "pry"
+require "active_model/railtie"
+require "action_controller/railtie"
+require "action_view/railtie"
+require "actionpack/action_caching/railtie"
+require "actionpack/page_caching/railtie"
+require "rspec/rails"
 
-require 'pry'
-require 'rspec/rails'
+require "high_voltage"
+require "fake_app"
 
 Rails.backtrace_cleaner.remove_silencers!
 
-Dir[File.dirname(__FILE__) + '/support/**/*.rb'].each { |file| require file }
+Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each { |file| require file }
 
 RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
@@ -23,5 +29,5 @@ RSpec.configure do |config|
 
   config.include RSpec::Matchers
   config.mock_with :rspec
-  config.order = 'random'
+  config.order = "random"
 end
