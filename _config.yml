@@ -14,3 +14,10 @@ sass:
   sass_dir: stylesheets
 
 gems: [bourbon]
+
+exclude:
+  - log
+  - pkg
+  - Gemfile
+  - Gemfile.lock
+  - vendor
