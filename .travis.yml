@@ -1,0 +1,9 @@
+language:
+  - ruby
+rvm:
+  - "2.2.0"
+script: 'bundle exec jekyll doctor'
+notifications:
+  email: false
+sudo: false
+cache: bundler
