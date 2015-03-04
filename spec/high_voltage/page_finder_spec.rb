@@ -41,6 +41,10 @@ describe HighVoltage::PageFinder do
     expect { find("\\…√") }.to raise_error HighVoltage::InvalidPageIdError
   end
 
+  it "throws an exception if the page_id is just a file extension after sanitization" do
+    expect { find("\\…√.zip") }.to raise_error HighVoltage::InvalidPageIdError
+  end
+
   private
 
   def find(page_id)
