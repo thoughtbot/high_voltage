@@ -4,3 +4,4 @@ pkg/
 *.swp
 *.gem
 gemfiles/*.lock
+spec/fixtures/log/*.log

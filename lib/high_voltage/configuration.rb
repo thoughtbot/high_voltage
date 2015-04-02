@@ -45,6 +45,14 @@ module HighVoltage
       @page_caching = value
     end
 
+    def page_ids
+      HighVoltage::PageCollector.new(HighVoltage.full_path).page_ids
+    end
+
+    def full_path
+      Rails.root.join("app", "views", HighVoltage.content_path)
+    end
+
     def set_default_configuration
       @action_caching = false
       @action_caching_layout = true
