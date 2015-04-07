@@ -37,12 +37,14 @@ describe HighVoltage::PageFinder do
     expect(find("b\\a…d√")).to eq "pages/bad"
   end
 
-  it "throws an exception if the page_id is empty after sanitization" do
-    expect { find("\\…√") }.to raise_error HighVoltage::InvalidPageIdError
-  end
+  context "sanitized page_id" do
+    it "throws an exception if the page_id is empty" do
+      expect { find("\\…√") }.to raise_error HighVoltage::InvalidPageIdError
+    end
 
-  it "throws an exception if the page_id is just a file extension after sanitization" do
-    expect { find("\\√.zip") }.to raise_error HighVoltage::InvalidPageIdError
+    it "throws an exception if the page_id is just a file extension" do
+      expect { find("\\√.zip") }.to raise_error HighVoltage::InvalidPageIdError
+    end
   end
 
   private
