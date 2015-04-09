@@ -1,0 +1,144 @@
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+  Rendered pages/exists.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7.4ms (Views: 6.8ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 0.7ms (Views: 0.6ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"invalid"}
+Completed 404 Not Found in 0.8ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"../other/wrong"}
+Completed 404 Not Found in 0.6ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists_but_references_nonexistent_partial"}
+Completed 500 Internal Server Error in 5.2ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 2.4ms (Views: 2.3ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 1.2ms (Views: 1.1ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"dir/nested"}
+Completed 200 OK in 1.9ms (Views: 1.8ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 2.0ms (Views: 1.8ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_invalid"}
+Completed 404 Not Found in 0.7ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_exists_but_references_nonexistent_partial"}
+Completed 500 Internal Server Error in 1.7ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"../other_wrong"}
+Completed 404 Not Found in 0.8ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"/\\../other/wrong"}
+Completed 404 Not Found in 0.7ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_exists"}
+Completed 200 OK in 1.9ms (Views: 1.8ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_dir/also_nested"}
+Completed 200 OK in 1.9ms (Views: 1.8ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Read fragment views/test.host/pages/exists 0.0ms
+Completed 200 OK in 1.1ms (Views: 0.6ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 0.6ms (Views: 0.5ms)
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"invalid"}
+Completed 404 Not Found in 0.8ms
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"../other/wrong"}
+Completed 404 Not Found in 0.4ms
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"also_exists_but_references_nonexistent_partial"}
+Completed 500 Internal Server Error in 1.8ms
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"also_exists"}
+Completed 200 OK in 1.7ms (Views: 1.6ms)
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"also_exists"}
+Completed 200 OK in 1.1ms (Views: 1.0ms)
+Started GET "/home" for 127.0.0.1 at 2014-03-14 22:23:11 -0400
+Processing by AlternativeFinderController#show as HTML
+  Parameters: {"id"=>"ebg13"}
+Completed 200 OK in 2.2ms (Views: 1.9ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+  Rendered pages/exists.html.erb within layouts/alternate (0.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"../other/wrong"}
+Completed 404 Not Found in 1ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"invalid"}
+Completed 404 Not Found in 1ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists_but_references_nonexistent_partial"}
+Completed 500 Internal Server Error in 4ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"dir/nested"}
+Completed 200 OK in 2ms (Views: 1.4ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 1ms (Views: 0.5ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 1ms (Views: 0.5ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"/\\../other/wrong"}
+Completed 404 Not Found in 1ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"../other_wrong"}
+Completed 404 Not Found in 1ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_invalid"}
+Completed 404 Not Found in 1ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_exists_but_references_nonexistent_partial"}
+Completed 500 Internal Server Error in 2ms
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_dir/also_nested"}
+Completed 200 OK in 1ms (Views: 1.1ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"also_exists"}
+Completed 200 OK in 1ms (Views: 1.1ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 1ms (Views: 0.6ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Read fragment views/test.host/pages/exists (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 1ms (Views: 0.6ms)
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"exists"}
+Completed 200 OK in 1ms (Views: 0.6ms)
+Started GET "/home" for 127.0.0.1 at 2014-03-14 22:23:14 -0400
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"../other/wrong"}
+Completed 404 Not Found in 1ms
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"invalid"}
+Completed 404 Not Found in 0ms
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"also_exists_but_references_nonexistent_partial"}
+Completed 500 Internal Server Error in 2ms
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"also_exists"}
+Completed 200 OK in 1ms (Views: 1.2ms)
+Processing by SubclassedPagesController#show as HTML
+  Parameters: {"id"=>"also_exists"}
+Completed 200 OK in 1ms (Views: 0.5ms)
+Processing by AlternativeFinderController#show as HTML
+  Parameters: {"id"=>"ebg13"}
+Completed 200 OK in 2ms (Views: 1.3ms)
