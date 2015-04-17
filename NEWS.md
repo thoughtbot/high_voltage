@@ -1,3 +1,8 @@
+New for 2.3.0:
++ Ruby 2.2 and Rails 4.2 testing
++ Raise InvalidPageIdError when visiting a page with invalid characters
++ Code of Conduct added to Contributing guide
+
 New for 2.2.1:
 + Resolve issue with require statements for Rails 3.x projects
 
