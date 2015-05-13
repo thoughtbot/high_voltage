@@ -25,17 +25,17 @@ module HighVoltage
     end
 
     def action_caching=(value)
-      ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING)
+      ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING) if value
       @action_caching = value
     end
 
     def action_caching_layout=(value)
-      ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING)
+      ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING) if value
       @action_caching_layout = value
     end
 
     def page_caching=(value)
-      ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING)
+      ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING) if value
       @page_caching = value
     end
 
