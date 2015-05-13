@@ -35,42 +35,87 @@ describe HighVoltage::Configuration do
     it { expect(HighVoltage.routes).to eq config_value }
   end
 
-  describe '#action_caching=' do
-    it 'displays a deprecation warning' do
-      allow(ActiveSupport::Deprecation).to receive(:warn)
+  describe "#action_caching" do
+    context "action caching is enabled" do
+      it 'displays a deprecation warning' do
+        allow(ActiveSupport::Deprecation).to receive(:warn)
 
-      HighVoltage.configure do |config|
-        config.action_caching = true
+        HighVoltage.configure do |config|
+          config.action_caching = true
+        end
+
+        expect(ActiveSupport::Deprecation).to have_received(:warn)
+          .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
       end
+    end
 
-      expect(ActiveSupport::Deprecation).to have_received(:warn)
-        .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+    context "action caching is disabled" do
+      it 'does not display a deprecation warning' do
+        allow(ActiveSupport::Deprecation).to receive(:warn)
+
+        HighVoltage.configure do |config|
+          config.action_caching = false
+        end
+
+        expect(ActiveSupport::Deprecation).not_to have_received(:warn)
+          .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+      end
     end
   end
 
-  describe '#action_caching_layout=' do
-    it 'displays a deprecation warning' do
-      allow(ActiveSupport::Deprecation).to receive(:warn)
+  describe "#action_caching_layout" do
+    context "action caching layout is enabled" do
+      it 'displays a deprecation warning' do
+        allow(ActiveSupport::Deprecation).to receive(:warn)
 
-      HighVoltage.configure do |config|
-        config.action_caching_layout = true
+        HighVoltage.configure do |config|
+          config.action_caching_layout = true
+        end
+
+        expect(ActiveSupport::Deprecation).to have_received(:warn)
+          .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
       end
+    end
 
-      expect(ActiveSupport::Deprecation).to have_received(:warn)
-        .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+    context "action caching layout is disabled" do
+      it "does not display a deprecation warning" do
+        allow(ActiveSupport::Deprecation).to receive(:warn)
+
+        HighVoltage.configure do |config|
+          config.action_caching_layout = false
+        end
+
+        expect(ActiveSupport::Deprecation).not_to have_received(:warn)
+          .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+      end
     end
   end
 
-  describe '#page_caching=' do
-    it 'displays a deprecation warning' do
-      allow(ActiveSupport::Deprecation).to receive(:warn)
+  describe "#page_caching" do
+    context "page caching is enabled" do
+      it "displays a deprecation warning" do
+        allow(ActiveSupport::Deprecation).to receive(:warn)
 
-      HighVoltage.configure do |config|
-        config.page_caching = true
+        HighVoltage.configure do |config|
+          config.page_caching = true
+        end
+
+        expect(ActiveSupport::Deprecation).to have_received(:warn)
+          .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
       end
+    end
 
-      expect(ActiveSupport::Deprecation).to have_received(:warn)
-        .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+    context "page caching is disbled" do
+      it "does not display a deprecation warning" do
+        allow(ActiveSupport::Deprecation).to receive(:warn)
+
+        HighVoltage.configure do |config|
+          config.page_caching = false
+        end
+
+        expect(ActiveSupport::Deprecation).not_to have_received(:warn)
+          .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+      end
     end
   end
 
