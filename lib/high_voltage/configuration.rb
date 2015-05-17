@@ -27,7 +27,7 @@ module HighVoltage
     def action_caching=(value)
       ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING) unless value == false
       @action_caching = value
-    end.
+    end
 
     def action_caching_layout=(value)
       ActiveSupport::Deprecation.warn(CACHING_DEPRECATION_WARNING) unless value == false

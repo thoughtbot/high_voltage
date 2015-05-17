@@ -57,7 +57,7 @@ describe HighVoltage::Configuration do
       end
 
       expect(ActiveSupport::Deprecation).not_to have_received(:warn)
-                                                .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+        .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
     end
   end
 
@@ -83,7 +83,7 @@ describe HighVoltage::Configuration do
       end
 
       expect(ActiveSupport::Deprecation).not_to have_received(:warn)
-                                                .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+        .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
     end
   end
 
@@ -96,6 +96,19 @@ describe HighVoltage::Configuration do
       end
 
       expect(ActiveSupport::Deprecation).to have_received(:warn)
+        .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+    end
+  end
+
+  describe '#page_caching=false' do
+    it 'displays a deprecation warning' do
+      allow(ActiveSupport::Deprecation).to receive(:warn)
+
+      HighVoltage.configure do |config|
+        config.page_caching = false
+      end
+
+      expect(ActiveSupport::Deprecation).not_to have_received(:warn)
         .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
     end
   end
