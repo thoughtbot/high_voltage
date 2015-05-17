@@ -35,7 +35,7 @@ describe HighVoltage::Configuration do
     it { expect(HighVoltage.routes).to eq config_value }
   end
 
-  describe '#action_caching=' do
+  describe '#action_caching=true' do
     it 'displays a deprecation warning' do
       allow(ActiveSupport::Deprecation).to receive(:warn)
 
@@ -48,7 +48,20 @@ describe HighVoltage::Configuration do
     end
   end
 
-  describe '#action_caching_layout=' do
+  describe '#action_caching=false' do
+    it 'does not display a deprecation warning' do
+      allow(ActiveSupport::Deprecation).to receive(:warn)
+
+      HighVoltage.configure do |config|
+        config.action_caching = false
+      end
+
+      expect(ActiveSupport::Deprecation).not_to have_received(:warn)
+                                                .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+    end
+  end
+
+  describe '#action_caching_layout=true' do
     it 'displays a deprecation warning' do
       allow(ActiveSupport::Deprecation).to receive(:warn)
 
@@ -61,7 +74,20 @@ describe HighVoltage::Configuration do
     end
   end
 
-  describe '#page_caching=' do
+  describe '#action_caching_layout=false' do
+    it 'does not display a deprecation warning' do
+      allow(ActiveSupport::Deprecation).to receive(:warn)
+
+      HighVoltage.configure do |config|
+        config.action_caching_layout = false
+      end
+
+      expect(ActiveSupport::Deprecation).not_to have_received(:warn)
+                                                .with(HighVoltage::Configuration::CACHING_DEPRECATION_WARNING)
+    end
+  end
+
+  describe '#page_caching=true' do
     it 'displays a deprecation warning' do
       allow(ActiveSupport::Deprecation).to receive(:warn)
 
