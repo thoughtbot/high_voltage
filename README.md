@@ -43,6 +43,17 @@ link_to 'Q4 Reports', page_path('about/corporate/policies/HR/en_US/biz/sales/Qua
 
 Bam.
 
+You can also get a list of your static pages by calling `HighVoltage.page_ids`
+This might be useful if you need to build a sitemap. For example, if you are
+using the [sitemap_generator](https://github.com/kjvarga/sitemap_generator) gem,
+you could add something like this to your sitemap config file:
+
+```ruby
+HighVoltage.page_ids.each do |page|
+  add page, changefreq: 'monthly'
+end
+```
+
 ## Configuration
 
 #### Routing overview
