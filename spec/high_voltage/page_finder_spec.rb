@@ -47,6 +47,10 @@ describe HighVoltage::PageFinder do
     end
   end
 
+  it "throws an exception if the path is empty" do
+    expect { find("關於我們/合作伙伴") }.to raise_error HighVoltage::InvalidPageIdError
+  end
+
   private
 
   def find(page_id)

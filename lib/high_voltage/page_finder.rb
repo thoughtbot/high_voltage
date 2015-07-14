@@ -27,7 +27,11 @@ module HighVoltage
 
     def clean_path
       path = Pathname.new("/#{clean_id}")
-      path.cleanpath.to_s[1..-1]
+      path.cleanpath.to_s[1..-1].tap do |p|
+        if p.blank?
+          raise InvalidPageIdError.new "Invalid page id: #{@page_id}"
+        end
+      end
     end
 
     def clean_id
