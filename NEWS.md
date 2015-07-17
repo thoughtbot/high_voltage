@@ -1,3 +1,8 @@
+New for 2.4.0
++ Retrieve a list of available static pages via `HighVoltage.page_ids`.
++ Properly handle page ids which are blank when being sanitized.
++ Only provide deprecation warnings around caching when caching is enabled.
+
 New for 2.3.0:
 + Ruby 2.2 and Rails 4.2 testing
 + Raise InvalidPageIdError when visiting a page with invalid characters

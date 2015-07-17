@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    high_voltage (2.3.0)
+    high_voltage (2.4.0)
 
 GEM
   remote: http://rubygems.org/
@@ -95,3 +95,6 @@ DEPENDENCIES
   high_voltage!
   pry
   rspec-rails (~> 3.2.0)
+
+BUNDLED WITH
+   1.10.0
