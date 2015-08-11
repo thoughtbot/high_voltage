@@ -335,7 +335,7 @@ and [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers):
 # spec/controllers/pages_controller_spec.rb
 describe PagesController, '#show' do
   %w(earn_money screencast about contact).each do |page|
-    context 'on GET to /pages/#{page}' do
+    context "on GET to /pages/#{page}" do
       before do
         get :show, id: page
       end
