@@ -5,3 +5,7 @@ pkg/
 *.gem
 gemfiles/*.lock
 spec/fixtures/log/*.log
+
+#Added following files to not force otheres to use them.
+.overcommit.yml
+.rvmrc
