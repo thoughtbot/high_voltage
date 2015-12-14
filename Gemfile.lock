@@ -4,7 +4,7 @@ PATH
     high_voltage (2.4.0)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionpack (4.2.5)
       actionview (= 4.2.5)
