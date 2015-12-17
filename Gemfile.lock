@@ -40,7 +40,7 @@ GEM
     method_source (0.8.2)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
-    nokogiri (1.6.7)
+    nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -97,4 +97,4 @@ DEPENDENCIES
   rspec-rails
 
 BUNDLED WITH
-   1.11.0
+   1.11.2
