@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = HighVoltage::VERSION.dup
   s.authors     = ['Matt Jankowski', 'Dan Croak', 'Nick Quaranto', 'Chad Pytel', 'Joe Ferris', 'J. Edward Dewyea', 'Tammer Saleh', 'Mike Burns', 'Tristan Dunn']
   s.email       = ['support@thoughtbot.com']
-  s.homepage    = 'http://github.com/thoughtbot/high_voltage'
+  s.homepage    = 'https://github.com/thoughtbot/high_voltage'
   s.summary     = 'Simple static page rendering controller'
   s.description = 'Fire in the disco. Fire in the ... taco bell.'
   s.license     = 'MIT'
