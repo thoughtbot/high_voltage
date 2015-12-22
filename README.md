@@ -168,7 +168,7 @@ end
 
 #### Caching
 
-Caching has been deprecated and will be removed in the next release.
+Built in caching support has been removed in HighVoltage. See [PR 221](https://github.com/thoughtbot/high_voltage/pull/221).
 
 Page caching and action caching can be done via Rails. Visit the [Caching with
 Rails: An overview](http://guides.rubyonrails.org/caching_with_rails.html) guide

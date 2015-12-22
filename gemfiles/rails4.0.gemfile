@@ -4,7 +4,5 @@ source "http://rubygems.org"
 
 gem "appraisal"
 gem "rails", "~> 4.0.0"
-gem "actionpack-action_caching"
-gem "actionpack-page_caching"
 
 gemspec :path => "../"

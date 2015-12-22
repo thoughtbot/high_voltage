@@ -14,15 +14,6 @@ module HighVoltage::StaticPage
 
     rescue_from HighVoltage::InvalidPageIdError, with: :invalid_page
 
-    if respond_to?(:caches_action)
-      caches_action :show, layout: HighVoltage.action_caching_layout,
-        if: -> { HighVoltage.action_caching }
-    end
-
-    if respond_to?(:caches_page)
-      caches_page :show, if: -> { HighVoltage.page_caching }
-    end
-
     hide_action :current_page, :page_finder, :page_finder_factory
   end
 

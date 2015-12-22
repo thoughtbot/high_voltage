@@ -4,8 +4,6 @@ require "pry"
 require "active_model/railtie"
 require "action_controller/railtie"
 require "action_view/railtie"
-require "actionpack/action_caching/railtie"
-require "actionpack/page_caching/railtie"
 require "rspec/rails"
 
 require "high_voltage"
