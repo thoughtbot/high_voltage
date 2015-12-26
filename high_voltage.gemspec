@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = HighVoltage::VERSION.dup
   s.authors     = ['Matt Jankowski', 'Dan Croak', 'Nick Quaranto', 'Chad Pytel', 'Joe Ferris', 'J. Edward Dewyea', 'Tammer Saleh', 'Mike Burns', 'Tristan Dunn']
   s.email       = ['support@thoughtbot.com']
-  s.homepage    = 'http://github.com/thoughtbot/high_voltage'
+  s.homepage    = 'https://github.com/thoughtbot/high_voltage'
   s.summary     = 'Simple static page rendering controller'
   s.description = 'Fire in the disco. Fire in the ... taco bell.'
   s.license     = 'MIT'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency("activesupport", ">= 3.1.0")
+  s.add_development_dependency("activesupport")
   s.add_development_dependency("pry")
-  s.add_development_dependency("rspec-rails", "~> 3.2.0")
+  s.add_development_dependency("rspec-rails")
 end
