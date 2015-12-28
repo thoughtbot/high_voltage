@@ -7,9 +7,9 @@ install:
 language:
   - ruby
 rvm:
-  - 2.0.0
-  - 2.1.5
-  - 2.2.0
+  - 2.0.0-p648
+  - 2.1.8
+  - 2.2.4
 script: 'bundle exec rake spec'
 notifications:
   email: false
