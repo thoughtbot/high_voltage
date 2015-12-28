@@ -10,6 +10,7 @@ rvm:
   - 2.0.0-p648
   - 2.1.8
   - 2.2.4
+  - 2.3.0
 script: 'bundle exec rake spec'
 notifications:
   email: false
