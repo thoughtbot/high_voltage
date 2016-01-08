@@ -13,13 +13,17 @@ module HighVoltage::StaticPage
     end
 
     rescue_from HighVoltage::InvalidPageIdError, with: :invalid_page
-
-    hide_action :current_page, :page_finder, :page_finder_factory
   end
 
   def show
     render template: current_page
   end
+
+  def invalid_page
+    raise ActionController::RoutingError, "No such page: #{params[:id]}"
+  end
+
+  private
 
   def current_page
     page_finder.find
@@ -31,9 +35,5 @@ module HighVoltage::StaticPage
 
   def page_finder_factory
     HighVoltage::PageFinder
-  end
-
-  def invalid_page
-    raise ActionController::RoutingError, "No such page: #{params[:id]}"
   end
 end
