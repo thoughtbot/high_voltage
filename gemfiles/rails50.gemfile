@@ -3,7 +3,8 @@
 source "https://rubygems.org"
 
 gem "appraisal"
-gem "rspec-rails", "~> 3.2"
-gem "rails", "~> 4.2.0"
+gem "rspec-rails", "3.5.0.beta1"
+gem "rails", "~> 5.0.0.beta3"
+gem "rails-controller-testing"
 
 gemspec :path => "../"

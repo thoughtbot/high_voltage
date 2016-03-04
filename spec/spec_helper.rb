@@ -28,4 +28,13 @@ RSpec.configure do |config|
   config.include RSpec::Matchers
   config.mock_with :rspec
   config.order = "random"
+
+  if Rails::VERSION::MAJOR >= 5
+    require "rails-controller-testing"
+
+    config.include(
+      Rails::Controller::Testing::TemplateAssertions,
+      type: :controller,
+    )
+  end
 end
