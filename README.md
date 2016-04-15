@@ -32,13 +32,13 @@ Write your static pages and put them in the RAILS_ROOT/app/views/pages directory
 After putting something interesting there, you can link to it from anywhere in your app with:
 
 ```ruby
-link_to 'About', page_path('about')
+<%= link_to 'About', page_path('about') %>
 ```
 
 You can nest pages in a directory structure, if that makes sense from a URL perspective for you:
 
 ```ruby
-link_to 'Q4 Reports', page_path('about/corporate/policies/HR/en_US/biz/sales/Quarter-Four')
+<%= link_to 'Q4 Reports', page_path('about/corporate/policies/HR/en_US/biz/sales/Quarter-Four') %>
 ```
 
 Bam.
