@@ -1,3 +1,8 @@
+New for 3.0.0
++ HighVoltage now supports Rails 5.0.0.beta3 and up.
++ Properly handle extensions in root route constraint requests.
++ Removes caching in preparation for Rails 5.
+
 New for 2.4.0
 + Retrieve a list of available static pages via `HighVoltage.page_ids`.
 + Properly handle page ids which are blank when being sanitized.

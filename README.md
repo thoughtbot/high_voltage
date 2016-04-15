@@ -15,12 +15,8 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 Include in your Gemfile:
 
 ```ruby
-gem 'high_voltage', '~> 2.4.0'
+gem 'high_voltage', '~> 3.0.0'
 ```
-
-For Rails versions prior to 3.0, use the 0.9.2 tag of high_voltage:
-
-    https://github.com/thoughtbot/high_voltage/tree/v0.9.2
 
 ## Usage
 
@@ -362,7 +358,7 @@ Thank you, [contributors]!
 
 ## License
 
-High Voltage is copyright © 2009-2015 thoughtbot. It is free software, and may
+High Voltage is copyright © 2009-2016 thoughtbot. It is free software, and may
 be redistributed under the terms specified in the [`LICENSE`] file.
 
 [`LICENSE`]: /MIT-LICENSE
