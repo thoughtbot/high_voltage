@@ -11,9 +11,23 @@ describe HighVoltage::PageFinder do
     expect(find("dir/nested")).to eq "pages/dir/nested"
   end
 
+  it "produces the name of a dotfile" do
+    expect(find(".file")).to eq "pages/.file"
+  end
+
+  it "supports non-ASCII characters" do
+    expect(find("résumé")).to eq "pages/résumé"
+  end
+
   it "uses a custom content path" do
     with_content_path("other_pages/") do
       expect(find("also_exists")).to eq "other_pages/also_exists"
+    end
+  end
+
+  it "allows the trailing slash to be omitted from the content path" do
+    with_content_path("forgot_slash") do
+      expect(find("thing")).to eq "forgot_slash/thing"
     end
   end
 
@@ -33,22 +47,29 @@ describe HighVoltage::PageFinder do
     expect(subclass.new("sweet page").page_name).to eq "the page is sweet page"
   end
 
-  it "removes invalid characters from the page_id" do
-    expect(find("b\\a…d√")).to eq "pages/bad"
-  end
-
-  context "sanitized page_id" do
-    it "throws an exception if the page_id is empty" do
-      expect { find("\\…√") }.to raise_error HighVoltage::InvalidPageIdError
+  context "bad page_id" do
+    it "throws an exception if page_id resolves to empty" do
+      expect { find("") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("/") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find(".") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("\\.") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("/\\.") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("dummy/..") }.to raise_error HighVoltage::InvalidPageIdError
     end
 
-    it "throws an exception if the page_id is just a file extension" do
-      expect { find("\\√.zip") }.to raise_error HighVoltage::InvalidPageIdError
+    it "throws an exception if page_id resolves to outside the content path" do
+      expect { find("..") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("\\..") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("/\\..") }.to raise_error HighVoltage::InvalidPageIdError
+      expect { find("../secret") }.
+        to raise_error HighVoltage::InvalidPageIdError
+      expect { find("\\../secret") }.
+        to raise_error HighVoltage::InvalidPageIdError
+      expect { find("/\\../secret") }.
+        to raise_error HighVoltage::InvalidPageIdError
+      expect { find("dummy/../../secret") }.
+        to raise_error HighVoltage::InvalidPageIdError
     end
-  end
-
-  it "throws an exception if the path is empty" do
-    expect { find("關於我們/合作伙伴") }.to raise_error HighVoltage::InvalidPageIdError
   end
 
   private
