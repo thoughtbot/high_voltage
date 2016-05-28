@@ -2,8 +2,6 @@ module HighVoltage
   # A command for finding pages by id. This encapsulates the concepts of
   # mapping page names to file names.
   class PageFinder
-    VALID_CHARACTERS = "a-zA-Z0-9~!@$%^&*()#`_+-=<>\"{}|[];',?".freeze
-
     def initialize(page_id)
       @page_id = page_id
     end
@@ -11,7 +9,11 @@ module HighVoltage
     # Produce a template path to the page, in a format understood by
     # `render :template => find`
     def find
-      "#{content_path}#{clean_path}"
+      path = clean_content_pathname.join(page_id.tr("\\", "/")).cleanpath.to_s
+      if !path.start_with?("#{clean_content_pathname}/")
+        raise InvalidPageIdError.new "Invalid page id: #{page_id}"
+      end
+      path
     end
 
     def content_path
@@ -23,27 +25,8 @@ module HighVoltage
     # The raw page id passed in by the user
     attr_reader :page_id
 
-    private
-
-    def clean_path
-      path = Pathname.new("/#{clean_id}")
-      path.cleanpath.to_s[1..-1].tap do |p|
-        if p.blank?
-          raise InvalidPageIdError.new "Invalid page id: #{@page_id}"
-        end
-      end
-    end
-
-    def clean_id
-      @page_id.tr("^#{VALID_CHARACTERS}", "").tap do |id|
-        if invalid_page_id?(id)
-          raise InvalidPageIdError.new "Invalid page id: #{@page_id}"
-        end
-      end
-    end
-
-    def invalid_page_id?(id)
-      id.blank? || (id.first == ".")
+    def clean_content_pathname
+      Pathname.new(content_path).cleanpath
     end
   end
 
