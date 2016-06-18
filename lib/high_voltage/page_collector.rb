@@ -17,8 +17,8 @@ module HighVoltage
     private
 
     def template_ext?(ext)
-      @ext_lookup ||=
-        ActionView::Template.template_handler_extensions.index_by(&:itself)
+      @ext_lookup ||= ActionView::Template.template_handler_extensions.
+        index_by { |e| e }
       @ext_lookup.key?(ext)
     end
 
