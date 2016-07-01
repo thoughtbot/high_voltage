@@ -40,7 +40,7 @@ describe HighVoltage::PagesController do
 
     it "raises a missing template error for valid page with invalid partial" do
       expect { get :show, id: "exists_but_references_nonexistent_partial" }.
-        to raise_error(ActionView::MissingTemplate)
+        to raise_error(missing_template_error)
     end
   end
 
@@ -107,7 +107,7 @@ describe HighVoltage::PagesController do
       id = "also_exists_but_references_nonexistent_partial"
 
       expect { get :show, id: id }.
-        to raise_error(ActionView::MissingTemplate)
+        to raise_error(missing_template_error)
     end
   end
 end

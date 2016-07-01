@@ -7,7 +7,6 @@ rails_versions.each do |rails_version|
 end
 
 appraise "rails50" do
-  gem "rails", "~> 5.0.0.beta3"
-  gem "rspec-rails", "3.5.0.beta1"
+  gem "rails", "~> 5.0.0"
   gem "rails-controller-testing"
 end
