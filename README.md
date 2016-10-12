@@ -139,7 +139,7 @@ meta-data on High Voltage pages.
 
 ```ruby
 # app/views/pages/about.html.erb
-<%= content_for :page_title, 'About Us - Custom page title' %>
+<% content_for :page_title, 'About Us - Custom page title' %>
 ```
 
 Then print the contents of `:title` into the layout:
