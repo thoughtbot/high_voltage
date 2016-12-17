@@ -3,9 +3,9 @@ require "spec_helper"
 describe HighVoltage::Constraints::RootRoute, ".matches?" do
   it "returns true when the view file exists" do
     request = double(path: 'index')
-    file_path = Rails.root.join("app", "views", "pages", "index.html*").to_s
+    file_path = Rails.root.join("app", "views", "pages", "index.*").to_s
 
-    allow(Dir).to receive(:glob).with(file_path).and_return(["about.html.erb"])
+    allow(Dir).to receive(:glob).with(file_path).and_return(["about.haml"])
 
     result = HighVoltage::Constraints::RootRoute.matches?(request)
 
@@ -14,7 +14,7 @@ describe HighVoltage::Constraints::RootRoute, ".matches?" do
 
   it "returns true when the view file exists and url ends with .html" do
     request = double(path: "index.html")
-    file_path = Rails.root.join("app", "views", "pages", "index.html*").to_s
+    file_path = Rails.root.join("app", "views", "pages", "index.*").to_s
 
     allow(Dir).to receive(:glob).with(file_path).and_return(["about.html.erb"])
 
@@ -25,7 +25,7 @@ describe HighVoltage::Constraints::RootRoute, ".matches?" do
 
   it "returns false when the view files does not exist" do
     request = double(path: 'index')
-    file_path = Rails.root.join("app", "views", "pages", "index", ".html*").to_s
+    file_path = Rails.root.join("app", "views", "pages", "index.*").to_s
 
     allow(File).to receive(:glob).with(file_path).and_return([])
 

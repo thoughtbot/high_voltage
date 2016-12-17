@@ -17,7 +17,7 @@ module HighVoltage
         end
 
         def file_pattern(page_id)
-          "#{content_path}#{page_id}.html*"
+          "#{content_path}#{page_id}.*"
         end
 
         def content_path
