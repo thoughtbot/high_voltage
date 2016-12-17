@@ -18,7 +18,7 @@ module HighVoltage::StaticPage
   def show
     render(
       template: current_page,
-      locals: { current_page: current_page }
+      locals: { current_page: current_page },
     )
   end
 
