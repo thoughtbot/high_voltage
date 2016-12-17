@@ -7,10 +7,11 @@ describe HighVoltage::PageCollector do
       "also_dir/also_nested",
       "also_exists",
       "also_exists_but_references_nonexistent_partial",
+      "current_page_helper",
       "dir/nested",
       "exists",
       "exists_but_references_nonexistent_partial",
-      "rot13"
+      "rot13",
     ]
   end
 

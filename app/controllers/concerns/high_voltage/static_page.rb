@@ -16,7 +16,10 @@ module HighVoltage::StaticPage
   end
 
   def show
-    render template: current_page
+    render(
+      template: current_page,
+      locals: { current_page: current_page },
+    )
   end
 
   def invalid_page
