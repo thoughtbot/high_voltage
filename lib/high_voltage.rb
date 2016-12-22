@@ -13,4 +13,6 @@ require 'high_voltage/version'
 module HighVoltage
   extend Configuration
   require 'high_voltage/engine' if defined?(Rails)
+
+  autoload :PageFinder, 'high_voltage/page_finder'
 end
