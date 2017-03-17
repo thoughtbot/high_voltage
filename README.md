@@ -316,7 +316,7 @@ Make sure that there are corresponding locale files
 /config/locale/hi.yml
 ```
 
-One last note is there is a [know
+One last note is there is a [known
 issue](https://github.com/thoughtbot/high_voltage/issues/59) with High Voltage.
 
 You'll need to specify routes like this `<%= link_to "About Us", page_path(id:
