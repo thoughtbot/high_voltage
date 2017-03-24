@@ -5,7 +5,7 @@ module HighVoltage::StaticPage
     layout ->(_) { HighVoltage.layout }
 
     rescue_from ActionView::MissingTemplate do |exception|
-      if exception.message =~ %r{Missing template #{page_finder.content_path}}
+      if exception.message =~ %r{Missing template /*#{page_finder.content_path.gsub(/\//, '')}}
         invalid_page
       else
         raise exception
