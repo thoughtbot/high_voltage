@@ -12,7 +12,7 @@ module HighVoltage
     end
 
     def valid?
-      exists? && file_in_content_path? && !directory? && !partial? && html?
+      exists? && file_in_content_path? && !directory? && !partial? && valido?
     end
 
     private
@@ -33,12 +33,12 @@ module HighVoltage
       File.basename(file_path).first == "_"
     end
 
-    def html?
-      !file_path.match(html_file_pattern).nil?
+    def valido?
+      !file_path.match(valid_file_pattern).nil?
     end
 
-    def html_file_pattern
-      /\.(html)(\.[a-z]+)?$/
+    def valid_file_pattern
+      \.(haml||erb||slim)(\.[a-z]+)?$
     end
   end
 end
