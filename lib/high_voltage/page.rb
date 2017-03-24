@@ -12,7 +12,7 @@ module HighVoltage
     end
 
     def valid?
-      exists? && file_in_content_path? && !directory? && !partial? && html?
+      exists? && file_in_content_path? && !directory? && !partial?
     end
 
     private
