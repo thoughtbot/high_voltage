@@ -9,6 +9,7 @@ describe HighVoltage::PageCollector do
       "dir/nested",
       "exists",
       "exists_but_references_nonexistent_partial",
+      "exists_haml",
       "rot13"
     ]
   end
@@ -19,6 +20,7 @@ describe HighVoltage::PageCollector do
         "also_dir/also_nested",
         "also_exists",
         "also_exists_but_references_nonexistent_partial",
+        "also_exists_haml",
       ]
     end
   end

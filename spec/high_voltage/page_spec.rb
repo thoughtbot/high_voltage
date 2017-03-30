@@ -19,6 +19,12 @@ describe HighVoltage::Page do
     expect(page).to be_valid
   end
 
+  it "is valid for a page with a haml extension" do
+    page = page(full_file_path("exists_haml.haml"))
+
+    expect(page).to be_valid
+  end
+
   it "is valid for a page in a subdirectory" do
     page = page(full_file_path("dir/nested.html.erb"))
 

@@ -38,7 +38,7 @@ module HighVoltage
     end
 
     def html_file_pattern
-      /\.(html)(\.[a-z]+)?$/
+      /(\.html(\.[a-z]+)?)|(\.haml)$/
     end
   end
 end
