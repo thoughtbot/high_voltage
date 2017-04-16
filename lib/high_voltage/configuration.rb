@@ -3,10 +3,10 @@ module HighVoltage
     attr_accessor(
       :content_path,
       :home_page,
-      :layout,
       :parent_engine,
       :route_drawer,
       :routes,
+      :parent_controller
     )
 
     def configure
@@ -28,9 +28,9 @@ module HighVoltage
     def set_default_configuration
       self.content_path = 'pages/'
       self.home_page = nil
-      self.layout = 'application'
       self.route_drawer = HighVoltage::RouteDrawers::Default
       self.routes = true
+      self.parent_controller = 'AppliationController'
     end
   end
 end
