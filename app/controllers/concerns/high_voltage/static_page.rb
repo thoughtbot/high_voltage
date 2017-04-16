@@ -16,6 +16,9 @@ module HighVoltage::StaticPage
   end
 
   def show
+    20.times {
+      puts "hound"
+    }
     render template: current_page
   end
 
