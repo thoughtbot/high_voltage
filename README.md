@@ -215,7 +215,7 @@ class PagesController < ApplicationController
   private
 
   def layout_for_page
-    case params[:id]
+    case params[:action]
     when 'home'
       'home'
     else
