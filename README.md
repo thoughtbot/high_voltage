@@ -10,9 +10,13 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 
 ## Installation
 
+There are two ways to install High Voltage. 
+
+You can run: 
+
     $ gem install high_voltage
 
-Include in your Gemfile:
+Or you can include in your Gemfile:
 
 ```ruby
 gem 'high_voltage', '~> 3.0.0'
