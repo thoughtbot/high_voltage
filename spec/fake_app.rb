@@ -10,6 +10,7 @@ module Dummy
     config.action_controller.perform_caching = true
     config.action_controller.cache_store = :memory_store
     config.root = "spec/fixtures"
+    config.paths["app/views"] << "spec/fixtures/app/views"
   end
 end
 Dummy::Application.initialize!

@@ -8,7 +8,7 @@ module HighVoltage
           "/*id" => 'high_voltage/pages#show',
           :as => :page,
           :format => false,
-          :constraints => HighVoltage::Constraints::RootRoute
+          :constraints => HighVoltage::Constraints::RootRoute.new,
         }
       end
     end

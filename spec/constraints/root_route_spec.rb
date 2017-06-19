@@ -1,36 +1,29 @@
 require "spec_helper"
 
-describe HighVoltage::Constraints::RootRoute, ".matches?" do
-  it "returns true when the view file exists" do
-    request = double(path: 'index')
-    file_path = Rails.root.join("app", "views", "pages", "index.html*").to_s
+describe HighVoltage::Constraints::RootRoute do
+  describe "#matches?" do
+    it "returns true when the view file exists" do
+      request = double(path: "exists")
 
-    allow(Dir).to receive(:glob).with(file_path).and_return(["about.html.erb"])
+      result = described_class.new.matches?(request)
 
-    result = HighVoltage::Constraints::RootRoute.matches?(request)
+      expect(result).to be true
+    end
 
-    expect(result).to be true
-  end
+    it "returns true when the view file exists and url ends with .html" do
+      request = double(path: "exists.html")
 
-  it "returns true when the view file exists and url ends with .html" do
-    request = double(path: "index.html")
-    file_path = Rails.root.join("app", "views", "pages", "index.html*").to_s
+      result = described_class.new.matches?(request)
 
-    allow(Dir).to receive(:glob).with(file_path).and_return(["about.html.erb"])
+      expect(result).to be true
+    end
 
-    result = HighVoltage::Constraints::RootRoute.matches?(request)
+    it "returns false when the view files does not exist" do
+      request = double(path: "index")
 
-    expect(result).to be true
-  end
+      result = described_class.new.matches?(request)
 
-  it "returns false when the view files does not exist" do
-    request = double(path: 'index')
-    file_path = Rails.root.join("app", "views", "pages", "index", ".html*").to_s
-
-    allow(File).to receive(:glob).with(file_path).and_return([])
-
-    result = HighVoltage::Constraints::RootRoute.matches?(request)
-
-    expect(result).to be false
+      expect(result).to be false
+    end
   end
 end
