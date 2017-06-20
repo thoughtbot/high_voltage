@@ -6,7 +6,10 @@ rails_versions.each do |rails_version|
   end
 end
 
-appraise "rails50" do
-  gem "rails", "~> 5.0.0"
-  gem "rails-controller-testing"
+rails_5x_version = ['~> 5.0.0', '~> 5.1.0']
+rails_5x_version.each do |rails_version|
+  appraise "rails#{rails_version.slice(/\d+\.\d+/)}" do
+    gem 'rails', rails_version
+    gem "rails-controller-testing"
+  end
 end

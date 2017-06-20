@@ -3,8 +3,12 @@
 # supported in Rails 5+. Since we support back to 4, we need some sort of shim
 # to avoid super noisy deprecations when running tests.
 module HTTPMethodShim
-  def get(path, params = nil, headers = nil)
-    super(path, params: params, headers: headers)
+  def get(path, params = nil, *args)
+    if args.any?
+      raise ArgumentError, "Unexpected arguments passed to shim: #{args.inspect}"
+    else
+      super(path, params: params)
+    end
   end
 end
 
