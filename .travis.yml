@@ -1,3 +1,6 @@
+branches:
+  only:
+    - "master"
 gemfile:
   - gemfiles/rails4.0.gemfile
   - gemfiles/rails4.1.gemfile
