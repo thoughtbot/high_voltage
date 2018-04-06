@@ -8,17 +8,21 @@ module HighVoltage
     end
 
     def id
-      file_path.gsub(content_path, "").gsub(html_file_pattern, "")
+      file_path.gsub(content_path, "").split(".").first
     end
 
     def valid?
-      exists? && file_in_content_path? && !directory? && !partial? && html?
+      exists? && file_in_content_path? && !directory? && !partial? && handled?
     end
 
     private
 
+    def handler_extension
+      File.extname(file_path).delete(".")
+    end
+
     def exists?
-      File.exists?(file_path)
+      File.exist?(file_path)
     end
 
     def file_in_content_path?
@@ -33,12 +37,12 @@ module HighVoltage
       File.basename(file_path).first == "_"
     end
 
-    def html?
-      !file_path.match(html_file_pattern).nil?
+    def handled?
+      available_handlers.include? handler_extension
     end
 
-    def html_file_pattern
-      /\.(html)(\.[a-z]+)?$/
+    def available_handlers
+      ActionView::Template.template_handler_extensions
     end
   end
 end

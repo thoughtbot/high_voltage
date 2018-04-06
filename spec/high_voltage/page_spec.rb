@@ -43,10 +43,10 @@ describe HighVoltage::Page do
     expect(page).to_not be_valid
   end
 
-  it "is invalid for a text page" do
-    page = page(full_file_path("text.txt.erb"))
+  it "is valid for files without a format present" do
+    page = page(full_file_path("exists_without_html_extension.erb"))
 
-    expect(page).to_not be_valid
+    expect(page).to be_valid
   end
 
   private
