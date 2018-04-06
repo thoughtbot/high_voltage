@@ -2,8 +2,6 @@ branches:
   only:
     - "master"
 gemfile:
-  - gemfiles/rails4.0.gemfile
-  - gemfiles/rails4.1.gemfile
   - gemfiles/rails4.2.gemfile
   - gemfiles/rails5.0.gemfile
   - gemfiles/rails5.1.gemfile
@@ -28,14 +26,6 @@ matrix:
       gemfile: gemfiles/rails5.0.gemfile
     - rvm: 2.1.10
       gemfile: gemfiles/rails5.1.gemfile
-    - rvm: 2.4.3
-      gemfile: gemfiles/rails4.0.gemfile
-    - rvm: 2.4.3
-      gemfile: gemfiles/rails4.1.gemfile
-    - rvm: 2.5.0
-      gemfile: gemfiles/rails4.0.gemfile
-    - rvm: 2.5.0
-      gemfile: gemfiles/rails4.1.gemfile
 
 script: 'bundle exec rake spec'
 notifications:
