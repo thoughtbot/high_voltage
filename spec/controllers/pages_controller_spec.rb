@@ -10,7 +10,7 @@ describe HighVoltage::PagesController do
       before { get :show, id: "exists" }
 
       it "responds with success and render template" do
-        expect(response).to be_success
+        expect(response).to be_successful
         expect(response).to render_template("exists")
       end
 
@@ -23,7 +23,7 @@ describe HighVoltage::PagesController do
       before { get :show, id: "dir/nested" }
 
       it "responds with success and render template" do
-        expect(response).to be_success
+        expect(response).to be_successful
         expect(response).to render_template("pages/dir/nested")
       end
     end
@@ -69,7 +69,7 @@ describe HighVoltage::PagesController do
       before { get :show, id: "also_exists" }
 
       it "responds with success and render template" do
-        expect(response).to be_success
+        expect(response).to be_successful
         expect(response).to render_template("other_pages/also_exists")
       end
     end
@@ -78,7 +78,7 @@ describe HighVoltage::PagesController do
       before { get :show, id: "also_dir/also_nested" }
 
       it "responds with success and render template" do
-        expect(response).to be_success
+        expect(response).to be_successful
         expect(response).to render_template("other_pages/also_dir/also_nested")
       end
     end
