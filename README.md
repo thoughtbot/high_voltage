@@ -19,7 +19,7 @@ You can run:
 Or you can include in your Gemfile:
 
 ```ruby
-gem 'high_voltage', '~> 3.0.0'
+gem 'high_voltage', '~> 3.1'
 ```
 
 ## Usage
