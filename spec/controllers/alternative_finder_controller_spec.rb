@@ -6,7 +6,7 @@ describe AlternativeFinderController do
   it 'renders the file from the alternative directory' do
     get :show, :id => 'ebg13'
 
-    expect(response).to be_success
+    expect(response).to be_successful
     expect(response).to render_template('rot13')
   end
 end
