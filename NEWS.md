@@ -1,3 +1,12 @@
+New for 3.1.0
++ Fix bugs around finding pages via page_ids's that contain non-ASCII characters
++ Trailing slash is no longer required for finding pages
++ Some other improvements around page lookups
++ Don't require format in extension for looking up page id's HAML and Slim do
+  not require them.
++ Test against Rails 5, 5.1, 5.2
++ Test against Ruby 2.4, 2.5
+
 New for 3.0.0
 + HighVoltage now supports Rails 5.0.0.beta3 and up.
 + Properly handle extensions in root route constraint requests.
