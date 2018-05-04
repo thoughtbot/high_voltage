@@ -16,7 +16,10 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_development_dependency("activesupport", ">= 3.1.0")
-  s.add_development_dependency("pry")
-  s.add_development_dependency("capybara")
+  s.add_development_dependency('activesupport', '>= 3.1.0')
+  s.add_development_dependency('appraisal')
+  s.add_development_dependency('capybara')
+  s.add_development_dependency('pry')
+  s.add_development_dependency('rails-controller-testing')
+  s.add_development_dependency('rspec-rails', '~> 3.5')
 end
