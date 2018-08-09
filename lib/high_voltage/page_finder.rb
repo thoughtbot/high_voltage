@@ -14,6 +14,8 @@ module HighVoltage
         raise InvalidPageIdError.new "Invalid page id: #{page_id}"
       end
       path
+    rescue ArgumentError
+      raise InvalidPageIdError.new "Invalid page id: #{page_id}"
     end
 
     def content_path
