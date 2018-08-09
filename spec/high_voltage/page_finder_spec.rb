@@ -70,6 +70,11 @@ describe HighVoltage::PageFinder do
       expect { find("dummy/../../secret") }.
         to raise_error HighVoltage::InvalidPageIdError
     end
+
+    it "throws an exception if invalid byte sequence in page_id" do
+      expect { find("\xD0½\xA8\xCEļ\xFE\xBC\xD0.zip") }.
+        to raise_error HighVoltage::InvalidPageIdError
+    end
   end
 
   private
