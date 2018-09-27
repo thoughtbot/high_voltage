@@ -26,7 +26,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    appraisal (1.0.2)
+    appraisal (2.2.0)
       bundler
       rake
       thor (>= 0.14.0)
