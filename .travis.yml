@@ -11,27 +11,9 @@ install:
 language:
   - ruby
 rvm:
-  - 2.0.0-p648
-  - 2.1.10
-  - 2.2.9
-  - 2.3.6
-  - 2.4.3
-  - 2.5.0
-matrix:
-  exclude:
-    - rvm: 2.0.0-p648
-      gemfile: gemfiles/rails5.0.gemfile
-    - rvm: 2.0.0-p648
-      gemfile: gemfiles/rails5.1.gemfile
-    - rvm: 2.0.0-p648
-      gemfile: gemfiles/rails5.2.gemfile
-    - rvm: 2.1.10
-      gemfile: gemfiles/rails5.0.gemfile
-    - rvm: 2.1.10
-      gemfile: gemfiles/rails5.1.gemfile
-    - rvm: 2.1.10
-      gemfile: gemfiles/rails5.2.gemfile
-
+  - 2.3.7
+  - 2.4.5
+  - 2.5.3
 script: 'bundle exec rake spec'
 notifications:
   email: false
