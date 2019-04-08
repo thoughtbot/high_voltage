@@ -2,7 +2,7 @@
 
 Rails engine for static pages.
 
-... but be careful. [Danger!](http://www.youtube.com/watch?v=HD5tnb2RBYg)
+... but be careful. [Danger!](https://www.youtube.com/watch?v=R-FxmoVM7X4)
 
 ## Static pages?
 
