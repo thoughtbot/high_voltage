@@ -182,6 +182,7 @@ Most common reasons to override?
   * You need authentication around the pages to make sure a user is signed in.
   * You need to render different layouts for different pages.
   * You need to render a partial from the `app/views/pages` directory.
+  * You need to use your own Page resource and would like to use StaticPage resource for high voltage
 
 Create a `PagesController` of your own:
 
@@ -236,6 +237,12 @@ To set up a different layout for all High Voltage static pages, use an initializ
 HighVoltage.configure do |config|
   config.layout = 'your_layout'
 end
+```
+
+To use StaticPage resource, turn off routing and use this route:
+
+```ruby
+get "/static_pages/*id" => 'high_voltage/pages#show', as: :static_page, format: false
 ```
 
 ## Custom finding
