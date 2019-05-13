@@ -7,7 +7,7 @@ gemfile:
   - gemfiles/rails_5.1.gemfile
   - gemfiles/rails_5.2.gemfile
 install:
-  - 'travis_retry bundle install'
+  - "bin/setup"
 language:
   - ruby
 rvm:
