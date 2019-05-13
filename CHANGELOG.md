@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [3.1.1] - 2019-05-13
 
 ### Fixed
 
@@ -83,7 +83,7 @@
 + New RootRoute constraint.
 + Updated README, with new TravisCI url.
 
-[Unreleased]: https://github.com/thoughtbot/high_voltage/compare/v3.1.0...HEAD
+[3.1.1]: https://github.com/thoughtbot/high_voltage/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/thoughtbot/high_voltage/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/thoughtbot/high_voltage/compare/v2.4.0...v3.0.0
 [2.4.0]: https://github.com/thoughtbot/high_voltage/compare/v2.3.0...v2.4.0
