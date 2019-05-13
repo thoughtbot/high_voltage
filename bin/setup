@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -e
+
+# Install required gems, including Appraisal, which helps us test against
+# multiple Rails versions
+gem install bundler --version 1.17.3
+bundle _1.17.3_ check || bundle _1.17.3_ install
+
+if [ -z "$CI" ]; then
+  bundle exec appraisal install
+fi

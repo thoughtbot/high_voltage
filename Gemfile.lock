@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     high_voltage (3.1.0)
+      activesupport (>= 3.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -103,7 +104,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (>= 3.1.0)
   appraisal
   capybara
   high_voltage!
