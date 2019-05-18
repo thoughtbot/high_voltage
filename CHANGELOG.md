@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.2] - 2019-05-20
+
+### Fixed
+
++ The previous release unintentionally included a `setup` script meant for
+  development only in the packaged gem. This has been removed.
+
 ## [3.1.1] - 2019-05-13
 
 ### Fixed
@@ -83,6 +90,7 @@
 + New RootRoute constraint.
 + Updated README, with new TravisCI url.
 
+[3.1.2]: https://github.com/thoughtbot/high_voltage/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/thoughtbot/high_voltage/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/thoughtbot/high_voltage/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/thoughtbot/high_voltage/compare/v2.4.0...v3.0.0
