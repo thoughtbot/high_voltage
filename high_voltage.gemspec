@@ -11,8 +11,14 @@ Gem::Specification.new do |s|
   s.description = 'Fire in the disco. Fire in the ... taco bell.'
   s.license     = 'MIT'
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.files         = `git ls-files -- {app,config,lib}/*`.split("\n")
+  s.files        += %w[
+    CHANGELOG.md
+    CONTRIBUTING.md
+    MIT-LICENSE
+    README.md
+  ]
+  s.test_files    = []
   s.require_paths = ["lib"]
 
   s.add_development_dependency('activesupport', '>= 3.1.0')
