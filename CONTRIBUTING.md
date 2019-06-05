@@ -39,3 +39,7 @@ Syntax:
 * Follow the conventions you see used in the source already.
 
 And in case we didn't emphasize it enough: we love tests!
+
+## Issue Triage [![Open Source Helpers](https://www.codetriage.com/thoughtbot/high_voltage/badges/users.svg)](https://www.codetriage.com/thoughtbot/high_voltage)
+
+You can triage issues which may include reproducing bug reports or asking for vital information, such as version numbers or reproduction instructions. If you would like to start triaging issues, one easy way to get started is to [subscribe to high_voltage on CodeTriage](https://www.codetriage.com/thoughtbot/high_voltage).
