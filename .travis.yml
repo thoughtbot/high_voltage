@@ -12,9 +12,9 @@ install:
 language:
   - ruby
 rvm:
-  - 2.4.6
-  - 2.5.5
-  - 2.6.3
+  - 2.4.7
+  - 2.5.6
+  - 2.6.4
 script: 'bundle exec rake spec'
 notifications:
   email: false
@@ -23,6 +23,6 @@ cache: bundler
 matrix:
   allow_failures:
     - gemfile: gemfiles/rails_4.2.gemfile
-      rvm: 2.6.3
+      rvm: 2.6.4
     - gemfile: gemfiles/rails_6.0.gemfile
-      rvm: 2.4.6
+      rvm: 2.4.7
