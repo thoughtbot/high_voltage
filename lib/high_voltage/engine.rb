@@ -11,12 +11,5 @@ module HighVoltage
         app.paths.add(concerns_path)
       end
     end
-
-    initializer "Require for Rails 3" do |app|
-      if defined?(Rails) && Rails::VERSION::MAJOR == 3
-        require "concerns/high_voltage/static_page"
-        require "high_voltage/pages_controller"
-      end
-    end
   end
 end
