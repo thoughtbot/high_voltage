@@ -47,7 +47,7 @@ GEM
     erubi (1.9.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
-    loofah (2.2.3)
+    loofah (2.3.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     method_source (0.9.2)
