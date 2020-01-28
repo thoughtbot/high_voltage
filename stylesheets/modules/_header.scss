@@ -1,8 +1,8 @@
 .site-header {
   @extend %container;
   background-color: $base-accent-color;
-  display: grid;
   color: $inverse-accent-color;
+  display: grid;
   grid-template-columns: 1fr;
   justify-content: space-between;
   margin-bottom: $gutter-width;
