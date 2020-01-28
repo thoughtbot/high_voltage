@@ -14,33 +14,35 @@
 }
 
 .install-direction {
+  display: grid;
+  grid-template-columns: 1fr;
   padding: 0;
   text-transform: lowercase;
+
+  @media screen and (min-width : $large-screen) {
+    grid-template-columns: 1fr auto;
+  }
 }
 
 .install-direction-instructions,
 .install-direction-sample {
-  padding: $gutter-width;
   margin: 0;
-}
-
-.install-direction-step {
-  @include clearfix;
-}
-
-.install-direction-instructions {
-  float: left;
+  padding: $gutter-width;
 }
 
 .install-direction-sample {
   border-bottom: $base-border;
-  border-left: $base-border;
-  float: right;
   font-size: 1.25em;
   min-width: 25rem;
+  padding-top: 0;
 
-  .install-direction-step:last-child & {
+  &:last-child {
     border-bottom-style: none;
+  }
+
+  @media screen and (min-width : $large-screen) {
+    border-left: $base-border;
+    padding-top: $gutter-width;
   }
 }
 

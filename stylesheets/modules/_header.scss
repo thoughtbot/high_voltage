@@ -1,7 +1,16 @@
 .site-header {
   @extend %container;
   background-color: $base-accent-color;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
   margin-bottom: $gutter-width;
+
+  @media screen and (min-width : $large-screen) {
+    grid-template-areas: "logo logo"
+                         "desc icon";
+    grid-template-columns: minmax(auto, 30em);
+  }
 }
 
 .site-title {
@@ -10,15 +19,17 @@
   svg {
     max-width: 100%;
   }
+
+  @media screen and (min-width : $large-screen) {
+    grid-area: logo;
+  }
 }
 
 .site-description {
   border: 1px solid $base-background-color;
   color: $base-background-color;
-  float: left;
   font-size: 1.25em;
   margin: 0;
-  max-width: 22em;
   padding: ($gutter-width * 0.8) $gutter-width;
 
   @media screen and (min-width : $large-screen) {
@@ -31,5 +42,6 @@
 
   @media screen and (min-width : $large-screen) {
     display: inline;
+    justify-self: end;
   }
 }

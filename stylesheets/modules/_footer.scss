@@ -9,9 +9,14 @@
 
   .cite {
     @include clearfix();
+    display: grid;
+    grid-template-columns: 1fr;
     font-size: 1.25em;
     margin-bottom: $gutter-width;
-    max-width: 22em;
+
+    @media screen and (min-width : $medium-screen) {
+      grid-template-columns: min-content minmax(auto, 18em);
+    }
   }
 
   .ralph {
@@ -20,7 +25,6 @@
     width: 5rem;
     @media screen and (min-width : $medium-screen) {
 
-      float: left;
       margin-right: $gutter-width;
       width: 3.75rem;
     }
