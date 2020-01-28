@@ -2,6 +2,7 @@
   @extend %container;
   background-color: $base-accent-color;
   display: grid;
+  color: $inverse-accent-color;
   grid-template-columns: 1fr;
   justify-content: space-between;
   margin-bottom: $gutter-width;
@@ -17,6 +18,8 @@
   margin-bottom: $gutter-width;
 
   svg {
+    fill: currentColor;
+    height: auto;
     max-width: 100%;
   }
 
@@ -26,8 +29,7 @@
 }
 
 .site-description {
-  border: 1px solid $base-background-color;
-  color: $base-background-color;
+  border: 1px solid $inverse-accent-color;
   font-size: 1.25em;
   margin: 0;
   padding: ($gutter-width * 0.8) $gutter-width;
@@ -41,6 +43,7 @@
   display: none;
 
   @media screen and (min-width : $large-screen) {
+    color: $inverse-accent-color;
     display: inline;
     justify-self: end;
   }

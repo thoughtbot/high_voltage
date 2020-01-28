@@ -1,176 +1,74 @@
-<svg version="1.1"
-   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-   viewBox="0 0 1174.1 413" class="usage-illustration-large">
-  <defs></defs>
-  <text transform="matrix(1 0 0 1 35.5821 177.1818)" fill="#414042">$ touch app/views/pages/about.html.erb</text>
-  <text transform="matrix(1 0 0 1 35.5821 221.9079)" fill="#414042">$ touch app/views/pages/contact.html.erb</text>
-  <text transform="matrix(1 0 0 1 35.5821 269.1819)" fill="#414042">$ touch app/views/pages/team.html.erb</text>
-  <text transform="matrix(1 0 0 1 35.5821 315.1819)" fill="#414042">$ touch app/views/pages/foo.html.erb</text>
-  <text transform="matrix(1 0 0 1 35.5821 359.9079)" fill="#414042">$ touch app/views/pages/love.html.erb</text>
-  <text transform="matrix(1 0 0 1 35.5821 407.1819)" fill="#414042">$ touch app/views/pages/life.html.erb</text>
-  <rect x="893.6" y="77.7" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="17.8" height="15.8"/>
-  <rect x="939.6" y="77.7" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="17.8" height="15.8"/>
-  <rect x="985.6" y="77.7" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="17.8" height="15.8"/>
-  <rect x="1031.6" y="77.7" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="17.8" height="15.8"/>
-  <rect x="1077.6" y="77.7" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="17.8" height="15.8"/>
-  <rect x="1123.6" y="77.7" fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="17.8" height="15.8"/>
-  <rect x="865.8" y="1" fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" width="307.3" height="84"/>
-  <rect x="510.5" y="36.5" fill="none" width="312.4" height="32.4"/>
-  <text transform="matrix(1 0 0 1 510.4685 49.2399)" fill="#414042">$ mkdir app/views/pages</text>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="858.9" y1="44.8" x2="811.9" y2="44.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="866.1" cy="44.6" r="3.3"/>
-      </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" height="413" width="1174.1" viewBox="0 0 1174.1 413" class="usage-illustration-large">
+  <text transform="translate(35.5821 177.1818)" fill="#414042">
+    $ touch app/views/pages/about.html.erb
+  </text>
+  <text transform="translate(35.5821 221.9079)" fill="#414042">
+    $ touch app/views/pages/contact.html.erb
+  </text>
+  <text transform="translate(35.5821 269.1819)" fill="#414042">
+    $ touch app/views/pages/team.html.erb
+  </text>
+  <text transform="translate(35.5821 315.1819)" fill="#414042">
+    $ touch app/views/pages/foo.html.erb
+  </text>
+  <text transform="translate(35.5821 359.9079)" fill="#414042">
+    $ touch app/views/pages/love.html.erb
+  </text>
+  <text transform="translate(35.5821 407.1819)" fill="#414042">
+    $ touch app/views/pages/life.html.erb
+  </text>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M893.6 77.7h17.8v15.8h-17.8zM939.6 77.7h17.8v15.8h-17.8zM985.6 77.7h17.8v15.8h-17.8zM1031.6 77.7h17.8v15.8h-17.8zM1077.6 77.7h17.8v15.8h-17.8zM1123.6 77.7h17.8v15.8h-17.8z"/>
+  <path fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M865.8 1h307.3v84H865.8z"/>
+  <path fill="none" d="M510.5 36.5h312.4v32.4H510.5z"/>
+  <text transform="translate(540.4685 49.2399)" fill="#414042">
+    $ mkdir app/views/pages
+  </text>
+  <g fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10">
+    <path d="M858.9 44.8h-47"/>
+    <circle cx="866.1" cy="44.6" r="3.3"/>
   </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="902.9" y1="84.8" x2="902.9" y2="401.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="902.5" cy="85.7" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="948.9" y1="84.8" x2="948.9" y2="217.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="948.5" cy="85.7" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="994.9" y1="84.8" x2="994.9" y2="263.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="994.5" cy="85.7" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="1040.9" y1="84.8" x2="1040.9" y2="309.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="1040.5" cy="85.7" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="1086.9" y1="84.8" x2="1086.9" y2="355.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="1086.5" cy="85.7" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="1132.9" y1="84.8" x2="1132.9" y2="171.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="1132.5" cy="85.7" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="635.9" y1="401.8" x2="902.9" y2="401.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="402.1" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="635.9" y1="355.8" x2="1086.9" y2="355.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="356.1" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="635.9" y1="309.8" x2="1040.9" y2="309.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="310.1" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="635.9" y1="263.8" x2="994.9" y2="263.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="264.1" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="635.9" y1="217.8" x2="948.9" y2="217.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="218.1" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <line fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" x1="635.9" y1="171.8" x2="1132.9" y2="171.8"/>
-    <g>
-      <g>
-        <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="172.1" r="3.3"/>
-      </g>
-    </g>
-  </g>
-  <g>
-    <g>
-      <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,182 1,169.2 6.5,163.7 13.9,163.7 13.9,182       "/>
-      <path fill="#414042" d="M12.9,164.7V181H2v-11.3l5-5H12.9 M14.9,162.7h-2H7H6.1l-0.6,0.6l-5,5L0,168.8v0.8V181v2h2h10.9h2v-2
-        v-16.3V162.7L14.9,162.7z"/>
-    </g>
-    <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,164.7 7,169.7 2,169.7    "/>
-  </g>
-  <g>
-    <g>
-      <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,228 1,215.2 6.5,209.7 13.9,209.7 13.9,228       "/>
-      <path fill="#414042" d="M12.9,210.7V227H2v-11.3l5-5H12.9 M14.9,208.7h-2H7H6.1l-0.6,0.6l-5,5L0,214.8v0.8V227v2h2h10.9h2v-2
-        v-16.3V208.7L14.9,208.7z"/>
-    </g>
-    <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,210.7 7,215.7 2,215.7    "/>
-  </g>
-  <g>
-    <g>
-      <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,274 1,261.2 6.5,255.7 13.9,255.7 13.9,274       "/>
-      <path fill="#414042" d="M12.9,256.7V273H2v-11.3l5-5H12.9 M14.9,254.7h-2H7H6.1l-0.6,0.6l-5,5L0,260.8v0.8V273v2h2h10.9h2v-2
-        v-16.3V254.7L14.9,254.7z"/>
-    </g>
-    <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,256.7 7,261.7 2,261.7    "/>
-  </g>
-  <g>
-    <g>
-      <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,320 1,307.2 6.5,301.7 13.9,301.7 13.9,320       "/>
-      <path fill="#414042" d="M12.9,302.7V319H2v-11.3l5-5H12.9 M14.9,300.7h-2H7H6.1l-0.6,0.6l-5,5L0,306.8v0.8V319v2h2h10.9h2v-2
-        v-16.3V300.7L14.9,300.7z"/>
-    </g>
-    <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,302.7 7,307.7 2,307.7    "/>
-  </g>
-  <g>
-    <g>
-      <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,366 1,353.2 6.5,347.7 13.9,347.7 13.9,366       "/>
-      <path fill="#414042" d="M12.9,348.7V365H2v-11.3l5-5H12.9 M14.9,346.7h-2H7H6.1l-0.6,0.6l-5,5L0,352.8v0.8V365v2h2h10.9h2v-2
-        v-16.3V346.7L14.9,346.7z"/>
-    </g>
-    <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,348.7 7,353.7 2,353.7    "/>
-  </g>
-  <g>
-    <g>
-      <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" points="1,412 1,399.2 6.5,393.7 13.9,393.7 13.9,412       "/>
-      <path fill="#414042" d="M12.9,394.7V411H2v-11.3l5-5H12.9 M14.9,392.7h-2H7H6.1l-0.6,0.6l-5,5L0,398.8v0.8V411v2h2h10.9h2v-2
-        v-16.3V392.7L14.9,392.7z"/>
-    </g>
-    <polyline fill-rule="evenodd" clip-rule="evenodd" fill="#414042" points="7,394.7 7,399.7 2,399.7    "/>
-  </g>
-
-    <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" points="
-    892.3,19.8 889.9,15.8 879.9,15.8 879.9,19.8 879.9,26.2 879.9,45.8 917.9,45.8 917.9,19.8   "/>
-  <polygon fill="#414042" points="854.3,48.5 862.9,44.8 854.3,41.2  "/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M902.9 84.8v317"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="902.5" cy="85.7" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M948.9 84.8v133"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="948.5" cy="85.7" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M994.9 84.8v179"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="994.5" cy="85.7" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M1040.9 84.8v225"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="1040.5" cy="85.7" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M1086.9 84.8v271"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="1086.5" cy="85.7" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M1132.9 84.8v87"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="1132.5" cy="85.7" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M635.9 401.8h267"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="402.1" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M635.9 355.8h451"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="356.1" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M635.9 309.8h405"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="310.1" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M635.9 263.8h359"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="264.1" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M635.9 217.8h313"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="218.1" r="3.3"/>
+  <path fill="none" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M635.9 171.8h497"/>
+  <circle fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" cx="637.1" cy="172.1" r="3.3"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" d="M1 182v-12.8l5.5-5.5h7.4V182z"/>
+  <path fill="#414042" d="M12.9 164.7V181H2v-11.3l5-5h5.9m2-2H6.1l-.6.6-5 5-.5.5V183h14.9v-20.3z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#414042" d="M7 164.7v5H2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" d="M1 228v-12.8l5.5-5.5h7.4V228z"/>
+  <path fill="#414042" d="M12.9 210.7V227H2v-11.3l5-5h5.9m2-2H6.1l-.6.6-5 5-.5.5V229h14.9v-20.3z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#414042" d="M7 210.7v5H2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" d="M1 274v-12.8l5.5-5.5h7.4V274z"/>
+  <path fill="#414042" d="M12.9 256.7V273H2v-11.3l5-5h5.9m2-2H6.1l-.6.6-5 5-.5.5V275h14.9v-20.3z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#414042" d="M7 256.7v5H2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" d="M1 320v-12.8l5.5-5.5h7.4V320z"/>
+  <path fill="#414042" d="M12.9 302.7V319H2v-11.3l5-5h5.9m2-2H6.1l-.6.6-5 5-.5.5V321h14.9v-20.3z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#414042" d="M7 302.7v5H2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" d="M1 366v-12.8l5.5-5.5h7.4V366z"/>
+  <path fill="#414042" d="M12.9 348.7V365H2v-11.3l5-5h5.9m2-2H6.1l-.6.6-5 5-.5.5V367h14.9v-20.3z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#414042" d="M7 348.7v5H2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" d="M1 412v-12.8l5.5-5.5h7.4V412z"/>
+  <path fill="#414042" d="M12.9 394.7V411H2v-11.3l5-5h5.9m2-2H6.1l-.6.6-5 5-.5.5V413h14.9v-20.3z"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#414042" d="M7 394.7v5H2"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" fill="#F5F5F5" stroke="#414042" stroke-width="2" stroke-miterlimit="10" d="M892.3 19.8l-2.4-4h-10v30h38v-26z"/>
+  <path fill="#414042" d="M854.3 48.5l8.6-3.7-8.6-3.6z"/>
 </svg>

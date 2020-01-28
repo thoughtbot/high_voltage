@@ -37,15 +37,17 @@ $dark-blue: #288dbf;
 $dark-gray: #414042;
 $gray: #bbb;
 $smoke: whitesmoke;
+$white: white;
 
 // Background Color
-$base-background-color: white;
+$base-background-color: $white;
 $section-background-color: $smoke;
 
 // Font Colors
 $base-font-color: $dark-gray;
 $base-accent-color: $blue;
 $alt-accent-color: $dark-blue;
+$inverse-accent-color: $white;
 
 // Link Colors
 $base-link-color: $base-accent-color;
