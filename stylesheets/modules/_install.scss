@@ -15,12 +15,12 @@
 
 .install-direction {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   padding: 0;
   text-transform: lowercase;
 
   @media screen and (min-width : $large-screen) {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr minmax(0, 25rem);
   }
 }
 
@@ -33,7 +33,6 @@
 .install-direction-sample {
   border-bottom: $base-border;
   font-size: 1.25em;
-  min-width: 25rem;
   padding-top: 0;
 
   &:last-child {
@@ -43,15 +42,5 @@
   @media screen and (min-width : $large-screen) {
     border-left: $base-border;
     padding-top: $gutter-width;
-  }
-}
-
-.install-direction-optional {
-  border-color: $alt-border-color;
-  border-top-color: $base-border-color;
-  background-color: white;
-
-  .install-direction-sample {
-    border-color: $alt-border-color;
   }
 }

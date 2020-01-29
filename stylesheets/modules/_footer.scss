@@ -15,7 +15,7 @@
     margin-bottom: $gutter-width;
 
     @media screen and (min-width : $medium-screen) {
-      grid-template-columns: min-content minmax(auto, 18em);
+      grid-template-columns: min-content minmax(auto, 20rem);
     }
   }
 

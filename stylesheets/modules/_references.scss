@@ -7,7 +7,7 @@
   text-transform: lowercase;
 
   @media screen and (min-width : $medium-screen) {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: minmax(auto, 30rem) 1fr;
   }
 }
 
@@ -15,14 +15,6 @@
   border: 1px solid $base-accent-color;
   padding: $gutter-width;
   font-size: 1.25em;
-
-  @media screen and (min-width : $medium-screen) {
-
-    span:after {
-      content: "";
-      display: block;
-    }
-  }
 }
 
 .references-dangerdanger {

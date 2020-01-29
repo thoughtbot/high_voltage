@@ -9,7 +9,7 @@
   @media screen and (min-width : $large-screen) {
     grid-template-areas: "logo logo"
                          "desc icon";
-    grid-template-columns: minmax(auto, 30em);
+    grid-template-columns: minmax(auto, 25rem);
   }
 }
 

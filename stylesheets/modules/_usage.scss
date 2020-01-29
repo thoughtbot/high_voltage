@@ -21,12 +21,14 @@
 
 .usage-directions {
   max-width: 25em;
-  padding: $gutter-width;
+  padding: $gutter-width 0;
 
   @media screen and (min-width : $large-screen) {
     @include position(absolute, 0em null null 0em);
-    border-right: $base-border;
     border-bottom: $base-border;
+    border-right: $base-border;
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
   }
 }
 
