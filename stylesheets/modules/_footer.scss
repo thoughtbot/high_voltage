@@ -8,7 +8,6 @@
   }
 
   .cite {
-    @include clearfix();
     display: grid;
     grid-template-columns: 1fr;
     font-size: 1.25em;

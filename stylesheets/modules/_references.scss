@@ -1,5 +1,4 @@
 .references {
-  @include clearfix;
   display: grid;
   grid-template-columns: 1fr;
   margin: 0 auto $gutter-width auto;
