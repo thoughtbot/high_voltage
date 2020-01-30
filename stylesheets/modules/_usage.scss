@@ -14,7 +14,7 @@
   position: relative;
 
   svg {
-    font-family: 'Anonymous Pro';
+    @extend %code;
     max-width: 100%;
   }
 }

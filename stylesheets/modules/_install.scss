@@ -20,7 +20,7 @@
   text-transform: lowercase;
 
   @media screen and (min-width : $large-screen) {
-    grid-template-columns: 1fr minmax(0, 25rem);
+    grid-template-columns: 1fr minmax(0, 26rem);
   }
 }
 

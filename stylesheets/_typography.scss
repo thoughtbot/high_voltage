@@ -95,6 +95,10 @@ cite {
   }
 }
 
+code {
+  @extend %code;
+}
+
 code em {
   font-style: normal;
   color: $alt-accent-color;
