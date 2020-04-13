@@ -56,7 +56,7 @@ GEM
     minitest (5.14.0)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
-    pry (0.13.0)
+    pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (4.0.4)
