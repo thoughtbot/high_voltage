@@ -92,7 +92,7 @@ GEM
       rspec-expectations (~> 3.9.0)
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
-    rspec-support (3.9.2)
+    rspec-support (3.9.3)
     thor (1.0.1)
     thread_safe (0.3.6)
     tzinfo (1.2.7)
