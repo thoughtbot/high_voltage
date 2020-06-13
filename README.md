@@ -214,7 +214,7 @@ Then modify new `PagesController` to include the High Voltage static page concer
 class PagesController < ApplicationController
   include HighVoltage::StaticPage
 
-  before_filter :authenticate
+  before_action :authenticate
   layout :layout_for_page
 
   private
