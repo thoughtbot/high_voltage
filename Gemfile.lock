@@ -45,7 +45,7 @@ GEM
     crass (1.0.6)
     diff-lcs (1.4.4)
     erubi (1.9.0)
-    i18n (1.8.3)
+    i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     loofah (2.6.0)
       crass (~> 1.0.2)
