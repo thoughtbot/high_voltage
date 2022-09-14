@@ -19,6 +19,7 @@ module HighVoltage::StaticPage
     render(
       template: current_page,
       locals: { current_page: current_page },
+      stream: stream_response?
     )
   end
 
@@ -38,5 +39,9 @@ module HighVoltage::StaticPage
 
   def page_finder_factory
     HighVoltage::PageFinder
+  end
+
+  def stream_response?
+    false
   end
 end

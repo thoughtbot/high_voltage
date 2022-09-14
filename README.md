@@ -183,6 +183,7 @@ Most common reasons to override?
   * You need to render different layouts for different pages.
   * You need to render a partial from the `app/views/pages` directory.
   * You need to use your own Page resource and would like to use StaticPage resource for high voltage
+  * You want to enable [response streaming](https://api.rubyonrails.org/classes/ActionController/Streaming.html)
 
 Create a `PagesController` of your own:
 
@@ -281,6 +282,25 @@ end
 Use this to create a custom file mapping, clean filenames for your file
 system, A/B test, and so on.
 
+## ActionController Streaming
+
+Enable
+[ActionController::Streaming](https://api.rubyonrails.org/classes/ActionController/Streaming.html)
+by overriding `stream_response?`
+
+```ruby
+# app/controllers/pages_controller.rb
+class PagesController < ApplicationController
+  include HighVoltage::StaticPage
+
+  private
+
+  def stream_response?
+    true
+  end
+end
+```
+
 ## Localization
 
 [Rails I18n guides](http://guides.rubyonrails.org/i18n.html).
@@ -369,7 +389,7 @@ Thank you, [contributors]!
 
 ## License
 
-High Voltage is copyright © 2009-2018 thoughtbot. It is free software, and may
+High Voltage is copyright © 2009-2022 thoughtbot. It is free software, and may
 be redistributed under the terms specified in the [`LICENSE`] file.
 
 [`LICENSE`]: /MIT-LICENSE
