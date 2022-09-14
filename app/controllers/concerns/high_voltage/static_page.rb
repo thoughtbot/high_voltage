@@ -19,7 +19,7 @@ module HighVoltage::StaticPage
     render(
       template: current_page,
       locals: { current_page: current_page },
-      stream: stream_response?
+      stream: stream_response?,
     )
   end
 

@@ -19,7 +19,7 @@ describe HighVoltage::PagesController do
       end
 
       it "uses the default render streaming false" do
-        expect(response.headers['Transfer-Encoding']).to be_nil
+        expect(response.headers["Transfer-Encoding"]).to be_nil
       end
     end
 
@@ -58,8 +58,9 @@ describe HighVoltage::PagesController do
     describe "on GET to /pages/exists" do
       before { get :show, params: { id: "exists" } }
 
-      it "uses the custom configured layout" do
-        expect(response.headers['Transfer-Encoding']).to_not be_nil
+      it "responds with chunked transfer encoding" do
+        expect(response.headers["Transfer-Encoding"]).to_not be_nil
+        expect(response.headers["Transfer-Encoding"]).to eq "chunked"
       end
     end
   end
