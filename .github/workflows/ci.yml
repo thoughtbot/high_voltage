@@ -22,4 +22,4 @@ jobs:
         bundler-cache: true
         rubygems: latest
     - name: Run tests
-      run: bundle rake spec
+      run: bundle exec rake spec
