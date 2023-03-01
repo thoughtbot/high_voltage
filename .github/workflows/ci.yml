@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
-    name: Specs - Ruby ${{ matrix.ruby-version }}
+    name: Specs - Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
@@ -21,5 +21,5 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
         rubygems: latest
-    - name: Run tests
+    - name: Run specs
       run: bundle exec rake spec
