@@ -8,7 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         ruby-version: ['2.7']
-        gemfile: ['rails_5.0']
+        gemfile: ['rails_5.0', 'rails_5.1', 'rails_5.2', 'rails_6.0']
     runs-on: ubuntu-latest
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
