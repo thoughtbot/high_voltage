@@ -21,9 +21,9 @@ Gem::Specification.new do |s|
   s.test_files    = []
   s.require_paths = ["lib"]
 
-  s.add_development_dependency('activesupport', '>= 5.0')
+  s.add_development_dependency('activesupport', '>= 5.2')
   s.add_development_dependency('appraisal')
   s.add_development_dependency('capybara')
   s.add_development_dependency('pry')
-  s.add_development_dependency('rspec-rails', '~> 3.5')
+  s.add_development_dependency('rspec-rails', '~> 4.0.0')
 end
