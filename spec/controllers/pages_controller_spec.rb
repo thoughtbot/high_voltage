@@ -17,6 +17,10 @@ describe HighVoltage::PagesController do
       it "uses the default layout used by ApplicationController" do
         expect(response).to render_template("layouts/application")
       end
+
+      it "uses the default render streaming false" do
+        expect(response.headers["Transfer-Encoding"]).to be_nil
+      end
     end
 
     describe "on GET to /pages/dir/nested" do
@@ -47,6 +51,17 @@ describe HighVoltage::PagesController do
       get :show, params: {
         id: "exists_but_references_nonexistent_partial",
       }
+    end
+  end
+
+  context "using streaming response" do
+    describe "on GET to /pages/exists" do
+      before { get :show, params: { id: "exists" } }
+
+      it "responds with chunked transfer encoding" do
+        expect(response.headers["Transfer-Encoding"]).to_not be_nil
+        expect(response.headers["Transfer-Encoding"]).to eq "chunked"
+      end
     end
   end
 
