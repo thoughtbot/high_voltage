@@ -10,9 +10,9 @@ Yeah, like "About us", "Directions", marketing pages, etc.
 
 ## Installation
 
-There are two ways to install High Voltage. 
+There are two ways to install High Voltage.
 
-You can run: 
+You can run:
 
     $ gem install high_voltage
 
@@ -152,6 +152,7 @@ Then print the contents of `:title` into the layout:
 # app/views/layouts/application.html.erb
 <title><%= yield(:page_title) %></title>
 ```
+
 #### Content path
 
 High Voltage uses a default path and folder of 'pages', i.e. 'url.com/pages/contact',
@@ -179,10 +180,10 @@ HighVoltage controller as described [below](#override).
 
 Most common reasons to override?
 
-  * You need authentication around the pages to make sure a user is signed in.
-  * You need to render different layouts for different pages.
-  * You need to render a partial from the `app/views/pages` directory.
-  * You need to use your own Page resource and would like to use StaticPage resource for high voltage
+- You need authentication around the pages to make sure a user is signed in.
+- You need to render different layouts for different pages.
+- You need to render a partial from the `app/views/pages` directory.
+- You need to use your own Page resource and would like to use StaticPage resource for high voltage
 
 Create a `PagesController` of your own:
 
@@ -369,21 +370,10 @@ Thank you, [contributors]!
 
 ## License
 
-High Voltage is copyright © 2009-2023 thoughtbot. It is free software, and may
+High Voltage is copyright © 2009-2024 thoughtbot. It is free software, and may
 be redistributed under the terms specified in the [`LICENSE`] file.
 
 [`LICENSE`]: /MIT-LICENSE
 
-## About thoughtbot
-
-![thoughtbot](http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
-
-High Voltage is maintained and funded by thoughtbot, inc.
-The names and logos for thoughtbot are trademarks of thoughtbot, inc.
-
-We love open source software!
-See [our other projects][community].
-We are [available for hire][hire].
-
-[community]: https://thoughtbot.com/community?utm_source=github
-[hire]: https://thoughtbot.com/hire-us?utm_source=github
+<!-- START /templates/footer.md -->
+<!-- END /templates/footer.md -->
