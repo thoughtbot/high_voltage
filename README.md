@@ -19,7 +19,7 @@ You can run:
 Or you can include in your Gemfile:
 
 ```ruby
-gem 'high_voltage', '~> 3.1'
+gem 'high_voltage', '~> 3.1.2'
 ```
 
 ## Usage
@@ -370,12 +370,13 @@ Thank you, [contributors]!
 
 ## License
 
-High Voltage is copyright © 2009-2024 thoughtbot. It is free software, and may
+High Voltage is copyright © 2009 thoughtbot. It is free software, and may
 be redistributed under the terms specified in the [`LICENSE`] file.
 
 [`LICENSE`]: /MIT-LICENSE
 
 <!-- START /templates/footer.md -->
+
 ## About thoughtbot
 
 ![thoughtbot](https://thoughtbot.com/thoughtbot-logo-for-readmes.svg)
@@ -389,6 +390,5 @@ We are [available for hire][hire].
 
 [community]: https://thoughtbot.com/community?utm_source=github
 [hire]: https://thoughtbot.com/hire-us?utm_source=github
-
 
 <!-- END /templates/footer.md -->
