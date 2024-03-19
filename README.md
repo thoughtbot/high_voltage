@@ -1,5 +1,10 @@
 # High Voltage [![Build Status](https://github.com/thoughtbot/high_voltage/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/thoughtbot/high_voltage/actions) [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
+> [!NOTE]
+> `high_voltage` is in maintenance-mode. We’re not actively adding new features,
+but we’ll fix bugs and keep it up to date, and compatible with the latest ruby
+and rails versions.
+
 Rails engine for static pages.
 
 ... but be careful. [Danger!](https://www.youtube.com/watch?v=R-FxmoVM7X4)
