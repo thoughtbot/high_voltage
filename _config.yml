@@ -4,9 +4,9 @@ description: >
   High Voltage serves static pages in your Rails app
 url: "http://thoughtbot.github.io/high_voltage/"
 repository_url: "http://github.com/thoughtbot/high_voltage"
-documentation_url: "http://github.com/thoughtbot/high_voltage/blob/master/README.md"
+documentation_url: "http://github.com/thoughtbot/high_voltage/blob/main/README.md"
 thoughtbot_url: "http://thoughtbot.com"
-license_url: "https://github.com/thoughtbot/high_voltage/blob/master/MIT-LICENSE"
+license_url: "https://github.com/thoughtbot/high_voltage/blob/main/MIT-LICENSE"
 
 # Build settings
 markdown: kramdown
