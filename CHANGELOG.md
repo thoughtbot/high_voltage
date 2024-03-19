@@ -9,6 +9,7 @@
 - Remove support for EOL'd Rails versions 5.x
 - Add support for Rails 7.1
 - Add Ruby's minimum version required to >= 3.0
+- Add note about the project being in maintenance-mode
 
 ## [3.1.2] - 2019-05-20
 
