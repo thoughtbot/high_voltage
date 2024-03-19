@@ -6,13 +6,11 @@ describe HighVoltage::Configuration do
 
     before(:each) do
       HighVoltage.configure do |config|
-        ActiveSupport::Deprecation.silence do
-          config.content_path = config_value
-          config.layout = config_value
-          config.parent_engine = config_value
-          config.route_drawer = config_value
-          config.routes = config_value
-        end
+        config.content_path = config_value
+        config.layout = config_value
+        config.parent_engine = config_value
+        config.route_drawer = config_value
+        config.routes = config_value
       end
     end
 
