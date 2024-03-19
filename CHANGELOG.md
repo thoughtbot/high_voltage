@@ -7,6 +7,8 @@
 - Remove support for EOL'd Rails version 4.2
 - Remove support for Travis CI and replaced with Github Actions
 - Remove support for EOL'd Rails versions 5.0 and 5.1
+- Remove support for EOL'd Rails versions 5.x
+- Add support for Rails 7.1
 
 ## [3.1.2] - 2019-05-20
 
