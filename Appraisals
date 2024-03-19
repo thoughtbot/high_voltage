@@ -1,5 +1,4 @@
 rails_versions = %w(
-  5.2
   6.0
   6.1
   7.0
