@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.test_files    = []
   s.require_paths = ["lib"]
 
+  s.required_ruby_version = '>= 3.0'
   s.add_development_dependency('activesupport', '>= 5.2')
   s.add_development_dependency('appraisal')
   s.add_development_dependency('capybara')
