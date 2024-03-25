@@ -2,8 +2,8 @@
 
 > [!NOTE]
 > `high_voltage` is in maintenance-mode. We’re not actively adding new features,
-but we’ll fix bugs and keep it up to date, and compatible with the latest ruby
-and rails versions.
+but we’ll fix bugs and keep it up to date, and compatible with the latest Ruby
+and Rails versions.
 
 Rails engine for static pages.
 
