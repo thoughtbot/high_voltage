@@ -5,6 +5,10 @@
 We welcome pull requests from everyone. By participating in this project, you
 agree to abide by the thoughtbot [code of conduct].
 
+Note that this project is in maintenance-mode. We’re not actively adding new features. Bug
+fixes and other contributions to keep it compatible with the latest Ruby and Rails versions
+are welcomed.
+
 We expect everyone to follow the code of conduct anywhere in thoughtbot's
 project codebases, issue trackers, chat-rooms, and mailing lists.
 
