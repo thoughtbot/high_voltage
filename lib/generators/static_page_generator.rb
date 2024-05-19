@@ -1,4 +1,4 @@
-class PageGenerator < Rails::Generators::NamedBase
+class StaticPageGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("templates", __dir__)
 
   def add_page

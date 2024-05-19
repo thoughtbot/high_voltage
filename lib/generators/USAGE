@@ -2,7 +2,7 @@ Description:
     Generates page views for high_voltage static pages
 
 Example:
-    bin/rails generate page Thing
+    bin/rails generate static_page Thing
 
     This will create:
         app/views/pages/thing.html.erb

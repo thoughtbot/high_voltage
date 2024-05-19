@@ -1,15 +1,15 @@
 require 'spec_helper'
 require 'rails/generators'
-require_relative '../../lib/generators/page_generator.rb' # Make sure this path is correct for your project
+require_relative '../../lib/generators/static_page_generator.rb' # Make sure this path is correct for your project
 
-RSpec.describe PageGenerator, type: :generator do
+RSpec.describe StaticPageGenerator, type: :generator do
   # Define the destination directory for generator output
   let(:destination) { Rails.root.join('tmp/generators') }
   let(:filename) { 'homepage' }
 
   before do
     FileUtils.mkdir_p(destination)
-    Rails::Generators.invoke('page', [filename], destination_root: destination)
+    Rails::Generators.invoke('static_page', [filename], destination_root: destination)
   end
 
   after do
