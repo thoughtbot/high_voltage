@@ -1,5 +1,5 @@
 Description:
-    Generates page views for high_voltage static pages
+    Generates page .erb templates for high_voltage static pages
 
 Example:
     bin/rails generate static_page Thing
