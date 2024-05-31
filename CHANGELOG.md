@@ -1,5 +1,24 @@
 # Changelog
 
+## [4.0.0] - 2024-05-31
+
+This project is in maintenance-mode. We’re not actively adding new features, but we’ll fix bugs and keep it up to date, and compatible with the latest Ruby and Rails versions.
+
+Main changes:
+
+- Remove support for EOL'd Rails version 4.2
+- Remove support for EOL'd Rails versions 5.x
+- Remove support for Travis CI and replaced with Github Actions
+- Add support for Rails 7.1
+- Add Ruby's minimum version required to >= 3.0
+
+## New Contributors
+
+* @denissellu made their first contribution in https://github.com/thoughtbot/high_voltage/pull/302
+* @keegnotrub made their first contribution in https://github.com/thoughtbot/high_voltage/pull/306
+* @stefannibrasil made their first contribution in https://github.com/thoughtbot/high_voltage/pull/311
+* @dependabot made their first contribution in https://github.com/thoughtbot/high_voltage/pull/313
+
 ## [4.0.0.rc1] - 2024-03-25
 
 This is a release candidate. Please report any [issues](https://github.com/thoughtbot/high_voltage/issues/new) you might encounter when installing this version.
@@ -104,6 +123,7 @@ Main changes:
 - New RootRoute constraint.
 - Updated README, with new TravisCI url.
 
+[4.0.0]: https://github.com/thoughtbot/high_voltage/compare/v3.1.2...v4.0.0
 [4.0.0.rc1]: https://github.com/thoughtbot/high_voltage/compare/v3.1.2...4.0.0.rc1
 [3.1.2]: https://github.com/thoughtbot/high_voltage/compare/v3.1.1...v3.1.2
 [3.1.1]: https://github.com/thoughtbot/high_voltage/compare/v3.1.0...v3.1.1
