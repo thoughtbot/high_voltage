@@ -26,5 +26,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency('appraisal')
   s.add_development_dependency('capybara')
   s.add_development_dependency('pry')
-  s.add_development_dependency('rspec-rails', '~> 5.1.2')
+  s.add_development_dependency('rspec-rails', '~> 7.0.0')
 end
