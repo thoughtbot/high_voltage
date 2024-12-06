@@ -15,7 +15,9 @@ jobs:
         gemfile: ['rails_6.0','rails_6.1','rails_7.0', 'rails_7.1', 'rails_8.0']
         exclude:
           - gemfile: rails_8.0
-            ruby-version: ['3.0', '3.1']
+            ruby-version: '3.0'
+          - gemfile: rails_8.0
+            ruby-version: '3.1'
     runs-on: ubuntu-latest
     env:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
