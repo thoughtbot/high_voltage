@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] = "test"
 
 require "pry"
+require "logger"
 require "active_model/railtie"
 require "action_controller/railtie"
 require "action_view/railtie"

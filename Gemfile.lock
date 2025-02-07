@@ -22,6 +22,8 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
+    activemodel (7.1.4)
+      activesupport (= 7.1.4)
     activesupport (7.1.4)
       base64
       bigdecimal
@@ -141,6 +143,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel (>= 6.1)
   activesupport (>= 6.1)
   appraisal
   capybara
@@ -149,4 +152,4 @@ DEPENDENCIES
   rspec-rails (~> 5.1.2)
 
 BUNDLED WITH
-   2.2.33
+   2.6.3
