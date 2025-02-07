@@ -148,6 +148,7 @@ DEPENDENCIES
   appraisal
   capybara
   high_voltage!
+  mutex_m
   pry
   rspec-rails (~> 5.1.2)
 
