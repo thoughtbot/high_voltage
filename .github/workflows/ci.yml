@@ -11,8 +11,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby-version: ['3.0', '3.1', '3.2', '3.3']
-        gemfile: ['rails_6.0','rails_6.1','rails_7.0', 'rails_7.1', 'rails_8.0']
+        ruby-version: ['3.0', '3.1', '3.2', '3.3', '3.4']
+        gemfile: ['rails_6.1', 'rails_7.0', 'rails_7.1', 'rails_8.0']
         exclude:
           - ruby-version: '3.0'
             gemfile: 'rails_8.0'
@@ -23,12 +23,12 @@ jobs:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     name: Specs - Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true
-        rubygems: default
-    - name: Run specs
-      run: bundle exec rake spec
+      - uses: actions/checkout@v4
+      - name: Set up Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true
+          rubygems: default
+      - name: Run specs
+        run: bundle exec rake spec
