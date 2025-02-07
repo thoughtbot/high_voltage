@@ -4,9 +4,9 @@ source "https://rubygems.org"
 
 gem "rails", "~> 8.0.0"
 gem "bigdecimal"
-gem "mutex_m"
-gem "logger"
 gem "drb"
+gem "logger"
+gem "mutex_m"
 gem "rails-controller-testing"
 
 gemspec path: "../"
