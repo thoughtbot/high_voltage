@@ -143,12 +143,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemodel (>= 6.1)
-  activesupport (>= 6.1)
+  activemodel (>= 6.0)
+  activesupport (>= 6.0)
   appraisal
   capybara
   high_voltage!
-  mutex_m
   pry
   rspec-rails (~> 5.1.2)
 

@@ -22,11 +22,9 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.required_ruby_version = '>= 3.0'
-  s.add_development_dependency('activesupport', '>= 6.1')
-  s.add_development_dependency('activemodel', '>= 6.1')
+  s.add_development_dependency('activesupport', '>= 6.0')
+  s.add_development_dependency('activemodel', '>= 6.0')
   s.add_development_dependency('appraisal')
-  s.add_development_dependency('bigdecimal')
-  s.add_development_dependency('mutex_m')
   s.add_development_dependency('capybara')
   s.add_development_dependency('pry')
   s.add_development_dependency('rspec-rails', '~> 5.1.2')

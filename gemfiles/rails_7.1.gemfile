@@ -3,6 +3,10 @@
 source "https://rubygems.org"
 
 gem "rails", "~> 7.1.0"
+gem "bigdecimal"
+gem "mutex_m"
+gem "logger"
+gem "drb"
 gem "rails-controller-testing"
 
 gemspec path: "../"
