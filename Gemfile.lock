@@ -141,7 +141,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (>= 6.0)
+  activesupport (>= 7.0)
   appraisal
   capybara
   high_voltage!

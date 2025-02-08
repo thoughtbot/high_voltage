@@ -1,6 +1,4 @@
 rails_versions = %w(
-  6.0
-  6.1
   7.0
   7.1
   7.2
@@ -10,10 +8,13 @@ rails_versions = %w(
 rails_versions.each do |version|
   appraise "rails_#{version}" do
     gem "rails", "~> #{version}.0"
-    gem "bigdecimal"
-    gem "drb"
-    gem "logger"
-    gem "mutex_m"
+    if version == "7.0"
+      gem "benchmark"
+      gem "bigdecimal"
+      gem "drb"
+      gem "logger"
+      gem "mutex_m"
+    end
     gem "rails-controller-testing"
   end
 end
