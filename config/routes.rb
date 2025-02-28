@@ -5,6 +5,6 @@ HighVoltage.parent_engine.routes.draw do
   end
 
   if HighVoltage.routes
-    get HighVoltage.route_drawer.match_attributes
+    get **HighVoltage.route_drawer.match_attributes
   end
 end
