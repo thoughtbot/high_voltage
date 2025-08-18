@@ -21,7 +21,7 @@ jobs:
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     name: Specs - Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Set up Ruby ${{ matrix.ruby-version }} with ${{ matrix.gemfile }}
         uses: ruby/setup-ruby@v1
         with:
