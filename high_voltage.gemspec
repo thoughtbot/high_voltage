@@ -11,6 +11,10 @@ Gem::Specification.new do |s|
   s.description = 'Fire in the disco. Fire in the ... taco bell.'
   s.license     = 'MIT'
 
+  s.metadata = {
+    'rubygems_mfa_required' => 'true',
+  }
+
   s.files         = `git ls-files -- {app,config,lib}/*`.split("\n")
   s.files        += %w[
     CHANGELOG.md
